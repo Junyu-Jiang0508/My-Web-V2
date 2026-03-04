@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 ---
 
 <Layout title="Junyu Jiang">
 	<section class="flex flex-col items-center px-4 py-16 text-center md:py-24">
 		<div class="mb-6 h-24 w-24 overflow-hidden rounded-full bg-gray-200 md:h-32 md:w-32">
-			<img src="/icon.png" alt="Junyu Jiang" class="h-full w-full object-cover" />
+			<img src={`${base}/icon.png`} alt="Junyu Jiang" class="h-full w-full object-cover" />
 		</div>
 
 		<h1 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -17,13 +19,13 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="flex flex-wrap justify-center gap-4">
 			<a
-				href="/research"
+				href={`${base}/research`}
 				class="rounded-lg bg-gray-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
 			>
 				View Research
 			</a>
 			<a
-				href="/blog"
+				href={`${base}/blog`}
 				class="rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
 			>
 				Read Blog
