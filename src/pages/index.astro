@@ -16,6 +16,7 @@ const makeLink = (text: string, url: string) =>
 
 const bioWithLinks = profile.bio
   .replace('Ukrainian Poetry Digital Archive', makeLink('Ukrainian Poetry Digital Archive', 'https://www.ukrpoetry.org/'))
+  .replace('Prof. Amelia Glasser', makeLink('Prof. Amelia Glasser', 'https://literature.ucsd.edu/people/faculty/aglaser.html'))
   .replace('Computational Social Science at UC San Diego', makeLink('Computational Social Science at UC San Diego', 'https://css.ucsd.edu/masters/index.html'))
   .replace('Communication University of China', makeLink('Communication University of China', 'https://en.cuc.edu.cn/'))
   .replace('University of Missouri-Columbia', makeLink('University of Missouri-Columbia', 'https://journalism.missouri.edu/'));
