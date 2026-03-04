@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import SelectedPubs from '../components/SelectedPubs.astro';
 import profile from '../data/profile.json';
 
-const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '';
 
 // Convert display email (e.g. "x[at]y[dot]com") to mailto format
 const getMailtoLink = (email: string) =>
@@ -24,6 +24,7 @@ const socialLinks = [
   profile.email && { label: 'Email', href: `mailto:${getMailtoLink(profile.email)}`, icon: 'email' },
   profile.github && { label: 'GitHub', href: profile.github, icon: 'github' },
   profile.googleScholar && { label: 'Google Scholar', href: profile.googleScholar, icon: 'scholar' },
+  profile.orcid && { label: 'ORCID', href: profile.orcid, icon: 'orcid' },
   profile.twitter && { label: 'Twitter/X', href: profile.twitter, icon: 'twitter' },
 ].filter(Boolean);
 ---
@@ -34,7 +35,7 @@ const socialLinks = [
 			<!-- Avatar: larger size, rectangular, aligned with reference layout -->
 			<div class="flex-shrink-0 w-56 md:w-72">
 				<img
-					src={profile.avatar.startsWith('http') ? profile.avatar : `${base}${profile.avatar.startsWith('/') ? '' : '/'}${profile.avatar}`}
+					src={profile.avatar.startsWith('http') ? profile.avatar : new URL(profile.avatar.startsWith('/') ? profile.avatar : '/' + profile.avatar, import.meta.env.SITE).href}
 					alt={profile.name}
 					class="w-full h-auto object-contain"
 				/>
@@ -76,6 +77,11 @@ const socialLinks = [
 							{link.icon === 'scholar' && (
 								<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 									<path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L12 24z" />
+								</svg>
+							)}
+							{link.icon === 'orcid' && (
+								<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-2 8.5v7h-2v-7h2zm1 0c.828 0 1.5.672 1.5 1.5S11.828 11.5 11 11.5 9.5 10.828 9.5 10s.672-1.5 1.5-1.5zm4 3.5c0-1.933-1.567-3.5-3.5-3.5S8 10.567 8 12.5 9.567 16 11.5 16c.914 0 1.755-.354 2.371-.933l-.006.006 1.135-1.135c-.793.793-1.871 1.285-3.062 1.285-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4h-2z" />
 								</svg>
 							)}
 							{link.icon === 'twitter' && (
