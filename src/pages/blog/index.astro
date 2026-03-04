@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Blog">
+  <div class="px-4 py-8 md:py-12">
+    <h1 class="mb-8 text-3xl font-bold text-gray-900">Blog Posts</h1>
+    <ul class="space-y-4">
+      {posts.map((post) => (
+        <li class="border-b border-gray-200 pb-4 last:border-0">
+          <a
+            href={`/blog/${post.slug}`}
+            class="group flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4"
+          >
+            <time class="shrink-0 text-sm text-gray-500">
+              {post.data.date.toISOString().slice(0, 10)}
+            </time>
+            <span class="font-medium text-gray-900 transition-colors group-hover:text-gray-600">
+              {post.data.title}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

@@ -1,0 +1,94 @@
+[
+  {
+    "title": "Framing the 'Nation': Discourse of National Identity Construction in the Taiwan Region—An Analysis of 2024 Electoral Campaign Texts",
+    "description": "This study explores the construction of national identity in Taiwan through an analysis of the 2024 electoral campaign texts. Utilizing automated content analysis techniques, we examine how political discourse frames 'nation' and its implications for cross-strait relations and regional stability.",
+    "image": "",
+    "links": {
+      "paper": "/assets/pdf/framing-the-nation.pdf",
+      "slides": "https://wc2025.ipsa.org/wc/home",
+      "code": "",
+      "demo": ""
+    },
+    "tags": [
+      "Political Communication",
+      "Discourse Analysis",
+      "NLP",
+      "Content Analysis"
+    ],
+    "date": "2025-07-06"
+  },
+  {
+    "title": "The Digitalization of Religion and the Reconstruction of the Sanctity - A Discourse Analysis Based on the ask_jesus Livestream",
+    "description": "The audience's religious cognition and belief construction are significantly impacted by the sacred narratives used in religious spread. The physical presence of clergy, the spatial entities of ritual acts (churches, icons, etc.), and the material carriers of classical literature are the foundations of traditional religious the sacred (Mircea Eliade, 1959).",
+    "image": "",
+    "links": {
+      "paper": "/assets/pdf/digitalization-religion.pdf",
+      "slides": "https://iamcr.org/singapore2025",
+      "code": "",
+      "demo": ""
+    },
+    "tags": [
+      "AI",
+      "Religion",
+      "Discourse Analysis",
+      "NLP"
+    ],
+    "date": "2025-07-01"
+  },
+  {
+    "title": "Gaokao News Frame Analysis Based on Natural Language Processing Models",
+    "description": "Gaokao, a major public issue characterized by its selective, institutional, and symbolic nature, has long stood at the intersection of national politics and public discourse in China. Media narratives surrounding the Gaokao are not merely journalistic reproductions but also critical arenas for ideological dissemination and social cognition construction.",
+    "image": "",
+    "links": {
+      "paper": "/assets/pdf/gaokao-news-frame-analysis.pdf",
+      "slides": "",
+      "code": "",
+      "demo": ""
+    },
+    "tags": [
+      "NLP",
+      "BERT",
+      "DeepSeek",
+      "News Framing",
+      "Media Analysis"
+    ],
+    "date": "2025-06-01"
+  },
+  {
+    "title": "Aging as a mythological cognitive construction: A case of elderly self-identity in the rural elderly-service stations in Beijing",
+    "description": "The traditional Chinese practice of venerating the elderly within family discourse has significantly eroded, impacting self-identity. This paper explores the symbolic perception of aging among the elderly in Chinese society and their interaction with aging myths.",
+    "image": "",
+    "links": {
+      "paper": "/assets/pdf/Aging-as-a-mythological-cognitive-construction.pdf",
+      "slides": "https://sites.google.com/amic.asia/30thamicannualconference/home",
+      "code": "",
+      "demo": ""
+    },
+    "tags": [
+      "Discourse Analysis",
+      "Qualitative Research",
+      "Social Cognition",
+      "Aging Studies"
+    ],
+    "date": "2024-08-31"
+  },
+  {
+    "title": "How Regional Stereotypes are Narrated in News Comments: An Analysis of TikTok Platform Based on LDA Model",
+    "description": "This study examines regional stereotypes in new media comment sections, focusing on TikTok. Using the Latent Dirichlet Allocation (LDA) model, researchers analyze comments to uncover how social cognitive biases contribute to these stereotypes.",
+    "image": "",
+    "links": {
+      "paper": "/assets/pdf/regional-stereotypes-tiktok-analysis.pdf",
+      "slides": "https://iamcr.org/christchurch2024",
+      "code": "",
+      "demo": ""
+    },
+    "tags": [
+      "LDA",
+      "NLP",
+      "TikTok",
+      "Social Media",
+      "Discourse Analysis"
+    ],
+    "date": "2024-07-06"
+  }
+]

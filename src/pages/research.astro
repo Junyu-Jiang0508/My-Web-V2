@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import researchData from '../data/research.json';
+---
+
+<Layout title="Research">
+	<div class="mx-auto max-w-4xl py-10">
+		<h1 class="mb-10 text-3xl font-bold text-gray-900">Academic Research</h1>
+		<div class="flex flex-col gap-8">
+			{researchData.map((project) => (
+				<ResearchCard project={project} />
+			))}
+		</div>
+	</div>
+</Layout>

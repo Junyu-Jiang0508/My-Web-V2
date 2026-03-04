@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <article class="px-4 py-8 md:py-12">
+    <header class="mb-8">
+      <h1 class="mb-2 text-3xl font-bold text-gray-900">{post.data.title}</h1>
+      <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
+        {post.data.date.toISOString().slice(0, 10)}
+      </time>
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="mt-2 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+    <div class="prose prose-gray mx-auto max-w-none lg:prose-xl">
+      <Content />
+    </div>
+  </article>
+</Layout>
