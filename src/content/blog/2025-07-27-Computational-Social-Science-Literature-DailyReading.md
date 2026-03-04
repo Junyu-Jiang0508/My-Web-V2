@@ -5,13 +5,15 @@ date: 2025-07-27
 
 ## Preface
 
-This project began on July 27, 2025. As part of my preparation for applying to a **Ph.D. in Computational Social Science (CSS),** I intend to make it a habit to study literature for **one hour each day**.
+This project began on July 27, 2025. As part of my preparation for applying to a Ph.D, I intend to make it a habit to study literature for **one hour each day**.
 
 The idea is to take notes on noteworthy points as I read and see how long I can keep this up.
 
 This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com/en/apad/).
 
 ## Books Reading
+
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-tags="Sociology, China"></div>
 
 ### 1. Communist Neo-Traditionalism: Work and Authority in Chinese Industry (Andrew G. Walder)
 
@@ -31,6 +33,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ### 2. 传播政治经济学 (Vincent Mosco)
 
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+
 #### July 28, 2025
 - **Read Chapter:** 30-47
 - **Key Points:**
@@ -40,11 +44,15 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   4. 商品化到空间化：信息系统的出现使得信息转变空间——重新分配产业资源
   5. 传播政治经济学的传统是把空间化视作企业权力在传播产业的制度延伸
 
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+
 #### August 02, 2025
 - **Read Chapter:** 48-56
 - **Key Points:**
   1. 社会关系，特别是权力关系，它们交互组成了资源的生产、分配和消费；而这就要求传播政治经济学检视顺着生产分配和消费线路不断变换的控制方式；或行动主义者如何通过新媒介来抵制权力的集中。但在传播产业中，生产者、分配者和消费者无法进行准确定义：受众不可被直接认定为消费者，在消费媒介产品时，也在制作出象征价值。
   2. 另一个对政治经济学的定义是，研究社会生活中的控制和存在。
+
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
 
 #### August 10, 2025
 - **Read Chapter:** 57-85
@@ -73,6 +81,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      3. 倾向于将市场视为个人互动的自然产物，加剧了社会的阶级、种族和性别分别
      4. 急切的需要把经济学正统从修辞体系中脱离出来，研究其作为一种权力体系的部分
 
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+
 #### August 11, 2025
 - **Read Chapter:** 86-95
 - **Key Points:**
@@ -83,6 +93,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      - **社会学家:** 建立意义的过程
      - **市场专家:** 两个或多方的交互过程，意义通过符号有意图的使用交换
      - **政治经济学启示:** 传播学应把传播体系看作社会基本经济、政治、文化过程的一部分：资本主义基本要素框架，资本积累与劳动工资
+
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
 
 #### August 14, 2025
 - **Read Chapter:** 96-110
@@ -102,6 +114,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      - **知识潮流:**
        1. 传播产业与传统古典经济模型格格不入
 
+<div class="reading-entry" data-type="book" data-year="2025" data-tags="Sociology, China"></div>
+
 ### 3. Rise of the Red Engineers: The Cultural Revolution and the Origins of China's New Class (Joel Andreas)
 
 #### August 11, 2025
@@ -118,6 +132,8 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   4. **Loss of Inspirational Core:** The loss of the inspirational core of the communist party member put it more like a political credential and networking tool.
   
   5. **Core of New Tsinghua University:** The transfer of class power, the flow and change of the knowledge hierarchy
+
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-tags="Cultural Studies, Media"></div>
 
 ### 4. Representation: Cultural Representations and Signifying Practices (Stuart Hall, Ed.)
 
@@ -143,7 +159,10 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      - **Positive imagery:** Presenting affirmative, authentic, and diverse representations to offset prevailing negative portrayals
      - **Contesting from within:** Working within mainstream forms and platforms to insert new narratives that disrupt established codes
      - Hall warns that each approach has limits—reversal can still lock thinking into binary oppositions, while positive imagery may gloss over structural inequalities 
+
 ## Paper Reading
+
+<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-tags="Content Moderation, Platform Governance, NLP"></div>
 
 ### 2025-7
 
@@ -160,10 +179,12 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   3. **Platform Governance Archive (PGA):** GitHub Repository makes historical versions available
   4. **Readability Measurement:** Flesch-Kincaid Grade Score relies on average sentence length and average word length in a given text
 
+<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-tags="NLP, Disinformation, CSS"></div>
+
 ### 2025-8
 
 #### 2025-8-10
-- **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagler, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080)
+- **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagel, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080)
 
 - **Research Purpose:** To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features.
 
@@ -183,8 +204,10 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 - **Questions:** How to deal with LLMs bias?
 
+<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-tags="NLP, Disinformation, CSS"></div>
+
 #### 2025-8-11
-- **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagler, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080) (Continued)
+- **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagel, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080) (Continued)
 
 - **Language Standardization Process:**
   1. **Standardized Prompt:** "Please summarize this news article in 7-10 English sentences. Article: [insert article text]"
