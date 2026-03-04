@@ -4,7 +4,7 @@ import profile from '../data/profile.json';
 // Use explicit root-relative paths to avoid protocol-relative URLs (//blog, //cv)
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/blog.html', label: 'Blog' },
   ...(profile.cv ? [{ href: profile.cv.startsWith('http') ? profile.cv : profile.cv.startsWith('/') ? profile.cv : '/' + profile.cv, label: 'CV', external: true }] : []),
   ...(profile.news ? [{ href: profile.news.startsWith('http') ? profile.news : profile.news.startsWith('/') ? profile.news : '/' + profile.news, label: 'News', external: profile.news.startsWith('http') }] : []),
 ];
