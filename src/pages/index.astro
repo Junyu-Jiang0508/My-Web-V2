@@ -9,11 +9,16 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 const getMailtoLink = (email: string) =>
   email.replace(/\[at\]/g, '@').replace(/\[dot\]/g, '.');
 
-// Inject link into bio for Ukrainian Poetry Digital Archive
-const bioWithLinks = profile.bio.replace(
-  'Ukrainian Poetry Digital Archive',
-  '<a href="https://www.ukrpoetry.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline decoration-blue-300 underline-offset-2 hover:text-blue-800 hover:decoration-blue-500">Ukrainian Poetry Digital Archive</a>'
-);
+// Inject links into bio
+const linkClass = 'text-blue-600 underline decoration-blue-300 underline-offset-2 hover:text-blue-800 hover:decoration-blue-500';
+const makeLink = (text: string, url: string) =>
+  `<a href="${url}" target="_blank" rel="noopener noreferrer" class="${linkClass}">${text}</a>`;
+
+const bioWithLinks = profile.bio
+  .replace('Ukrainian Poetry Digital Archive', makeLink('Ukrainian Poetry Digital Archive', 'https://www.ukrpoetry.org/'))
+  .replace('Computational Social Science at UC San Diego', makeLink('Computational Social Science at UC San Diego', 'https://css.ucsd.edu/masters/index.html'))
+  .replace('Communication University of China', makeLink('Communication University of China', 'https://en.cuc.edu.cn/'))
+  .replace('University of Missouri-Columbia', makeLink('University of Missouri-Columbia', 'https://journalism.missouri.edu/'));
 
 const socialLinks = [
   profile.email && { label: 'Email', href: `mailto:${getMailtoLink(profile.email)}`, icon: 'email' },
