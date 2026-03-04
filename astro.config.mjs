@@ -7,8 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://junyu-jiang0508.github.io",
-  base: "/My-Web-V2",
+  site: "https://junyuj.com",
+  base: "/",
   redirects: {
     '/research': '/',
   },
