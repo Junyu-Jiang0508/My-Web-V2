@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SelectedPubs from '../components/SelectedPubs.astro';
-import ResearchCard from '../components/ResearchCard.astro';
 import profile from '../data/profile.json';
-import researchData from '../data/research.json';
 
 const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 
@@ -81,35 +79,9 @@ const socialLinks = [
 					))}
 				</div>
 
-				<!-- CTA Buttons -->
-				<div class="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-					<a
-						href="#selected-publications"
-						class="rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-800"
-					>
-						View Research
-					</a>
-					<a
-						href={`${base}/blog`}
-						class="rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
-					>
-						Read Blog
-					</a>
-				</div>
 			</div>
 		</div>
 	</section>
 
 	<SelectedPubs />
-
-	<section class="px-4 py-12 md:py-16">
-		<div class="mx-auto max-w-3xl">
-			<h2 class="mb-6 text-xl font-semibold text-gray-900">Research Projects</h2>
-			<div class="flex flex-col gap-8">
-				{researchData.map((project) => (
-					<ResearchCard project={project} />
-				))}
-			</div>
-		</div>
-	</section>
 </Layout>

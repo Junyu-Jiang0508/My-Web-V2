@@ -1,6 +1,9 @@
 ---
 import publications from '../data/publications.json';
+import researchData from '../data/research.json';
 import profile from '../data/profile.json';
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 
 // Flatten all publications from all categories and filter by highlight
 const allPubs = Object.values(publications).flat();
@@ -8,19 +11,43 @@ const highlightedPubs = allPubs
   .filter((p) => p.highlight === true)
   .sort((a, b) => (b.year || 0) - (a.year || 0)); // Sort by year descending
 
+// Convert research.json items to Selected Publications format
+const researchAsPubs = researchData.map((r) => {
+  const year = r.date ? parseInt(r.date.slice(0, 4), 10) : null;
+  const links = {};
+  if (r.links?.paper) {
+    const paperUrl = r.links.paper.startsWith('http') ? r.links.paper : `${base}${r.links.paper.startsWith('/') ? '' : '/'}${r.links.paper}`;
+    links.pdf = paperUrl;
+  }
+  if (r.links?.code) links.code = r.links.code;
+  if (r.links?.slides) links.slides = r.links.slides;
+  return {
+    title: r.title,
+    authors: 'Jiang, J.*',
+    venue: r.tags?.length ? r.tags.join(', ') : 'Research Project',
+    year,
+    links: Object.keys(links).length ? links : { code: null },
+    highlight: true,
+  };
+}).sort((a, b) => (b.year || 0) - (a.year || 0));
+
+// Merge and deduplicate by title (publications take precedence)
+const pubTitles = new Set(highlightedPubs.map((p) => p.title.toLowerCase().trim()));
+const researchOnly = researchAsPubs.filter((r) => !pubTitles.has(r.title.toLowerCase().trim()));
+const mergedPubs = [...highlightedPubs, ...researchOnly].sort((a, b) => (b.year || 0) - (a.year || 0));
+
 // Bold the user's name in authors (e.g. "Jiang, J.*" when profile name is "Junyu Jiang")
 const boldAuthorName = (authors: string) => {
   const lastName = profile.name.split(' ').pop() || '';
   if (!lastName) return authors;
-  // Match "Jiang, J" or "Jiang, J.*" or similar citation formats
   const regex = new RegExp(`(${lastName},?\\s*J\\.?\\*?)`, 'g');
   return authors.replace(regex, '<strong>$1</strong>');
 };
 
-// Get title link: prefer pdf, else code, else data
+// Get title link: prefer pdf, else code, else data, else slides
 const getTitleLink = (links: Record<string, string | null> | undefined) => {
   if (!links) return null;
-  return links.pdf || links.code || links.data || null;
+  return links.pdf || links.code || links.data || links.slides || null;
 };
 ---
 
@@ -28,7 +55,7 @@ const getTitleLink = (links: Record<string, string | null> | undefined) => {
   <div class="mx-auto max-w-3xl">
     <h2 class="mb-6 text-xl font-semibold text-gray-900">Selected Publications</h2>
     <ul class="space-y-6">
-      {highlightedPubs.map((pub) => {
+      {mergedPubs.map((pub) => {
         const titleLink = getTitleLink(pub.links);
         const yearStr = pub.year ? `, ${pub.year}` : '';
         return (
@@ -55,7 +82,7 @@ const getTitleLink = (links: Record<string, string | null> | undefined) => {
               {pub.venue}
               {yearStr}
             </div>
-            {/* Line 4: Badges [PDF], [Code], [Data] */}
+            {/* Line 4: Badges [PDF], [Code], [Data], [Slides] */}
             <div class="flex flex-wrap gap-2 text-xs">
               {pub.links?.pdf && (
                 <a
@@ -85,6 +112,16 @@ const getTitleLink = (links: Record<string, string | null> | undefined) => {
                   class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
                 >
                   [Data]
+                </a>
+              )}
+              {pub.links?.slides && (
+                <a
+                  href={pub.links.slides}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
+                >
+                  [Slides]
                 </a>
               )}
             </div>
