@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "gen": "python -m pip install -r requirements.txt -q && python scripts/build_data.py && python scripts/update_pubs.py",
+    "gen": "python -m pip install -r requirements.txt -q && python scripts/update_pubs.py",
     "gen:pubs": "python scripts/update_pubs.py",
     "sync:cv": "python scripts/sync_cv.py",
     "dev": "npm run gen && astro dev",
