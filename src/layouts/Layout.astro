@@ -4,9 +4,10 @@ import Header from '../components/Header.astro';
 
 interface Props {
 	title?: string;
+	fullWidth?: boolean;
 }
 
-const { title = 'Astro Basics' } = Astro.props;
+const { title = 'Astro Basics', fullWidth = false } = Astro.props;
 const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <!doctype html>
@@ -16,7 +17,7 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 		<meta name="viewport" content="width=device-width" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 		<link rel="icon" type="image/png" href="/icon.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="/icon.png" sizes="192x192" />
 		<link rel="apple-touch-icon" href="/icon.png" />
@@ -25,7 +26,7 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 	</head>
 	<body>
 		<Header />
-		<div class="mx-auto max-w-4xl px-4 pt-20 pb-8">
+		<div class={`mx-auto px-4 pt-20 pb-8 ${fullWidth ? 'max-w-7xl' : 'max-w-4xl'}`}>
 			<main>
 				<slot />
 			</main>

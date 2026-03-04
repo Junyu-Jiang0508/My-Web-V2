@@ -8,12 +8,19 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CV_SOURCE = PROJECT_ROOT / "CV" / "CV.pdf"
-PUBLIC_DEST = PROJECT_ROOT / "public" / "cv.pdf"
+PUBLIC_DEST = PROJECT_ROOT / "public" / "Junyu_Jiang_CV.pdf"
 
 if not CV_SOURCE.exists():
     print(f"[ERROR] CV not found: {CV_SOURCE}")
     exit(1)
 
 import shutil
+
+# Remove legacy cv.pdf if present (case-sensitive on Linux/GitHub Pages)
+legacy = PROJECT_ROOT / "public" / "cv.pdf"
+if legacy.exists() and legacy != PUBLIC_DEST:
+    legacy.unlink()
+    print(f"[INFO] Removed legacy {legacy.name}")
+
 shutil.copy2(CV_SOURCE, PUBLIC_DEST)
 print(f"[OK] CV synced: {CV_SOURCE} -> {PUBLIC_DEST}")
