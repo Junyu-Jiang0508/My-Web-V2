@@ -9,6 +9,12 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 const getMailtoLink = (email: string) =>
   email.replace(/\[at\]/g, '@').replace(/\[dot\]/g, '.');
 
+// Inject link into bio for Ukrainian Poetry Digital Archive
+const bioWithLinks = profile.bio.replace(
+  'Ukrainian Poetry Digital Archive',
+  '<a href="https://www.ukrpoetry.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline decoration-blue-300 underline-offset-2 hover:text-blue-800 hover:decoration-blue-500">Ukrainian Poetry Digital Archive</a>'
+);
+
 const socialLinks = [
   profile.email && { label: 'Email', href: `mailto:${getMailtoLink(profile.email)}`, icon: 'email' },
   profile.github && { label: 'GitHub', href: profile.github, icon: 'github' },
@@ -40,9 +46,7 @@ const socialLinks = [
 				<p class="mt-1 text-base text-gray-600">
 					{profile.school}
 				</p>
-				<p class="mt-4 max-w-xl text-base leading-relaxed text-gray-600">
-					{profile.bio}
-				</p>
+				<p class="mt-4 max-w-xl text-base leading-relaxed text-gray-600" set:html={bioWithLinks} />
 
 				<!-- Social Links -->
 				<div class="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
