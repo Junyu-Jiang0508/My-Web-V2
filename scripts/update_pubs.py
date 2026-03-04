@@ -83,9 +83,12 @@ def bib_entry_to_pub(entry: dict) -> dict:
     year_str = entry.get("year", "")
     year = int(year_str) if year_str and str(year_str).isdigit() else None
 
-    # Links - clean LaTeX and braces
+    # Links - clean LaTeX, braces, and strip .git from GitHub URLs (browser-friendly)
     def clean_url(s: str) -> str:
-        return clean_latex(str(s).strip().strip("{}"))
+        url = clean_latex(str(s).strip().strip("{}"))
+        if url.endswith(".git") and "github.com" in url:
+            url = url[:-4]  # Remove .git for browser navigation
+        return url
 
     links = {}
     if entry.get("code"):

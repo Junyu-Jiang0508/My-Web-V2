@@ -6,7 +6,7 @@
       "venue": "IPSA 2025",
       "year": 2025,
       "links": {
-        "code": "https://github.com/Junyu-Jiang0508/Taiwan_Framing_Discourse.git"
+        "code": "https://github.com/Junyu-Jiang0508/Taiwan_Framing_Discourse"
       },
       "highlight": true
     },
@@ -16,7 +16,7 @@
       "venue": "IAMCR 2025",
       "year": 2025,
       "links": {
-        "code": "https://github.com/Junyu-Jiang0508/AskJesus_Discourse_Study.git"
+        "code": "https://github.com/Junyu-Jiang0508/AskJesus_Discourse_Study"
       },
       "highlight": true
     },
@@ -45,20 +45,20 @@
     {
       "title": "Cyber Nationalism as Commodification: Witch-Hunt Discourse and Platform Economy",
       "authors": "Jiang, J.*",
-      "venue": "ICA 2026 (Submitted)",
+      "venue": "IAMCR 2026",
       "year": 2026,
       "links": {
-        "code": "https://github.com/Junyu-Jiang0508/cybernationlism_in_Wuchang.git"
+        "code": "https://github.com/Junyu-Jiang0508/cybernationlism_in_Wuchang"
       },
       "highlight": true
     },
     {
       "title": "Question Mark Bullet Screens and Political Distrust in Social Events Videos",
       "authors": "Jiang, J.*",
-      "venue": "Working Paper",
-      "year": null,
+      "venue": "ECREA 2026",
+      "year": 2026,
       "links": {
-        "code": "https://github.com/Junyu-Jiang0508/questionmark_danmaku.git"
+        "code": "https://github.com/Junyu-Jiang0508/questionmark_danmaku"
       },
       "highlight": false
     }
@@ -70,7 +70,7 @@
       "venue": "Best Undergraduate Thesis Award, Communication University of China",
       "year": 2025,
       "links": {
-        "code": "https://github.com/Junyu-Jiang0508/GAOKAO.git"
+        "code": "https://github.com/Junyu-Jiang0508/GAOKAO"
       },
       "highlight": true
     }

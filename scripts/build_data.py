@@ -68,14 +68,23 @@ def load_references_bib():
     return entries
 
 
+def strip_git_from_url(url: str) -> str:
+    """Remove .git suffix from GitHub URLs for browser-friendly links."""
+    if url and url.endswith(".git") and "github.com" in url:
+        return url[:-4]
+    return url or ""
+
+
 def ensure_links_structure(project: dict) -> dict:
-    """Ensure links has all expected keys."""
+    """Ensure links has all expected keys and strip .git from GitHub URLs."""
     default_links = {"paper": "", "code": "", "demo": "", "slides": ""}
     links = project.get("links", {})
     if isinstance(links, dict):
         for k, v in default_links.items():
             if k not in links:
                 links[k] = v
+            elif links[k] and k in ("code", "paper", "demo", "slides"):
+                links[k] = strip_git_from_url(str(links[k]))
     else:
         links = default_links.copy()
     project["links"] = links
