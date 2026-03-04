@@ -1,9 +1,7 @@
 ---
 /**
- * Giscus 评论区组件
- *
- * 配置方式：编辑 src/config.ts 中的 giscus.repoId 和 giscus.categoryId
- * 获取方式：访问 https://giscus.app/zh-CN 完成配置后复制
+ * Giscus comments component.
+ * Configure repoId and categoryId in src/config.ts (from giscus.app).
  */
 
 import { giscus } from '../config';
@@ -39,9 +37,9 @@ const { repo, repoId, category, categoryId, mapping, theme, lang, inputPosition,
       />
     ) : (
       <p class="comments-placeholder">
-        评论区待配置。请在 <code>src/config.ts</code> 中填入从{' '}
-        <a href="https://giscus.app/zh-CN" target="_blank" rel="noopener noreferrer">giscus.app</a>{' '}
-        获取的 <code>repoId</code> 和 <code>categoryId</code>。
+        Comments not configured. Add <code>repoId</code> and <code>categoryId</code> from{' '}
+        <a href="https://giscus.app" target="_blank" rel="noopener noreferrer">giscus.app</a>{' '}
+        to <code>src/config.ts</code>.
       </p>
     )}
   </div>

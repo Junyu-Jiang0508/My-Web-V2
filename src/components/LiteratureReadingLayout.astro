@@ -25,15 +25,15 @@ const { title, date } = Astro.props;
           <div class="dashboard-stats">
             <div class="stat-card" id="stat-total">
               <span class="stat-value" id="stat-total-value">0</span>
-              <span class="stat-label">Total / 总阅读量</span>
+              <span class="stat-label">Total</span>
             </div>
             <div class="stat-card" id="stat-books">
               <span class="stat-value" id="stat-books-value">0</span>
-              <span class="stat-label">Books / 书籍</span>
+              <span class="stat-label">Books</span>
             </div>
             <div class="stat-card" id="stat-papers">
               <span class="stat-value" id="stat-papers-value">0</span>
-              <span class="stat-label">Papers / 论文</span>
+              <span class="stat-label">Papers</span>
             </div>
           </div>
           <div class="dashboard-filters">
@@ -46,21 +46,21 @@ const { title, date } = Astro.props;
               </div>
             </div>
             <div class="filter-group">
-              <span class="filter-label">Language / 语言:</span>
+              <span class="filter-label">Language:</span>
               <div class="filter-pills filter-pills-lang">
-                <button type="button" class="filter-pill active" data-filter-lang="all">All / 全部</button>
-                <button type="button" class="filter-pill" data-filter-lang="zh">中文</button>
+                <button type="button" class="filter-pill active" data-filter-lang="all">All</button>
+                <button type="button" class="filter-pill" data-filter-lang="zh">Chinese</button>
                 <button type="button" class="filter-pill" data-filter-lang="en">English</button>
               </div>
             </div>
             <div class="filter-group">
-              <label for="filter-field" class="filter-label">Field / 大类:</label>
+              <label for="filter-field" class="filter-label">Field:</label>
               <select id="filter-field" class="filter-select">
                 <option value="">All Fields</option>
               </select>
             </div>
             <div class="filter-group">
-              <label for="filter-subfield" class="filter-label">Subfield / 小类:</label>
+              <label for="filter-subfield" class="filter-label">Subfield:</label>
               <select id="filter-subfield" class="filter-select">
                 <option value="">All Subfields</option>
               </select>
