@@ -13,7 +13,9 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## Books Reading
 
-<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-tags="Sociology, China"></div>
+<!-- 每条记录格式: data-field=大类(Sociology/Communication/Cultural Studies等) data-subfield=小类(Political Sociology/Computational Linguistics等) -->
+
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-field="Sociology" data-subfield="Political Sociology"></div>
 
 ### 1. Communist Neo-Traditionalism: Work and Authority in Chinese Industry (Andrew G. Walder)
 
@@ -33,7 +35,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ### 2. 传播政治经济学 (Vincent Mosco)
 
-<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-field="Communication" data-subfield="Political Economy"></div>
 
 #### July 28, 2025
 - **Read Chapter:** 30-47
@@ -52,7 +54,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   1. 社会关系，特别是权力关系，它们交互组成了资源的生产、分配和消费；而这就要求传播政治经济学检视顺着生产分配和消费线路不断变换的控制方式；或行动主义者如何通过新媒介来抵制权力的集中。但在传播产业中，生产者、分配者和消费者无法进行准确定义：受众不可被直接认定为消费者，在消费媒介产品时，也在制作出象征价值。
   2. 另一个对政治经济学的定义是，研究社会生活中的控制和存在。
 
-<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-field="Communication" data-subfield="Political Economy"></div>
 
 #### August 10, 2025
 - **Read Chapter:** 57-85
@@ -94,7 +96,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
      - **市场专家:** 两个或多方的交互过程，意义通过符号有意图的使用交换
      - **政治经济学启示:** 传播学应把传播体系看作社会基本经济、政治、文化过程的一部分：资本主义基本要素框架，资本积累与劳动工资
 
-<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-tags="Communication, Political Economy"></div>
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="zh" data-field="Communication" data-subfield="Political Economy"></div>
 
 #### August 14, 2025
 - **Read Chapter:** 96-110
@@ -133,7 +135,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
   
   5. **Core of New Tsinghua University:** The transfer of class power, the flow and change of the knowledge hierarchy
 
-<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-tags="Cultural Studies, Media"></div>
+<div class="reading-entry" data-type="book" data-year="2025" data-lang="en" data-field="Cultural Studies" data-subfield="Media Representation"></div>
 
 ### 4. Representation: Cultural Representations and Signifying Practices (Stuart Hall, Ed.)
 
@@ -162,7 +164,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## Paper Reading
 
-<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-tags="Content Moderation, Platform Governance, NLP"></div>
+<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-field="Communication" data-subfield="Platform Governance"></div>
 
 ### 2025-7
 
@@ -204,7 +206,7 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 - **Questions:** How to deal with LLMs bias?
 
-<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-tags="NLP, Disinformation, CSS"></div>
+<div class="reading-entry" data-type="paper" data-year="2025" data-lang="en" data-field="Sociology" data-subfield="Computational Social Science"></div>
 
 #### 2025-8-11
 - **Paper:** Waight, H., Messing, S., Shirikov, A., Roberts, M. E., Nagel, J., Greenfield, J., Brown, M. A., Aslett, K., & Tucker, J. A. (2025). Quantifying Narrative Similarity Across Languages. *Sociological Methods & Research, 54(3)*, 933–983. [Link](https://doi.org/10.1177/00491241251340080) (Continued)

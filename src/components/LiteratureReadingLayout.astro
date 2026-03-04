@@ -54,9 +54,15 @@ const { title, date } = Astro.props;
               </div>
             </div>
             <div class="filter-group">
-              <label for="filter-topic" class="filter-label">Topic / 领域:</label>
-              <select id="filter-topic" class="filter-select">
-                <option value="">All Topics / 全部领域</option>
+              <label for="filter-field" class="filter-label">Field / 大类:</label>
+              <select id="filter-field" class="filter-select">
+                <option value="">All Fields</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="filter-subfield" class="filter-label">Subfield / 小类:</label>
+              <select id="filter-subfield" class="filter-select">
+                <option value="">All Subfields</option>
               </select>
             </div>
           </div>
@@ -103,7 +109,8 @@ const { title, date } = Astro.props;
       const statTotal = document.getElementById('stat-total-value');
       const statBooks = document.getElementById('stat-books-value');
       const statPapers = document.getElementById('stat-papers-value');
-      const topicSelect = document.getElementById('filter-topic');
+      const fieldSelect = document.getElementById('filter-field');
+      const subfieldSelect = document.getElementById('filter-subfield');
       const countText = document.getElementById('dashboard-count');
       const typePills = document.querySelectorAll('.filter-pill[data-filter-type]');
       const langPills = document.querySelectorAll('.filter-pill[data-filter-lang]');
@@ -119,30 +126,57 @@ const { title, date } = Astro.props;
         countText.textContent = `Showing ${visibleTotal} of ${total} items`;
       }
 
-      function getTags() {
-        const tags = new Set();
+      function getFields() {
+        const fields = new Set();
         entries.forEach((e) => {
-          const t = e.dataset.tags;
-          if (t) t.split(',').forEach((tag) => tags.add(tag.trim()));
+          const f = e.dataset.field;
+          if (f) fields.add(f.trim());
         });
-        return [...tags].sort();
+        return [...fields].sort();
       }
 
-      function populateTopics() {
-        const tags = getTags();
-        topicSelect.innerHTML = '<option value="">All Topics</option>';
-        tags.forEach((tag) => {
+      function getSubfields() {
+        const subfields = new Set();
+        entries.forEach((e) => {
+          const s = e.dataset.subfield;
+          if (s) subfields.add(s.trim());
+        });
+        return [...subfields].sort();
+      }
+
+      function populateField() {
+        const fields = getFields();
+        fieldSelect.innerHTML = '<option value="">All Fields</option>';
+        fields.forEach((f) => {
           const opt = document.createElement('option');
-          opt.value = tag;
-          opt.textContent = tag;
-          topicSelect.appendChild(opt);
+          opt.value = f;
+          opt.textContent = f;
+          fieldSelect.appendChild(opt);
+        });
+      }
+
+      function populateSubfield() {
+        const fieldFilter = fieldSelect.value;
+        const subfields = new Set();
+        entries.forEach((e) => {
+          if (fieldFilter && e.dataset.field !== fieldFilter) return;
+          const s = e.dataset.subfield;
+          if (s) subfields.add(s.trim());
+        });
+        subfieldSelect.innerHTML = '<option value="">All Subfields</option>';
+        [...subfields].sort().forEach((s) => {
+          const opt = document.createElement('option');
+          opt.value = s;
+          opt.textContent = s;
+          subfieldSelect.appendChild(opt);
         });
       }
 
       function applyFilters() {
         const typeFilter = document.querySelector('.filter-pill[data-filter-type].active')?.dataset.filterType || 'all';
         const langFilter = document.querySelector('.filter-pill[data-filter-lang].active')?.dataset.filterLang || 'all';
-        const topicFilter = topicSelect.value;
+        const fieldFilter = fieldSelect.value;
+        const subfieldFilter = subfieldSelect.value;
 
         let visible = 0;
         let visibleBooks = 0;
@@ -151,11 +185,13 @@ const { title, date } = Astro.props;
         entries.forEach((entry) => {
           const type = entry.dataset.type;
           const lang = entry.dataset.lang || 'en';
-          const tags = (entry.dataset.tags || '').split(',').map((t) => t.trim());
+          const field = entry.dataset.field || '';
+          const subfield = entry.dataset.subfield || '';
           const typeMatch = typeFilter === 'all' || type === typeFilter;
           const langMatch = langFilter === 'all' || lang === langFilter;
-          const topicMatch = !topicFilter || tags.includes(topicFilter);
-          const show = typeMatch && langMatch && topicMatch;
+          const fieldMatch = !fieldFilter || field === fieldFilter;
+          const subfieldMatch = !subfieldFilter || subfield === subfieldFilter;
+          const show = typeMatch && langMatch && fieldMatch && subfieldMatch;
 
           entry.style.display = show ? '' : 'none';
           if (show) {
@@ -170,7 +206,8 @@ const { title, date } = Astro.props;
 
       // Initial stats
       updateStats(total, totalBooks, totalPapers);
-      populateTopics();
+      populateField();
+      populateSubfield();
 
       // Type filter pills
       typePills.forEach((pill) => {
@@ -190,8 +227,14 @@ const { title, date } = Astro.props;
         });
       });
 
-      // Topic select
-      topicSelect.addEventListener('change', applyFilters);
+      // Field select: when changed, update subfield options and apply filter
+      fieldSelect.addEventListener('change', () => {
+        populateSubfield();
+        subfieldSelect.value = '';
+        applyFilters();
+      });
+
+      subfieldSelect.addEventListener('change', applyFilters);
     }
 
     function buildTOC() {
