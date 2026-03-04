@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+const site = import.meta.env.SITE || 'https://junyuj.com';
 const allPosts = await getCollection('blog');
 const posts = allPosts
   .filter((post) => !post.data.draft)
@@ -15,7 +16,7 @@ const posts = allPosts
       {posts.map((post) => (
         <li class="border-b border-gray-200 pb-4 last:border-0">
           <a
-            href={`/blog/${post.slug}`}
+            href={`${site}/blog/${post.slug}`}
             class="group flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4"
           >
             <time class="shrink-0 text-sm text-gray-500">
