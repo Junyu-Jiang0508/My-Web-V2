@@ -5,7 +5,7 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
 
 const navLinks = [
   { href: `${base}/`, label: 'Home' },
-  { href: `${base}/research`, label: 'Research' },
+  { href: `${base}/blog`, label: 'Blog' },
   ...(profile.cv ? [{ href: profile.cv.startsWith('http') ? profile.cv : `${base}${profile.cv.startsWith('/') ? '' : '/'}${profile.cv}`, label: 'CV', external: true }] : []),
   ...(profile.news ? [{ href: profile.news.startsWith('http') ? profile.news : `${base}${profile.news.startsWith('/') ? '' : '/'}${profile.news}`, label: 'News', external: profile.news.startsWith('http') }] : []),
 ];

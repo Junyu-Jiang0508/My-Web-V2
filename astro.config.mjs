@@ -9,6 +9,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: "https://junyu-jiang0508.github.io",
   base: "/My-Web-V2",
+  redirects: {
+    '/research': '/',
+  },
   integrations: [react()],
 
   vite: {
