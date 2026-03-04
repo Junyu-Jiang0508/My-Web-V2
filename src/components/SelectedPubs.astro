@@ -1,0 +1,96 @@
+---
+import publications from '../data/publications.json';
+import profile from '../data/profile.json';
+
+// Flatten all publications from all categories and filter by highlight
+const allPubs = Object.values(publications).flat();
+const highlightedPubs = allPubs
+  .filter((p) => p.highlight === true)
+  .sort((a, b) => (b.year || 0) - (a.year || 0)); // Sort by year descending
+
+// Bold the user's name in authors (e.g. "Jiang, J.*" when profile name is "Junyu Jiang")
+const boldAuthorName = (authors: string) => {
+  const lastName = profile.name.split(' ').pop() || '';
+  if (!lastName) return authors;
+  // Match "Jiang, J" or "Jiang, J.*" or similar citation formats
+  const regex = new RegExp(`(${lastName},?\\s*J\\.?\\*?)`, 'g');
+  return authors.replace(regex, '<strong>$1</strong>');
+};
+
+// Get title link: prefer pdf, else code, else data
+const getTitleLink = (links: Record<string, string | null> | undefined) => {
+  if (!links) return null;
+  return links.pdf || links.code || links.data || null;
+};
+---
+
+<section class="px-4 py-12 md:py-16">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="mb-6 text-xl font-semibold text-gray-900">Selected Publications</h2>
+    <ul class="space-y-6">
+      {highlightedPubs.map((pub) => {
+        const titleLink = getTitleLink(pub.links);
+        const yearStr = pub.year ? `, ${pub.year}` : '';
+        return (
+          <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
+            {/* Line 1: Title (bold, link if available) */}
+            <div class="mb-1">
+              {titleLink ? (
+                <a
+                  href={titleLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-semibold text-gray-900 underline decoration-gray-300 underline-offset-2 transition-colors hover:decoration-gray-500"
+                >
+                  {pub.title}
+                </a>
+              ) : (
+                <span class="font-semibold text-gray-900">{pub.title}</span>
+              )}
+            </div>
+            {/* Line 2: Authors (bold user's name) */}
+            <div class="mb-1 text-sm text-gray-700" set:html={boldAuthorName(pub.authors)} />
+            {/* Line 3: Venue and Year (italic) */}
+            <div class="mb-2 text-sm italic text-gray-600">
+              {pub.venue}
+              {yearStr}
+            </div>
+            {/* Line 4: Badges [PDF], [Code], [Data] */}
+            <div class="flex flex-wrap gap-2 text-xs">
+              {pub.links?.pdf && (
+                <a
+                  href={pub.links.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
+                >
+                  [PDF]
+                </a>
+              )}
+              {pub.links?.code && (
+                <a
+                  href={pub.links.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
+                >
+                  [Code]
+                </a>
+              )}
+              {pub.links?.data && (
+                <a
+                  href={pub.links.data}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
+                >
+                  [Data]
+                </a>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</section>

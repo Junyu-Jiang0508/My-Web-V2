@@ -1,0 +1,385 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+\definecolor{darkblue}{RGB}{0,0,139}
+
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+
+% Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands with scriptsize for descriptions
+\newcommand{\resumeItem}[2]{
+  \item\scriptsize{
+    {#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{2mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{p{0.75\textwidth}@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont}
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont}
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont}
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont}
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont}
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont}
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont}
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont}
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont}
+
+\begin{document}
+\onehalfspacing
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Jun-yu Jiang}}
+\end{center}
+\vspace{-3mm}
+
+\begin{center}
+    \href{https://junyuj.com}{\faGlobe \hspace{0.5mm} junyuj.com} \quad | \quad
+    \href{mailto:junyujiang0508@gmail.com}{\faEnvelope \hspace{0.5mm} junyujiang0508@gmail.com} \quad | \quad
+    \href{https://github.com/Junyu-Jiang0508}{\faGithub \hspace{0.5mm} Junyu-Jiang0508}
+\end{center}
+\vspace{-6mm}
+\vspace{-4mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of California, San Diego}{ }
+{M.S. in Computational Social Science}{Jun. 2025 - Jul. 2026 (Expected)}
+\resumeItemListStart
+\item \textbf{Relevant Coursework:} Text as Data, Advanced Statistical Methods for CSS, Machine Learning for Social Sciences, Network Analysis, Neural Networks and Deep Learning 
+\resumeItemListEnd
+
+\resumeSubheading
+{Communication University of China, Beijing}{ }
+{B.A. in Communication (Honors), joint program with University of Missouri-Columbia}{Sep. 2021 - Jun. 2025}
+\resumeItemListStart
+\item \textbf{GPA: 3.9/4.0}
+\resumeItemListEnd
+
+\resumeSubheading
+{University of Missouri-Columbia, Columbia}{ }
+{B.A. Non-Degree Joint Program in Journalism, Missouri School of Journalism}{Sep. 2021 - Jun. 2025}
+\resumeItemListStart
+\item \textbf{GPA: 3.84/4.0}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Peer-Reviewed Publications \& Conference Papers}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {\textbf{Framing the Nation: Discourse of National Identity Construction in the Taiwan Region}}
+  {Jiang, J.* \& Li, Z.}
+  {IPSA 2025}
+  {{[\href{https://github.com/Junyu-Jiang0508/Taiwan_Framing_Discourse.git}{\faIcon{globe}}]}}
+  \resumeItemListStart
+  \item {\scriptsize Developed the Discursive Polysemy Model (DPM)—a Defining–Positioning–Mobilizing framework that operationalizes the nation-as-floating-signifier concept and maps structured frame configurations in Taiwanese national identity discourse.}
+  \item {\scriptsize Constructed frame co-occurrence networks and sequence patterns to identify cross-party equivalence chains of national identity, revealing divergent articulation of sovereignty, democracy, and security across major candidates.}
+  \resumeItemListEnd
+
+  \resumeProject
+  {\textbf{Pseudo-Sacred Illusions in the Age of Generative AI: A Discourse and Computational Analysis of Ask\_Jesus}}
+  {Jiang, J.* \& Liu, Z}
+  {IAMCR 2025}
+  {{[\href{https://github.com/Junyu-Jiang0508/AskJesus_Discourse_Study.git}{\faIcon{globe}}]}}
+  \resumeItemListStart
+    \item {\scriptsize Develops the concept of \textit{pseudo-sacred illusion} and a transferable \textit{algorithmic authority illusion} model, showing how LLM fluency, persona cues, and platform power jointly construct quasi-divine authority in religious AI interfaces.}
+    \item {\scriptsize Designs a dual-layer, 17-category framing scheme to analyze 57,960 Ask\_Jesus interaction turns, combining frame–emotion heatmaps (CARER), Bible-based hallucination auditing, and standardized residual analysis to trace how specific frames shift user affect and reinforce perceived AI authority.}
+  \resumeItemListEnd
+
+
+
+\resumeProject
+  {\textbf{How Regional Stereotypes Are Narrated: LDA Analysis Based on Douyin}}
+  {Jiang, J.* \& Xu, J}
+  {IAMCR 2024}
+  {{[\href{https://github.com/Junyu-Jiang0508/IAMCR2024}{\faIcon{globe}}]}}
+  \resumeItemListStart
+  \item {\scriptsize Theoretically framed online regional stereotypes as Bourdieusian symbolic violence and empirically identified four narrative frameworks (objective, ironic, symbolic, image-repair) through which they are constructed in digital comment sections.}
+  \item {\scriptsize Applied LDA topic modeling to 4,953 Douyin comments, revealing how dialect markers and historical allusions function as cultural identifiers through indirect speech acts to reinforce regional stigma.}
+\resumeItemListEnd
+
+\resumeProject
+  {\textbf{Aging as a Mythological Construction: Analysis of Elderly Self-Identity}}
+  {Jiang, J.* \& Li, S., Li, J.}
+  {AMIC 2024}
+  {{[\href{https://github.com/Junyu-Jiang0508/Elderly_Studies}{\faIcon{globe}}]}}
+  \resumeItemListStart
+  \item {\scriptsize Expanded Heider's Balance Theory by empirically identifying a 'resistance to attitude adjustment' pathway, challenging its universal applicability when elderly with emphasized intrinsic values and sharp physical deterioration actively maintain cognitive imbalance.}
+  \item {\scriptsize Applied Glaserian grounded theory to 150,347-word corpus from 11 rural Beijing elderly (9-month longitudinal study), systematically constructing a 4-dimensional aging myth framework through three-stage coding (69 initial → 17 axial → 4 core categories).}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+\section{\textbf{Working Papers \& Research in Progress}}
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+
+\resumeProject
+  {\textbf{Cyber Nationalism as Commodification: Witch-Hunt Discourse and Platform Economy}}
+  {Jiang, J.*}
+  {ICA 2026 (Submitted)}
+  {{[\href{https://github.com/Junyu-Jiang0508/cybernationlism_in_Wuchang.git}{\faIcon{globe}}]}}
+\resumeItemListStart
+  \item {\scriptsize Conceptualizes cyber nationalism as a commodified spectacle, proposing a three-stage witch-hunt template (revealing → denunciation → judgment) with replicable narrative units and transition rules for platform monetization.}
+  \item {\scriptsize Combines RoBERTa, SBERT, and Few-shot Prototypical Network with custom nationalism frame lexicon to extract cross-platform (Bilibili, Douyin, Zhihu) homogenized templates, revealing emotional capital → adversarial discourse → traffic monetization pipeline in videos game controversies.}
+\resumeItemListEnd
+
+\resumeProject
+  {\textbf{Question Mark Bullet Screens and Political Distrust in Social Events Videos}}
+  {Jiang, J.*}
+  {Working Paper}
+  {{[\href{https://github.com/Junyu-Jiang0508/questionmark_danmaku.git}{\faIcon{globe}}]}}
+  \resumeItemListStart
+    \item {\scriptsize Theorizes question mark danmaku as digital infrapolitics, which means a low-risk, high-context form of skeptical decoding, and advances a temporal association hypothesis that positive policy narratives on Bilibili are followed by spikes in question-mark density within 0–10s windows.}
+    \item {\scriptsize Applies time-window event modeling, multilevel mixed-effects regression, and LLM-assisted semantic classification to the K-Visa controversy corpus ($N=327$ videos), showing sarcasm and skepticism dominate over confusion in pro-government videos, evidencing collective skeptical decoding.}
+  \resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+\section{\textbf{Research Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {\textbf{An Analysis of Discourse Frames in Gaokao News Reports}}{\textbf{Undergraduate Thesis}}
+      {Best Undergraduate Thesis Award, Communication University of China \hspace{1mm} [\href{https://github.com/Junyu-Jiang0508/GAOKAO.git}{\faIcon{globe}}]}{Sep. 2024 - May 2025}
+      \resumeItemListStart
+        \item {\scriptsize Proposed the "Frame-Emotion Dual-Track Interaction Model," demonstrating how frames and emotional appeals co-evolve to shape perception.}
+        \item {\scriptsize Used LLMs (DeepSeek) and CARER model for large-scale analysis, revealing systematic patterns by media ownership and region.}
+        \item {\scriptsize Constructed a 48-year longitudinal corpus, including manual digitization of pre-2008 print and microfiche archives.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {\textbf{Ukrainian Poetry Digital Archive Project}}{\textbf{Research Assistant}}
+      {PI: \href{https://www.ukrpoetry.org/}{Prof. Amelia Glasser}, University of California, San Diego}{Jun. 2025 - Jan. 2026 (Expected)}
+      \resumeItemListStart
+        \item {\scriptsize Built a Chrome extension and data pipeline to systematically collect and de-duplicate 4,000+ Ukrainian Facebook poems, turning an ad-hoc workflow into a reproducible corpus for annotation and analysis.}
+        \item {\scriptsize Co-developed an advanced annotation manual for Ukrainian pronouns, specifying referent categories (SELF/INTIMATE/LOCAL/NATION/STATE/ENEMY/etc.), “we”-inclusivity, syntactic and semantic roles, discourse functions, and stratified sampling protocols for 400–600 tokens.}
+        \item {\scriptsize Annotating and modeling shifts in poetic voice and polyphony (monologic vs. mediated vs. choral) together with collocation networks (2014–2025) to trace how person perspective and national-identity vocabularies transform across wartime phases.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {The Symbiotic Development of Digital Nomads and Rural Communities}{\textbf{Research Assistant}}
+      {PI: \href{https://sic.cuc.edu.cn/2024/0814/c2066a241968/page.htm}{Prof. Rui Wang}, Communication University of China}{Mar. 2024 - Jul. 2024}
+      \resumeItemListStart
+        \item {\scriptsize Modeled interpersonal communication networks through 20 in-depth interviews, identifying pathways for virtual identity formation and community integration.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Big Data Project on Global Opinions}{\textbf{Research Assistant}}
+      {PI: \href{https://www.ais.cn/mentor/mentorDetail/9ea8421a-5e3c-11ec-b045-a85e45a23623}{Prof. Ting Zhou}, Communication University of China}{Jan. 2024 - Jan. 2026 (Expected)}
+      \resumeItemListStart
+        \item {\scriptsize Executed sentiment analysis on 500+ Western media articles regarding China's "Two Sessions" for China's National News Agency.}
+        \item {\scriptsize Monitored credibility risks for foreign social media accounts, producing weekly analytical briefings.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Desire to Remain Young: An Investigation of Elderly Matchmaking in China}}{\textbf{Research Project Developer}}
+      {2024 Paper Data Content Annual Case Collection Award}{Mar. 2023 - Jun. 2023}
+      \resumeItemListStart
+        \item {\scriptsize Collected and coded qualitative dataset from 22 in-depth interviews to analyze identity and desire in matchmaking contexts.}
+        \item {\scriptsize Designed an award-winning interactive data story website \href{https://github.com/Junyu-Jiang0508/seniorlove0705}{[link]}, implementing full-stack solution for dynamic user profile comparison.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Selected Work Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {China Telecom}
+  {Event Operations Intern}
+  {Jan. 2022 - Mar. 2022}
+  {}
+\resumeItemListStart
+  \item {\scriptsize Analyzed real-time social media data (Weibo, WeChat) to model user engagement patterns and public opinion trends.}
+  \item {\scriptsize Performed large-scale comment analysis to identify key audience demographics and public sentiment, guiding content development.}
+\resumeItemListEnd
+
+\resumeProject
+  {iFeng}
+  {News Editing Intern}
+  {Sep. 2023 - Dec. 2023}
+  {{[\href{https://pingce.ifeng.com/c/8UgcaZo240z}{\textcolor{darkblue}{\faIcon{globe}}}]}}
+\resumeItemListStart
+  \item {\scriptsize Authored and published press releases on emerging technology for iFeng.com, covering major industry events.}
+  \item {\scriptsize Developed video scripts for the \textit{ifengTech} column and conducted daily public opinion monitoring, providing analytical briefings.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+
+\section{\textbf{Academic Service}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+  \resumePOR{Peer Reviewer}{International Communication Association (ICA)}{Nov. 2024}
+  \resumePOR{Peer Reviewer}{International Political Science Association (IPSA)}{Nov. 2024}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Community and Volunteer Engagement}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+  \resumePOR{Outstanding Volunteer}{The Third Belt and Road Forum for International Cooperation}{Oct. 2023}
+  \resumePOR{Outstanding Volunteer}{China International Fair for Trade in Service (CIFTIS)}{Sep. 2023}
+  \resumePOR{Volunteer Teacher}{Guanghua Foundation Voluntary Teaching Programme}{Jun. 2023}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Selected Awards and Honors}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+  \resumePOR{Outstanding Undergraduate Thesis Award (University-Level)}{}{May 2025}
+  \resumePOR{Paper Data Content Annual Case Collection Award}{}{Jun. 2024}
+  \resumePOR{Second-Class Scholarship (University-Level)}{}{Nov. 2024}
+  \resumePOR{Meritorious Student (University-Level)}{}{Sep. 2022 - Sep. 2024}
+  \resumePOR{Practical Scholarship (University-Level)}{}{Oct. 2023}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Skills}}
+\vspace{1.5mm}
+\scriptsize{
+\begin{tabularx}{\textwidth}{@{}l@{\hspace{2mm}} X}
+\textbf{Programming} & Python (Pandas, Scikit-learn, PyTorch, NLTK, spaCy), R, Web (HTML, CSS, JavaScript) \\
+\textbf{Analytical Tools} & SPSS, NVivo, Tableau, ECharts \\
+\textbf{NLP/ML Models} & BERT, SBERT, LDA, and other transformer-based architectures \\
+\textbf{Production Tools} & \LaTeX, Microsoft Office Suite, Adobe Creative Suite (Premiere, Photoshop) \\
+\end{tabularx}
+}
+\vspace{-2mm}
+
+\end{document}

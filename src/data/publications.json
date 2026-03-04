@@ -1,0 +1,78 @@
+{
+  "Conference Papers": [
+    {
+      "title": "Framing the Nation: Discourse of National Identity Construction in the Taiwan Region",
+      "authors": "Jiang, J.* & Li, Z.",
+      "venue": "IPSA 2025",
+      "year": 2025,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/Taiwan_Framing_Discourse.git"
+      },
+      "highlight": true
+    },
+    {
+      "title": "Pseudo-Sacred Illusions in the Age of Generative AI: A Discourse and Computational Analysis of Ask_Jesus",
+      "authors": "Jiang, J.* & Liu, Z.",
+      "venue": "IAMCR 2025",
+      "year": 2025,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/AskJesus_Discourse_Study.git"
+      },
+      "highlight": true
+    },
+    {
+      "title": "How Regional Stereotypes Are Narrated: LDA Analysis Based on Douyin",
+      "authors": "Jiang, J.* & Xu, J.",
+      "venue": "IAMCR 2024",
+      "year": 2024,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/IAMCR2024"
+      },
+      "highlight": false
+    },
+    {
+      "title": "Aging as a Mythological Construction: Analysis of Elderly Self-Identity",
+      "authors": "Jiang, J.* & Li, S. & Li, J.",
+      "venue": "AMIC 2024",
+      "year": 2024,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/Elderly_Studies"
+      },
+      "highlight": false
+    }
+  ],
+  "Working Papers": [
+    {
+      "title": "Cyber Nationalism as Commodification: Witch-Hunt Discourse and Platform Economy",
+      "authors": "Jiang, J.*",
+      "venue": "ICA 2026 (Submitted)",
+      "year": 2026,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/cybernationlism_in_Wuchang.git"
+      },
+      "highlight": true
+    },
+    {
+      "title": "Question Mark Bullet Screens and Political Distrust in Social Events Videos",
+      "authors": "Jiang, J.*",
+      "venue": "Working Paper",
+      "year": null,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/questionmark_danmaku.git"
+      },
+      "highlight": false
+    }
+  ],
+  "Undergraduate Thesis": [
+    {
+      "title": "An Analysis of Discourse Frames in Gaokao News Reports",
+      "authors": "Jiang, J.*",
+      "venue": "Best Undergraduate Thesis Award, Communication University of China",
+      "year": 2025,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/GAOKAO.git"
+      },
+      "highlight": true
+    }
+  ]
+}

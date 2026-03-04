@@ -1,15 +1,104 @@
 ---
+import profile from '../data/profile.json';
+
 const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
+
+const navLinks = [
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/research`, label: 'Research' },
+  ...(profile.cv ? [{ href: profile.cv.startsWith('http') ? profile.cv : `${base}${profile.cv.startsWith('/') ? '' : '/'}${profile.cv}`, label: 'CV', external: true }] : []),
+  ...(profile.news ? [{ href: profile.news.startsWith('http') ? profile.news : `${base}${profile.news.startsWith('/') ? '' : '/'}${profile.news}`, label: 'News', external: profile.news.startsWith('http') }] : []),
+];
 ---
 
-<nav class="sticky top-0 z-50 flex items-center justify-between border-b border-gray-200/60 bg-white/80 px-4 py-3 backdrop-blur-sm md:px-6">
-	<a href={`${base}/`} class="text-lg font-bold text-gray-900 transition-colors hover:text-gray-600">
-		Junyu Jiang
-	</a>
-	<div class="flex flex-wrap items-center gap-4 md:gap-6">
-		<a href={`${base}/`} class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Home</a>
-		<a href={`${base}/research`} class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Research</a>
-		<a href={`${base}/blog`} class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Blog</a>
-		<a href={`${base}/cv`} class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">CV</a>
-	</div>
-</nav>
+<header class="fixed left-0 right-0 top-0 z-50 border-b border-gray-200/60 bg-white/70 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3 md:px-6">
+    <a href={`${base}/`} class="text-lg font-bold text-gray-900 transition-colors hover:text-gray-600">
+      {profile.name}
+    </a>
+
+    <!-- Desktop menu -->
+    <div class="hidden items-center gap-6 md:flex">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          target={link.external ? '_blank' : undefined}
+          rel={link.external ? 'noopener noreferrer' : undefined}
+          class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Mobile hamburger button -->
+    <button
+      type="button"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Toggle menu"
+      class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 md:hidden"
+    >
+      <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu (collapsible) -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-gray-200/60 bg-white/95 backdrop-blur-md md:hidden"
+    aria-hidden="true"
+  >
+    <div class="flex flex-col px-4 py-3">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          target={link.external ? '_blank' : undefined}
+          rel={link.external ? 'noopener noreferrer' : undefined}
+          class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      menu.setAttribute('aria-hidden', String(isOpen));
+      if (iconOpen && iconClose) {
+        iconOpen.classList.toggle('hidden', !isOpen);
+        iconClose.classList.toggle('hidden', isOpen);
+      }
+    });
+
+    // Close menu when clicking a link (for same-page navigation)
+    menu.querySelectorAll('.mobile-nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        toggle?.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        if (iconOpen && iconClose) {
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      });
+    });
+  }
+</script>

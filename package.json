@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "gen": "python scripts/build_data.py",
+    "gen": "python scripts/build_data.py && python scripts/update_pubs.py",
+    "gen:pubs": "python scripts/update_pubs.py",
+    "sync:cv": "python scripts/sync_cv.py",
     "dev": "npm run gen && astro dev",
     "build": "npm run gen && astro build",
     "preview": "astro preview",
