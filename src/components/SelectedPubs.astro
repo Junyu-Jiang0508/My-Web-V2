@@ -29,8 +29,8 @@ const getTitleLink = (links: Record<string, string | null> | undefined) => links
         const yearStr = pub.year ? `, ${pub.year}` : '';
         return (
           <li class="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
-            {/* Line 1: Title (bold, link if available) */}
-            <div class="mb-1">
+            {/* Line 1: Title (bold, link if available) - line-height & break for mobile */}
+            <div class="mb-1 leading-relaxed break-words">
               {titleLink ? (
                 <a
                   href={titleLink}
@@ -51,19 +51,6 @@ const getTitleLink = (links: Record<string, string | null> | undefined) => links
               {pub.venue}
               {yearStr}
             </div>
-            {/* Line 4: Only [Code] badge (GitHub) */}
-            {pub.links?.code && (
-              <div class="flex flex-wrap gap-2 text-xs">
-                <a
-                  href={pub.links.code}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 underline decoration-gray-300 underline-offset-1 hover:text-gray-900"
-                >
-                  [Code]
-                </a>
-              </div>
-            )}
           </li>
         );
       })}
