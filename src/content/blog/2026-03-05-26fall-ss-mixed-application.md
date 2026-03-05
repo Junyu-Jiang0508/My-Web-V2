@@ -1,7 +1,10 @@
+d
+
 ---
-title: "我的26fall北美社科混申总结"
+
+## title: "我的26fall北美社科混申总结"
+
 date: 2026-03-05
----
 
 ## 前言
 
@@ -36,29 +39,50 @@ date: 2026-03-05
 | Rutgers      | Comm & Info  | 12/1  | 1/27  | —            | —    |
 | Northwestern | MTS          | 12/1  | —     | —            | —    |
 | Cornell      | Comm         | 12/1  | —     | Declined     | 1/28 |
-| NYU          | MCC          | 1/12  | —     | Declined     | 3/5  |
+| NYU          | MCC          | 12/1  | —     | Declined     | 3/5  |
 | Michigan     | iSchool      | 12/1  | 1/9   | Declined     | 2/6  |
 | UIUC         | Comm         | 12/1  | —     | Declined     | 1/16 |
 | UCSD         | PoliSci      | 12/1  | —     | Declined     | 2/12 |
 | CU Boulder   | Info         | 12/1  | —     | Declined     | 1/27 |
-| CU Boulder   | APRD         | 11/2  | —     | Declined     | 2/9  |
+| CU Boulder   | APRD         | 11/25 | —     | Declined     | 2/9  |
 
 
 ## 二、选校
 
 ### 1. 是否应该读硕士
 
-### 2. 我所了解过的项目
+#### a. 关于直博
 
-### 3. 如何选择自己合适的项目
+我所了解的陆本直播项目还是挺少的。我本科直系师哥有去[Texas Tech University](https://www.depts.ttu.edu/comc/graduate/phd/)和[路易斯安那州立](https://www.lsu.edu/hss/cmst/graduate/about.php)的案例，也有朋友从鹿大去Ohio State的，另外我在寄托天下有看到从鹿大去[UW](https://com.uw.edu/ma-phd/curriculum/areas-of-study/)的[大佬](https://bbs.gter.net/thread-2501575-1-1.html)。但综合来看难度很大，只适合国内Top985且有会议论文或pub的极少数人。且随着Trump Policy导致的科研资金极具缩减，个人认为这样的道路会越来越难。我在25Fall申请master时也杂糅尝试着申请了[Minnesota](https://cla.umn.edu/comm-studies/graduate/degrees-offered/phd-communication-studies)（wl但rej）和[UNC](https://comm.unc.edu/graduate-studies/)（无面rej）的phd项目，个人认为有这方面想法的朋友们应该大胆尝试但绝不应该all in。
+
+#### b. 关于硕士项目的选择
+
+我对于陆本陆硕这条路径的选择并没有太深的了解，个人认为三年的硕士时间非常充裕，比起美国相对紧缩且课程繁忙的硕士项目来说会有更多的时间来好好做自己的研究，确定自己相对具体的研究方向。我在面试过程中有认识从中大本硕并且最后取得很好的offer的同学，所以认为在传播学里陆硕可能没有想象中的那么不占优势。
+
+关于英港新的硕士项目，我认为优势主要在于老师可能的connect和与国外培养体系的接轨，但过短的培养时间会让更多人选择gap一年在下一个cycle申请。我所熟知的对申请有确切帮助且有相当不错的placement项目有：
+
+- [CUHK Mphil in Communication](https://rpg.com.cuhk.edu.hk/m-phil-in-communication/) 亚洲顶级的纯粹学术跳板，但录取难度奇高。其实感觉能拿到这个的朋友，往往本就足够直接去北美Top 50的PhD项目里碰运气了。
+- [Oxford OII](https://www.ox.ac.uk/admissions/graduate/courses/msc-social-science-internet) 资源非常多的项目，量化的培养可能没那么强，10个月的培养周期确实时间比较紧。我认识的一个直系师哥硕士来这里最后去到了CMU做HCI。
+- [LSE Media and Comm (Research)](https://www.lse.ac.uk/study-at-lse/graduate/msc-media-and-communications-research) placement蛮不错的，cohort挺小而且难度没那么高，Faculty和美国学界联系还挺多的，但最后听说前年去[UPenn](https://www.asc.upenn.edu/graduate/doctorate-communication)的几个都是本科都是美本藤校的，所以具体能有多少。[LSE 和 USC那个合办的项目](https://www.lse.ac.uk/study-at-lse/graduate/msc-global-media-and-communications-lse-and-usc)可能是更好的选择，但我的了解也极其有限。
+- 阿姆斯特丹的量化培养以及学科名气也能有很大的帮助，欧陆包括[Zurich](https://www.uzh.ch/en/studies/programs/master/internet_society.html)做政治传播的也有几个很有名气的学者，学费也挺便宜，都是不错的去处。
+
+美国的硕士项目能够提供许多优势，包括但不限于：1）美国学校很喜欢录取已经接受过美国教育体系培养的人（在这个层面上来说，本科去美国读一个暑校也许帮助会很大）。2）直接的推荐信和connection。3）参会的travel grant都还挺足的，而且路程也近。
+
+美国硕士有两条路径取向。第一种是申请大公校有奖的硕士项目，但最近对州内学生的极度保护也让这一条路径没有之前那么好走了。具体的项目可以参考[郝鸿涛学长的美国提供全奖的新闻传播学硕士项目（不完全统计）](https://hongtaoh.com/cn/2020/02/01/us-comm-ma/)。
+
+第二种是去名校读镀金硕士，常见的去向有东亚研究（[哈佛](https://gsas.harvard.edu/program/regional-studies-east-asia)、[哥大](https://www.gsas.columbia.edu/content/east-asian-regional-studies)、伯克利等）、计算社科（[芝加哥](https://macss.uchicago.edu/)、[哥大](https://qmss.columbia.edu/)等)，一些社科项目例如芝大的MAPSS今年的结果貌似不太好看，我猜测是学科计算取向程度的加深导致与美国学界的资金缩紧的双重结果。
+
+### 2. 如何选择自己合适的项目
+
+我在第一步做的是进行比较宏观的检索。在Political Science 和 Information Science，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士点开设点](https://www.natcom.org/doctoral-program-guide/)。
+
+### 3. 我所了解过的项目
 
 ## 三、材料准备
 
-### 1. 硬实力
+### 1. 在申请季中可以提升的
 
-### 2. 软实力
-
-### 3. 对各部分的一些小建议
+### 2. 在申请季中不可把控的
 
 ## 四、套磁
 
