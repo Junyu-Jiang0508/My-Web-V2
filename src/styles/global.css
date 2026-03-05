@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* Blog typography: Times New Roman for English, 宋体 for Chinese */
+.blog-prose {
+  font-family: "Times New Roman", "SimSun", "宋体", serif;
+}
