@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import LiteratureReadingLayout from '../../components/LiteratureReadingLayout.astro';
 import GiscusComments from '../../components/GiscusComments.astro';
+import BlogTOC from '../../components/BlogTOC.astro';
 import { getCollection } from 'astro:content';
 
 const LITERATURE_SLUG = '2025-07-27-computational-social-science-literature-dailyreading';
@@ -41,6 +42,7 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
           </div>
         )}
       </header>
+      <BlogTOC />
       <div class="prose prose-gray mx-auto max-w-none lg:prose-xl">
         <Content />
       </div>
