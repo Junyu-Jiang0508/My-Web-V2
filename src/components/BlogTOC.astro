@@ -6,8 +6,8 @@
 ---
 
 <nav id="blog-toc" class="blog-toc" aria-label="Table of contents" style="display: none;">
-  <h3 class="blog-toc-title">Contents</h3>
-  <ul id="blog-toc-list" class="blog-toc-list"></ul>
+  <p class="blog-toc-title">目 录</p>
+  <ol id="blog-toc-list" class="blog-toc-list"></ol>
 </nav>
 
 <script>
@@ -23,6 +23,9 @@
     toc.style.display = '';
     tocList.innerHTML = '';
 
+    let h2Index = 0;
+    let h3Index = 0;
+
     headings.forEach((h) => {
       let id = h.id;
       if (!id) {
@@ -36,7 +39,18 @@
       }
 
       const li = document.createElement('li');
-      li.className = `blog-toc-item blog-toc-${h.tagName.toLowerCase()}`;
+      const isH2 = h.tagName === 'H2';
+      if (isH2) {
+        h2Index++;
+        h3Index = 0;
+        li.className = 'blog-toc-item blog-toc-h2';
+        li.dataset.num = String(h2Index);
+      } else {
+        h3Index++;
+        li.className = 'blog-toc-item blog-toc-h3';
+        li.dataset.num = `${h2Index}.${h3Index}`;
+      }
+
       const a = document.createElement('a');
       a.href = `#${id}`;
       a.textContent = h.textContent || '';
@@ -52,46 +66,67 @@
 
 <style>
   .blog-toc {
-    margin-bottom: 2rem;
-    padding: 1rem 1.25rem;
-    background: #f8fafc;
-    border-radius: 0.5rem;
-    border: 1px solid #e2e8f0;
+    margin-bottom: 2.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid #374151;
+    border-bottom: 1px solid #374151;
+    font-family: "Times New Roman", "SimSun", "宋体", serif;
   }
 
   .blog-toc-title {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748b;
-    margin: 0 0 0.75rem 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.2em;
+    text-align: center;
   }
 
   .blog-toc-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .blog-toc-item {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
+    padding-left: 0;
+    position: relative;
+  }
+
+  .blog-toc-item.blog-toc-h2 {
+    font-weight: 600;
+    padding-top: 0.25rem;
+  }
+
+  .blog-toc-item.blog-toc-h2::before {
+    content: attr(data-num) ". ";
+    color: #374151;
+    margin-right: 0.25rem;
   }
 
   .blog-toc-item.blog-toc-h3 {
-    padding-left: 1rem;
+    padding-left: 1.25rem;
+    font-weight: 400;
+  }
+
+  .blog-toc-item.blog-toc-h3::before {
+    content: attr(data-num) " ";
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
   }
 
   .blog-toc-link {
-    color: #475569;
+    color: #374151;
     text-decoration: none;
-    display: block;
-    padding: 0.2rem 0;
+    display: inline;
     transition: color 0.15s;
   }
 
   .blog-toc-link:hover {
-    color: #1e293b;
+    color: #111827;
+    text-decoration: underline;
   }
 </style>
