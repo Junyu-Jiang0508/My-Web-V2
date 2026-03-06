@@ -11,13 +11,43 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-05-kaplan-blei',
+    date: '2026-03-05',
+    type: 'Paper',
+    title: 'A Computational Approach to Style in American Poetry',
+    author: 'David M. Kaplan & David M. Blei',
+    progress: 'Full paper',
+    tags: ['Computational Methods', 'Cultural Studies'],
+    notes: `
+<p><strong>Citation:</strong> Kaplan, D. M. &amp; Blei, D. M. (2007). <em>Seventh IEEE International Conference on Data Mining (ICDM 2007)</em>. <a href="https://doi.org/10.1109/ICDM.2007.76" target="_blank" rel="noopener">DOI</a></p>
+<ol>
+<li><strong>Research Question:</strong> Computationally capture a comprehensive scope of poetic style; poetry as a domain has &ldquo;gone largely unexplored&rdquo; compared to prose.</li>
+<li><strong>Place in the Literature:</strong> Moves beyond predominant bag-of-words and diction-based approaches to text analysis.</li>
+<li><strong>Operationalization:</strong> Maps poem text to a high-dimensional vector via multi-layered metrics:
+  <ul>
+  <li><strong>Orthographic:</strong> Word count, line count, stanza count, average line/word length, lines per stanza; frequencies of the most frequent noun, adjective, and verb as proxies for repetition</li>
+  <li><strong>Syntactic:</strong> Frequencies of contractions and parts of speech aggregated at different levels of specificity</li>
+  <li><strong>Phonemic:</strong> Alliteration and formal rhyme scheme</li>
+  </ul>
+</li>
+<li><strong>Visualization:</strong> PCA projection of high-dimensional poem vectors onto two dimensions, preserving greatest variance to depict relative poem similarity.</li>
+<li><strong>Validity Risks:</strong>
+  <ul>
+  <li>POS tagger trained on Wall Street Journal corpus &mdash; domain mismatch with poetic language</li>
+  <li>PCA dimensionality reduction may obscure non-linear stylistic patterns</li>
+  </ul>
+</li>
+<li><strong>Comments:</strong> Pioneering early work on computational poetic style analysis. However, the feature set remains surface-level and does not fully capture the concise construction of narratives.</li>
+</ol>`
+  },
+  {
     id: '2026-03-05-kao-jurafsky',
     date: '2026-03-05',
     type: 'Paper',
     title: 'A Computational Analysis of Poetic Style: Imagism and Its Influence on Modern Professional and Amateur Poetry',
     author: 'Justine T. Kao & Dan Jurafsky',
     progress: 'Full paper',
-    tags: ['Computational Linguistics', 'Cultural Analytics', 'Stylistics'],
+    tags: ['Computational Methods', 'Cultural Studies'],
     notes: `
 <p><strong>Citation:</strong> Kao, J. T. &amp; Jurafsky, D. (2015). <em>Linguistic Issues in Language Technology</em>. <a href="https://aclanthology.org/2015.lilt-12.3/" target="_blank" rel="noopener">Link</a></p>
 <ol>
@@ -49,7 +79,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'The Political Economy of Communication',
     author: 'Vincent Mosco',
     progress: 'Chapter 96–110',
-    tags: ['Political Economy', 'Communication', 'Transnationalization'],
+    tags: ['Political Economy', 'Communication'],
     notes: `
 <ol>
 <li><strong>Social and intellectual factors shaping the political economy of communication:</strong>
@@ -85,7 +115,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Representation: Cultural Representations and Signifying Practices',
     author: 'Stuart Hall, Ed.',
     progress: 'P225–235, Chapter Four: The Spectacle of the Other',
-    tags: ['Cultural Studies', 'Representation', 'Race'],
+    tags: ['Cultural Studies', 'Communication'],
     notes: `
 <ol>
 <li><strong>Two Guiding Questions:</strong>
@@ -124,7 +154,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'The Political Economy of Communication',
     author: 'Vincent Mosco',
     progress: 'Chapter 86–95',
-    tags: ['Political Economy', 'Communication', 'Epistemology'],
+    tags: ['Political Economy', 'Communication'],
     notes: `
 <ol>
 <li><strong>How to define communication:</strong>
@@ -146,7 +176,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Rise of the Red Engineers: The Cultural Revolution and the Origins of China\'s New Class',
     author: 'Joel Andreas',
     progress: 'P213, Chapter Nine',
-    tags: ['Chinese Politics', 'Education', 'Cultural Revolution'],
+    tags: ['Chinese Politics', 'Cultural Studies'],
     notes: `
 <ol>
 <li><strong>Worker-Peasant-Soldier Students&rsquo; Attitude:</strong> They considered the loss of collective consciousness in new college students as an indicator of the reduction of political rights and participation in the New Era. This phenomenon illustrates a huge generation gap; the traditional habitus no longer existed, replaced by the alternation of ideology with individual self-consciousness.</li>
@@ -163,7 +193,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Quantifying Narrative Similarity Across Languages',
     author: 'Waight, Messing, Shirikov, Roberts, Nagel, Greenfield, Brown, Aslett & Tucker',
     progress: 'Continued reading',
-    tags: ['NLP', 'Computational Methods', 'Narrative Analysis'],
+    tags: ['Computational Methods', 'Narrative Analysis'],
     notes: `
 <p><strong>Language Standardization Process:</strong></p>
 <ol>
@@ -184,7 +214,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'The Political Economy of Communication',
     author: 'Vincent Mosco',
     progress: 'Chapter 57–85',
-    tags: ['Political Economy', 'Marxism', 'Communication'],
+    tags: ['Political Economy', 'Communication'],
     notes: `
 <ol>
 <li>Marx&rsquo;s conception of the commodity: all commodities are nothing but a definite quantity of congealed labour-time</li>
@@ -224,7 +254,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Quantifying Narrative Similarity Across Languages',
     author: 'Waight, Messing, Shirikov, Roberts, Nagel, Greenfield, Brown, Aslett & Tucker',
     progress: 'Initial reading',
-    tags: ['NLP', 'Computational Methods', 'Narrative Analysis'],
+    tags: ['Computational Methods', 'Narrative Analysis'],
     notes: `
 <p><strong>Research Purpose:</strong> To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features.</p>
 <p><strong>Methods:</strong> Using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. Sorting by SBERT and claimed by GPT-4o.</p>
@@ -265,7 +295,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'The Political Economy of Communication',
     author: 'Vincent Mosco',
     progress: 'Chapter 30–47',
-    tags: ['Political Economy', 'Commodification', 'Communication'],
+    tags: ['Political Economy', 'Communication'],
     notes: `
 <ol>
 <li>The fundamental analytical framework of the political economy of communication: <strong>commodification</strong>, <strong>spatialization</strong>, and <strong>structuration</strong></li>
@@ -282,7 +312,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Communist Neo-Traditionalism: Work and Authority in Chinese Industry',
     author: 'Andrew G. Walder',
     progress: 'P1–P8',
-    tags: ['Chinese Politics', 'Authority', 'Neo-Traditionalism'],
+    tags: ['Chinese Politics', 'Political Economy'],
     notes: `
 <ol>
 <li>A totalitarian society has two distinguishing characteristics:
@@ -306,7 +336,7 @@ export const readingLogs: ReadingEntry[] = [
     title: 'Written for Lawyers or Users? Mapping the Complexity of Community Guidelines',
     author: 'Nahrgang, Weidmann, Quint, Nagel, Theocharis & Roberts',
     progress: 'Full paper',
-    tags: ['Platform Governance', 'Content Moderation', 'Readability'],
+    tags: ['Platform Governance', 'Computational Methods'],
     notes: `
 <p><strong>Previous Problems:</strong> As harmful content fostered many problems, and social platforms conducted content moderation, many users held low trust towards the restrictions. However, many actors tried to use community guidelines to restrict users, but created a vast difference. No research has put attention on users&rsquo; situation.</p>
 <p><strong>Research Questions:</strong> Focusing on the length, readability, and semantic complexity of community guidelines.</p>
