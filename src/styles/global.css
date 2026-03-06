@@ -8,6 +8,18 @@ html {
 /* Blog typography: Times New Roman for English, 宋体 for Chinese */
 .blog-prose {
   font-family: "Times New Roman", "SimSun", "宋体", serif;
+  color: #000;
+}
+
+.blog-prose p,
+.blog-prose li,
+.blog-prose td,
+.blog-prose th,
+.blog-prose blockquote,
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 {
+  color: #000;
 }
 
 /* 学术三线表：仅保留表头顶、表头底、表格底三条横线 */
