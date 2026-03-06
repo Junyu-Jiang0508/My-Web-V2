@@ -444,7 +444,14 @@ const { title, date } = Astro.props;
     overflow-y: auto;
   }
 
-  .toc-title {
+  .literature-content :global(h2),
+  .literature-content :global(.log-accordion) {
+    scroll-margin-top: 6rem;
+  }
+</style>
+
+<style is:global>
+  .literature-toc .toc-title {
     font-family: "Times New Roman", "SimSun", "宋体", serif !important;
     font-size: 10px;
     font-weight: 600;
@@ -454,22 +461,22 @@ const { title, date } = Astro.props;
     margin: 0 0 0.5rem 0;
   }
 
-  .toc-list {
+  .literature-toc .toc-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .toc-item {
+  .literature-toc .toc-item {
     margin-bottom: 0.35rem;
   }
 
-  .toc-item.toc-h3 .toc-link {
+  .literature-toc .toc-item.toc-h3 .toc-link {
     font-size: 0.6875rem;
     padding-left: 1rem;
   }
 
-  .toc-link {
+  .literature-toc .toc-link {
     display: block;
     padding: 0.3rem 0 0.3rem 0.75rem;
     border-left: 2px solid #eee;
@@ -482,16 +489,18 @@ const { title, date } = Astro.props;
     line-height: 1.45;
   }
 
-  .toc-link:hover {
+  .literature-toc .toc-link:hover {
     color: #555;
   }
 
-  .toc-item.active .toc-link {
+  .literature-toc .toc-item.active .toc-link {
     border-left-color: #1a1a1a;
     color: #1a1a1a;
     font-weight: 700;
   }
+</style>
 
+<style>
   /* Dashboard - 极简学术风 */
   .reading-dashboard {
     display: flex;
