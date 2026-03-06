@@ -27,9 +27,10 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
 ) : (
   <Layout title={post.data.title} fullWidth={true}>
     <div class="blog-post-layout">
+      <BlogTOC />
       <article class="blog-article">
         <header class="blog-article-header">
-          <h1 class="mb-2 text-3xl font-bold text-gray-900">{post.data.title}</h1>
+          <h1 class="blog-article-title">{post.data.title}</h1>
           <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
             {post.data.date.toISOString().slice(0, 10)}
           </time>
@@ -47,7 +48,6 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
           <Content />
         </div>
       </article>
-      <BlogTOC />
     </div>
     <GiscusComments />
   </Layout>
@@ -56,8 +56,8 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
 <style>
   .blog-post-layout {
     display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 4rem;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
     align-items: start;
     padding: 2rem 0;
   }
@@ -72,6 +72,14 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
 
   .blog-article-header {
     margin-bottom: 2rem;
+  }
+
+  .blog-article-title {
+    font-family: "Times New Roman", "SimSun", "宋体", serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
   }
 
   .blog-prose :global(h2),
