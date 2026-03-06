@@ -11,6 +11,36 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-05-lo-cao',
+    date: '2026-03-05',
+    type: 'Paper',
+    title: 'Adapting NLP and Corpus Analysis Techniques to Structured Imagery Analysis in Classical Chinese Poetry',
+    author: 'Feng-Hsi Lo & Shu-Kai Hsieh (et al.)',
+    progress: 'Full paper',
+    tags: ['Computational Methods', 'Cultural Studies'],
+    notes: `
+<ol>
+<li><strong>Research Objective:</strong> Establish a computational framework for analyzing creative language in classical Chinese poetry using NLP and corpus analysis, focusing on extraction, classification, and structural analysis of poetic &ldquo;imageries&rdquo; to investigate inter-poet and intra-poet stylistic differences.</li>
+<li><strong>Ontology of Imageries:</strong> Built on a complete collection of Tang dynasty poems; words segmented and indexed into semantic classes (synsets) across six main categories: human, affair, time, space, object, and miscellany.</li>
+<li><strong>Four Structural Levels of Imagery:</strong>
+  <ul>
+  <li><strong>Primary imageries:</strong> Head nouns with imagery potential (e.g., &ldquo;winter&rdquo;)</li>
+  <li><strong>Complex imageries:</strong> Primary imageries modified by a premodifier or determiner (e.g., &ldquo;harsh winter&rdquo;)</li>
+  <li><strong>Extended imageries:</strong> Complex imageries serving clausal functions or acting as predicates</li>
+  <li><strong>Textual imageries:</strong> A system of extended imageries designed to articulate artistic conception</li>
+  </ul>
+</li>
+<li><strong>Syntactic Parsing:</strong> Java-based phrase structure grammar (PSG) parser generates syntactic trees for POS-tagged poetic lines, enabling automatic identification of imagery units.</li>
+<li><strong>Case Study &mdash; Su Shi vs. Liu Yong:</strong>
+  <ul>
+  <li><strong>Grammatical:</strong> Liu Yong: higher verb proportion (16.2%), fewer adjectives (11.9%) &rarr; colloquial/vocal style. Su Shi: fewer verbs (10.2%), more adjectives (16.5%) &rarr; dense, formal, scholarly style.</li>
+  <li><strong>Syntactic:</strong> Su Shi favored SVO constructions (more subjects, objects, adverbials, complements) typical of formal prose. Liu Yong showed higher predicate and premodifier proportions, consistent with casual style.</li>
+  </ul>
+</li>
+<li><strong>Conclusion:</strong> Structured sub-categorization of imageries successfully links linguistic analysis (lexical, grammatical, syntactic) to literary evaluations of style; the framework proves effective for automatic analysis of classical Chinese poetry.</li>
+</ol>`
+  },
+  {
     id: '2026-03-05-kaplan-blei',
     date: '2026-03-05',
     type: 'Paper',
