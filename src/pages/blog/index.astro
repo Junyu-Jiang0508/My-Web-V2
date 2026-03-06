@@ -30,7 +30,7 @@ const formatShortDate = (date: Date) => {
 };
 ---
 
-<Layout title="Blog">
+<Layout title="Blog" fullWidth={true}>
   <div class="blog-container px-4 py-12 md:py-16">
     <aside class="blog-sidebar" aria-label="Table of contents">
       <nav class="blog-toc">
@@ -130,29 +130,26 @@ const formatShortDate = (date: Date) => {
 <style>
   .blog-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 3rem;
     max-width: 56rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 767px) {
     .blog-container {
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .blog-sidebar {
+      display: none;
     }
   }
 
   .blog-sidebar {
-    display: none;
-  }
-
-  @media (min-width: 1024px) {
-    .blog-sidebar {
-      display: block;
-      position: sticky;
-      top: 6rem;
-      height: fit-content;
-    }
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
   }
 
   .blog-toc {

@@ -90,30 +90,36 @@
   }
 
   function setupScrollSpy() {
-    const links = document.querySelectorAll('.blog-toc-link');
+    const sections = document.querySelectorAll('.blog-prose h2[id], .blog-prose h3[id]');
     const items = document.querySelectorAll('.blog-toc-h2, .blog-toc-h3');
-    if (links.length === 0) return;
+    if (sections.length === 0 || items.length === 0) return;
 
-    const observerOptions = { rootMargin: '-80px 0px -60% 0px', threshold: 0 };
-    const headingIds = Array.from(links).map((a) => a.getAttribute('href')?.slice(1)).filter(Boolean);
+    const observerOptions = { rootMargin: '-100px 0px -60% 0px', threshold: 0 };
+    const visible = new Map();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        items.forEach((item) => {
-          if (item.dataset.targetId === id) {
-            items.forEach((i) => i.classList.remove('active'));
-            item.classList.add('active');
-          }
-        });
+    function updateActive() {
+      const intersecting = [...sections].filter((s) => visible.get(s.id));
+      const sorted = intersecting.sort(
+        (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+      );
+      const activeId = sorted[0]?.id || '';
+
+      items.forEach((item) => {
+        item.classList.toggle('active', item.dataset.targetId === activeId);
       });
-    }, observerOptions);
+    }
 
-    headingIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          visible.set(entry.target.id, entry.isIntersecting);
+        });
+        updateActive();
+      },
+      observerOptions
+    );
+
+    sections.forEach((s) => observer.observe(s));
   }
 
   document.addEventListener('DOMContentLoaded', buildBlogTOC);
@@ -123,19 +129,18 @@
 <style>
   .blog-toc-sidebar {
     position: sticky;
-    top: 2rem;
+    top: 6rem;
     align-self: start;
     width: 100%;
     max-width: 250px;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 8rem);
     overflow-y: auto;
-    padding-left: 1rem;
-    border-left: 1px solid #eaeaea;
   }
 
   .blog-toc-label {
     font-size: 11px;
-    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     color: #999;
     text-transform: uppercase;
     margin: 0 0 0.75rem 0;
@@ -146,7 +151,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 13px;
   }
 
   .blog-toc-sublist {
@@ -158,40 +162,40 @@
 
   .blog-toc-h2,
   .blog-toc-h3 {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.5rem;
     position: relative;
   }
 
-  .blog-toc-h3 {
-    font-size: 12px;
-  }
-
   .blog-toc-link {
-    color: #737373;
-    text-decoration: none;
     display: block;
-    transition: color 0.15s ease;
+    padding: 0.4rem 0 0.4rem 1rem;
+    border-left: 2px solid #eee;
+    font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #999;
+    text-decoration: none;
+    transition: all 0.2s ease;
     line-height: 1.4;
   }
 
   .blog-toc-link:hover {
-    color: #000000;
+    color: #555;
   }
 
   .blog-toc-h2.active .blog-toc-link,
   .blog-toc-h3.active .blog-toc-link {
-    color: #000000;
-    font-weight: 600;
+    border-left-color: #1a1a1a;
+    color: #1a1a1a;
+    font-weight: 700;
   }
 
-  .blog-toc-h2.active,
-  .blog-toc-h3.active {
-    border-left: 2px solid #000;
-    margin-left: -1rem;
-    padding-left: calc(1rem - 2px);
+  .blog-toc-h3 .blog-toc-link {
+    font-size: 0.75rem;
+    padding-left: 1.25rem;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .blog-toc-sidebar {
       display: none !important;
     }
