@@ -10,8 +10,8 @@ interface Props {
 const { title, date } = Astro.props;
 
 const totalEntries = readingLogs.length;
-const bookCount = readingLogs.filter(e => e.type === 'Book').length;
-const paperCount = readingLogs.filter(e => e.type === 'Paper').length;
+const bookCount = new Set(readingLogs.filter(e => e.type === 'Book').map(e => e.title)).size;
+const paperCount = new Set(readingLogs.filter(e => e.type === 'Paper').map(e => e.title)).size;
 const uniqueDates = [...new Set(readingLogs.map(e => e.date))];
 const daysCovered = uniqueDates.length;
 const allTags = [...new Set(readingLogs.flatMap(e => e.tags))].sort();
