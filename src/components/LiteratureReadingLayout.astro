@@ -325,24 +325,42 @@ const { title, date } = Astro.props;
       const tocList = document.getElementById('toc-list');
       if (!main || !tocList) return;
 
-      const headings = main.querySelectorAll('h2');
-      const accordions = main.querySelectorAll('.log-accordion');
-      if (headings.length === 0 && accordions.length === 0) return;
+      const content = main.querySelector('.literature-content');
+      if (!content) return;
+
+      const tocElements = content.querySelectorAll('h2, h3, .log-accordion');
+      if (tocElements.length === 0) return;
 
       tocList.innerHTML = '';
       const sections = [];
 
-      headings.forEach((h) => {
-        const id = h.id || h.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
-        if (!id) return;
-        h.id = id;
+      tocElements.forEach((el) => {
+        let id, text, level;
+
+        if (el.classList.contains('log-accordion')) {
+          id = el.id;
+          text = el.querySelector('.log-accordion-title')?.textContent || '';
+          level = 'h3';
+        } else if (el.tagName === 'H2') {
+          id = el.id || el.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
+          if (!el.id) el.id = id;
+          text = el.textContent || '';
+          level = 'h2';
+        } else if (el.tagName === 'H3') {
+          id = el.id || el.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
+          if (!el.id) el.id = id;
+          text = el.textContent || '';
+          level = 'h3';
+        }
+
+        if (!id || !text) return;
 
         const li = document.createElement('li');
-        li.className = 'toc-item toc-h2';
+        li.className = level === 'h2' ? 'toc-item toc-h2' : 'toc-item toc-h3';
         li.dataset.targetId = id;
         const a = document.createElement('a');
         a.href = `#${id}`;
-        a.textContent = h.textContent || '';
+        a.textContent = text;
         a.className = 'toc-link';
         a.addEventListener('click', (e) => {
           e.preventDefault();
@@ -350,28 +368,7 @@ const { title, date } = Astro.props;
         });
         li.appendChild(a);
         tocList.appendChild(li);
-        sections.push(h);
-      });
-
-      accordions.forEach((acc) => {
-        const id = acc.id;
-        const title = acc.querySelector('.log-accordion-title')?.textContent || '';
-        if (!id || !title) return;
-
-        const li = document.createElement('li');
-        li.className = 'toc-item toc-h3';
-        li.dataset.targetId = id;
-        const a = document.createElement('a');
-        a.href = `#${id}`;
-        a.textContent = title;
-        a.className = 'toc-link';
-        a.addEventListener('click', (e) => {
-          e.preventDefault();
-          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        li.appendChild(a);
-        tocList.appendChild(li);
-        sections.push(acc);
+        sections.push(el);
       });
 
       const items = tocList.querySelectorAll('.toc-item');
