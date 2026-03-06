@@ -87,25 +87,109 @@ const { title, date } = Astro.props;
   </article>
 
   <script>
-    // Step 1: Wrap content into reading-entry divs (marker divs collect following siblings)
-    function wrapReadingEntries() {
-      const markers = document.querySelectorAll('.literature-content .reading-entry[data-type]');
-      markers.forEach((marker) => {
-        const toMove = [];
-        let el = marker.nextElementSibling;
-        while (el && !el.classList.contains('reading-entry')) {
-          toMove.push(el);
-          el = el.nextElementSibling;
+    // Step 1: Wrap h3 (Books) and h4 (Papers) in details/summary accordion
+    function wrapAccordionSections() {
+      const content = document.querySelector('.literature-content');
+      if (!content) return;
+
+      const children = Array.from(content.children);
+
+      // Find Books Reading section (h2 with id or text "Books Reading")
+      let inBooks = false;
+      let inPaper = false;
+      let booksStartIdx = -1;
+      let paperStartIdx = -1;
+
+      children.forEach((el, i) => {
+        if (el.tagName === 'H2') {
+          const id = (el.id || '').toLowerCase();
+          const text = (el.textContent || '').toLowerCase();
+          if (id.includes('books-reading') || text.includes('books reading')) {
+            inBooks = true;
+            inPaper = false;
+            booksStartIdx = i + 1;
+          } else if (id.includes('paper-reading') || text.includes('paper reading')) {
+            inBooks = false;
+            inPaper = true;
+            paperStartIdx = i + 1;
+          }
         }
-        toMove.forEach((n) => marker.appendChild(n));
+      });
+
+      const toReplace = [];
+
+      // Wrap Books: each h3 and its content until next h3
+      if (booksStartIdx >= 0) {
+        for (let i = booksStartIdx; i < children.length; i++) {
+          const el = children[i];
+          if (el.tagName === 'H2') break;
+          if (el.tagName === 'H3') {
+            const siblings = [];
+            for (let j = i + 1; j < children.length; j++) {
+              const next = children[j];
+              if (next.tagName === 'H3' || next.tagName === 'H2') break;
+              siblings.push(next);
+            }
+            toReplace.push({ type: 'book', heading: el, siblings });
+          }
+        }
+      }
+
+      // Wrap Papers: each h4 and its content until next h4 or h3
+      if (paperStartIdx >= 0) {
+        for (let i = paperStartIdx; i < children.length; i++) {
+          const el = children[i];
+          if (el.tagName === 'H2') break;
+          if (el.tagName === 'H4') {
+            const siblings = [];
+            for (let j = i + 1; j < children.length; j++) {
+              const next = children[j];
+              if (next.tagName === 'H4' || next.tagName === 'H3' || next.tagName === 'H2') break;
+              siblings.push(next);
+            }
+            toReplace.push({ type: 'paper', heading: el, siblings });
+          }
+        }
+      }
+
+      toReplace.forEach(({ type, heading, siblings }) => {
+        const details = document.createElement('details');
+        details.className = 'log-accordion';
+        details.dataset.type = type;
+
+        const summary = document.createElement('summary');
+        summary.className = 'log-accordion-summary';
+        const title = heading.textContent || '';
+        const headingId = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'log-accordion-title';
+        titleSpan.textContent = title;
+        const iconSpan = document.createElement('span');
+        iconSpan.className = 'log-accordion-icon';
+        iconSpan.textContent = '+';
+        summary.appendChild(titleSpan);
+        summary.appendChild(iconSpan);
+        if (headingId) details.id = headingId;
+
+        const body = document.createElement('div');
+        body.className = 'log-accordion-body';
+        siblings.forEach((s) => body.appendChild(s));
+
+        details.appendChild(summary);
+        details.appendChild(body);
+        content.replaceChild(details, heading);
+
+        details.addEventListener('toggle', () => {
+          iconSpan.textContent = details.open ? '−' : '+';
+        });
       });
     }
 
-    // Step 2 & 3: Dashboard stats, topic dropdown, filtering
+    // Step 2 & 3: Dashboard stats, filtering
     function initDashboard() {
-      wrapReadingEntries();
+      wrapAccordionSections();
 
-      const entries = document.querySelectorAll('.literature-content .reading-entry[data-type]');
+      const entries = document.querySelectorAll('.literature-content .log-accordion[data-type]');
       const statTotal = document.getElementById('stat-total-value');
       const statBooks = document.getElementById('stat-books-value');
       const statPapers = document.getElementById('stat-papers-value');
@@ -242,26 +326,45 @@ const { title, date } = Astro.props;
       const tocList = document.getElementById('toc-list');
       if (!main || !tocList) return;
 
-      const headings = main.querySelectorAll('h2, h3');
-      if (headings.length === 0) return;
+      const headings = main.querySelectorAll('h2');
+      const accordions = main.querySelectorAll('.log-accordion');
+      if (headings.length === 0 && accordions.length === 0) return;
 
       tocList.innerHTML = '';
+      const observeTargets = [];
+
       headings.forEach((h) => {
-        const id = h.id || h.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') || '';
+        const id = h.id || h.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
         if (!id) return;
         h.id = id;
 
         const li = document.createElement('li');
-        li.className = `toc-item toc-${h.tagName.toLowerCase()}`;
+        li.className = 'toc-item toc-h2';
         const a = document.createElement('a');
         a.href = `#${id}`;
         a.textContent = h.textContent || '';
         a.className = 'toc-link';
         li.appendChild(a);
         tocList.appendChild(li);
+        observeTargets.push(h);
       });
 
-      // Scroll spy
+      accordions.forEach((acc) => {
+        const id = acc.id;
+        const title = acc.querySelector('.log-accordion-title')?.textContent || '';
+        if (!id || !title) return;
+
+        const li = document.createElement('li');
+        li.className = 'toc-item toc-h3';
+        const a = document.createElement('a');
+        a.href = `#${id}`;
+        a.textContent = title;
+        a.className = 'toc-link';
+        li.appendChild(a);
+        tocList.appendChild(li);
+        observeTargets.push(acc);
+      });
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -275,7 +378,7 @@ const { title, date } = Astro.props;
         },
         { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
       );
-      headings.forEach((h) => observer.observe(h));
+      observeTargets.forEach((el) => observer.observe(el));
     }
 
     function init() {
@@ -378,46 +481,45 @@ const { title, date } = Astro.props;
     border-left-color: var(--accent-blue);
   }
 
-  /* Dashboard */
+  /* Dashboard - 极简学术风 */
   .reading-dashboard {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 0.75rem;
-    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 0;
     margin-bottom: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
   }
 
   .dashboard-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
+    gap: 2rem;
+    align-items: baseline;
   }
 
   .stat-card {
-    flex: 1;
-    min-width: 100px;
-    background: white;
-    border-radius: 0.5rem;
-    padding: 0.875rem 1rem;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
   }
 
   .stat-value {
-    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--navy);
+    font-weight: 600;
+    color: #111111;
     line-height: 1.2;
   }
 
   .stat-label {
-    font-size: 0.75rem;
-    color: var(--cool-gray);
+    font-size: 11px;
+    font-weight: 500;
+    color: #737373;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
   }
 
   .dashboard-filters {
@@ -425,7 +527,6 @@ const { title, date } = Astro.props;
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 0.75rem;
   }
 
   .filter-group {
@@ -435,9 +536,11 @@ const { title, date } = Astro.props;
   }
 
   .filter-label {
-    font-size: 0.8125rem;
+    font-size: 11px;
     font-weight: 500;
-    color: var(--cool-gray);
+    color: #737373;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .filter-pills {
@@ -449,39 +552,103 @@ const { title, date } = Astro.props;
     padding: 0.35rem 0.75rem;
     font-size: 0.8125rem;
     font-weight: 500;
-    border-radius: 9999px;
-    border: 1px solid #cbd5e1;
+    border-radius: 0.25rem;
+    border: 1px solid #e5e5e5;
     background: white;
-    color: var(--cool-gray);
+    color: #737373;
     cursor: pointer;
     transition: all 0.15s;
   }
 
   .filter-pill:hover {
-    border-color: var(--navy-light);
-    color: var(--navy);
+    border-color: #737373;
+    color: #111111;
   }
 
   .filter-pill.active {
-    background: var(--navy);
-    border-color: var(--navy);
+    background: #111111;
+    border-color: #111111;
     color: white;
   }
 
   .filter-select {
     padding: 0.35rem 0.75rem;
     font-size: 0.8125rem;
-    border-radius: 0.375rem;
-    border: 1px solid #cbd5e1;
+    border-radius: 0.25rem;
+    border: 1px solid #e5e5e5;
     background: white;
-    color: var(--navy);
+    color: #111111;
     min-width: 140px;
   }
 
   .dashboard-count {
-    font-size: 0.8125rem;
-    color: var(--cool-gray);
+    font-size: 11px;
+    color: #737373;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Accordion 折叠卡片 */
+  .log-accordion {
+    margin-bottom: 0.5rem;
+    border: none;
+    scroll-margin-top: 6rem;
+  }
+
+  .log-accordion-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    margin-left: -1.5rem;
+    padding-left: 2rem;
+    border-left: 1px solid #eaeaea;
+    transition: background 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .log-accordion-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .log-accordion-summary::marker {
+    display: none;
+  }
+
+  .log-accordion-summary:hover {
+    background: #f9f9f9;
+  }
+
+  .log-accordion[open] .log-accordion-summary {
+    border-left-color: #737373;
+  }
+
+  .log-accordion-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #111111;
+  }
+
+  .log-accordion-icon {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #737373;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+
+  .log-accordion-body {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid #eaeaea;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .log-accordion-body > *:first-child {
+    margin-top: 0;
   }
 
   /* Reading entry wrapper */
@@ -515,83 +682,87 @@ const { title, date } = Astro.props;
   .literature-content :global(h3) {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--navy);
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding: 0.75rem 1rem;
-    background: var(--card-bg);
-    border-radius: 0.5rem;
-    border-left: 4px solid var(--navy-light);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  }
-
-  .literature-content :global(#books-reading ~ h3)::before {
-    content: 'Book';
-    display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: white;
-    background: var(--navy);
-    padding: 0.15rem 0.5rem;
-    border-radius: 0.25rem;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-  }
-
-  .literature-content :global(#paper-reading ~ h4)::before {
-    content: 'Paper';
-    display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: white;
-    background: #0d9488;
-    padding: 0.15rem 0.5rem;
-    border-radius: 0.25rem;
-    margin-right: 0.5rem;
-    vertical-align: middle;
+    color: #111111;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .literature-content :global(h4) {
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--cool-gray);
-    margin-top: 1.25rem;
+    color: #737373;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1rem;
-  }
-
-  .literature-content :global(h4)::after {
-    content: '';
-    position: absolute;
-    left: -1.75rem;
-    top: 0.5rem;
-    width: 8px;
-    height: 8px;
-    background: var(--timeline-dot);
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px #e2e8f0;
   }
 
   .literature-content :global(ul) {
     margin: 0.5rem 0 1rem 0;
     padding-left: 1.5rem;
+    list-style: none;
   }
 
-  .literature-content :global(li) {
+  .literature-content :global(ul li) {
     margin-bottom: 0.5rem;
     line-height: 1.6;
+    position: relative;
+    padding-left: 1rem;
   }
 
-  .literature-content :global(strong) {
-    color: var(--navy);
+  .literature-content :global(ul li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 4px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+  }
+
+  .literature-content :global(ul ul) {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  /* 文献引用块 Citation Block - Paper/Book 行 */
+  .literature-content :global(ul li:has(strong:first-child)) {
+    font-family: Georgia, "Times New Roman", "SimSun", "宋体", serif;
+    font-size: 0.9rem;
+    color: #404040;
+    padding: 0.75rem 1rem;
+    margin-left: -1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid #d4d4d4;
+    background: transparent;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Micro-badges: **Paper:**, **Previous Problems:** 等 */
+  .literature-content :global(ul li strong:first-child) {
+    font-size: 11px;
     font-weight: 600;
+    font-family: Inter, system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  .literature-content :global(ul li:has(strong:first-child)::before) {
+    display: none;
+  }
+
+  /* 嵌套列表 - 极简符号 */
+  .literature-content :global(ul ul li) {
+    padding-left: 1rem;
+  }
+
+  .literature-content :global(ul ul li::before) {
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
   }
 
   .literature-content :global(a) {
@@ -610,23 +781,5 @@ const { title, date } = Astro.props;
     margin: 0.5rem 0 1rem 0;
     line-height: 1.7;
     color: #334155;
-  }
-
-  /* Academic blockquote / Key Insights style */
-  .literature-content :global(ul li:has(strong)) {
-    padding: 0.75rem 1rem;
-    margin-left: -1rem;
-    padding-left: 1.5rem;
-    border-left: 3px solid #cbd5e1;
-    background: #f8fafc;
-    border-radius: 0 0.375rem 0.375rem 0;
-    margin-bottom: 0.75rem;
-  }
-
-  .literature-content :global(ul li:has(strong:first-child)) {
-    font-family: "Times New Roman", "SimSun", "宋体", serif;
-    font-size: 0.9375rem;
-    font-style: normal;
-    line-height: 1.7;
   }
 </style>
