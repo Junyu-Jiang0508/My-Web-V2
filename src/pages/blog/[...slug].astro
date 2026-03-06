@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import GiscusComments from '../../components/GiscusComments.astro';
 import BlogTOC from '../../components/BlogTOC.astro';
+import ReadingTimeline from '../../components/ReadingTimeline.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,34 +15,39 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+const useReadingsLayout = post.data.template === 'readings';
 ---
 
-<Layout title={post.data.title} fullWidth={true}>
-  <div class="blog-post-layout">
-    <BlogTOC />
-    <article class="blog-article">
-      <header class="blog-article-header">
-        <h1 class="blog-article-title">{post.data.title}</h1>
-        <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
-          {post.data.date.toISOString().slice(0, 10)}
-        </time>
-        {post.data.tags && post.data.tags.length > 0 && (
-          <div class="mt-2 flex flex-wrap gap-2">
-            {post.data.tags.map((tag) => (
-              <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
-      <div class="blog-prose prose prose-gray blog-article-content">
-        <Content />
-      </div>
-    </article>
-  </div>
-  <GiscusComments />
-</Layout>
+{useReadingsLayout ? (
+  <ReadingTimeline title={post.data.title} date={post.data.date.toISOString().slice(0, 10)} />
+) : (
+  <Layout title={post.data.title} fullWidth={true}>
+    <div class="blog-post-layout">
+      <BlogTOC />
+      <article class="blog-article">
+        <header class="blog-article-header">
+          <h1 class="blog-article-title">{post.data.title}</h1>
+          <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
+            {post.data.date.toISOString().slice(0, 10)}
+          </time>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="mt-2 flex flex-wrap gap-2">
+              {post.data.tags.map((tag) => (
+                <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </header>
+        <div class="blog-prose prose prose-gray blog-article-content">
+          <Content />
+        </div>
+      </article>
+    </div>
+    <GiscusComments />
+  </Layout>
+)}
 
 <style>
   .blog-post-layout {
