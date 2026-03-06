@@ -1,7 +1,8 @@
 ---
-title: "我的26fall北美社科混申总结"
+
+## title: "我的26fall北美社科混申总结"
+
 date: 2026-03-05
----
 
 ## 前言
 
@@ -73,43 +74,35 @@ date: 2026-03-05
 
 我在第一步做的是进行比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士点开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
 
-在完成最宏观的项目检索后，你可能留下30条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI总结功能可以在这一部分有非常优秀的发挥，将具体的faculty网页link复制粘贴，我的prompt如下：
+在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI总结功能可以在这一部分有非常优秀的发挥，将具体的faculty网页link复制粘贴，我的prompt如下：
 
-<details>
-<summary>📋 学术取向初筛 Prompt 模板（点击展开）</summary>
+ Prompt 模板（点击展开）
 
-> **Role & Context**
-> 你现在是一位顶尖的北美高校 [Political Science / Info Sci / Communication] 领域的资深学者。我正在进行博士项目的初步选校调研（School Research），需要快速、客观地梳理潜在导师的学术画像，以便进行大规模的初筛建档。
+> **Role & Context**  
+> You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
 >
 > **Task**
-> 请仔细阅读我提供的Faculty网页信息、简历或简介文本。请彻底摒弃所有客套话与行政性描述（如担任过什么委员会主席、得过什么教学奖），以最严苛、锐利的学术视角，直接输出以下高度结构化的信息：
+> Please carefully read the faculty webpage, CV, or bio text I provide. Discard all pleasantries and administrative descriptions (e.g., committee chairs, teaching awards). From the most rigorous academic perspective, output the following highly structured information:
 >
-> **1. 核心研究画像 (Core Academic Profile)**
-> - **绝对重心 (Tags)：** 提取3-5个极其精准的学术关键词，概括其当前的活跃研究领域。
-> - **核心关怀 (The Big Question)：** 用一句话总结该学者试图回答的终极学术问题是什么？
+> **1. Core Academic Profile**
 >
-> **2. 范式与认识论 (Paradigm & Epistemology)**
-> - 精准定位该学者的学术流派与理论底色（例如：是实证主义/后实证主义，还是阐释主义/批判文化？是偏向宏观结构还是微观行为？）。
+> - **Tags:** Extract 3–5 highly precise academic keywords summarizing their currently active research areas.
+> - **The Big Question:** In one sentence, what is the ultimate scholarly question this researcher is trying to answer?
 >
-> **3. 方法论工具箱 (Methodological Toolkit)**
-> - 明确指出其主导的研究方法（例如：计算社会科学/自然语言处理、网络分析、深度访谈、比较历史分析、控制实验等）。如有提及，请区分其是方法论的"创新者"还是"应用者"。
+> **2. Methodological Toolkit**
 >
-> **4. 学术轨迹研判 (Trajectory Check)**
-> - 区分其"历史成就"与"近期活跃方向"。基于文本，指出该学者近3-5年的研究重心是否有转移？（这对判断入读后的实际指导方向至关重要）。
+> - Identify their dominant research methods (e.g., computational social science / NLP, network analysis, in-depth interviews, comparative-historical analysis, controlled experiments, etc.).
 >
-> **5. 学术生态侧写 (Vibe & Network 推测)**
-> - 基于该导师的研究取向、资历（AP/Associate/Full）以及合作网络，推测其所在实验室或系所局部的学术氛围（例如：是高产的Quant厂牌，还是注重慢工出细活的理论作坊？）。
+> **3. Trajectory Check**
+>
+> - Distinguish between their historical achievements and recently active directions. Based on the text, indicate whether their research focus has shifted in the past 3–5 years.
 >
 > **Input Data:**
-> 网页链接/文本：[在此粘贴教授A、教授B的简介或链接]
+> [Paste faculty webpage link or bio text here]
 
-**这个版本的调整逻辑：**
+在此基础上，你所剩下的选择就不多了，仔细阅读选出来的教授的Google Scholar主页，我认为可以着重关注发表量最多和最近的发表取向。很多教授都会有他们的个人主页，通过他们的bio和selected works去了解这个教授的整体vibe与他自己所表达出来的研究路径选择也是很好的方式。
 
-1. **拔高"终极问题"提取：** 增加了"核心关怀 (The Big Question)"这一项。很多顶尖学者的研究方向看似庞杂，但底层通常只有一个核心关切（比如"权力在数字空间如何重构"）。提炼出这个关切，能让你瞬间记住这个老师。
-2. **强化"轨迹研判"：** 初筛最容易被骗的就是老教授的主页。他们可能靠某个理论成名，但现在早就转向了。这一步强迫AI去分辨"过去"和"现在"。
-3. **纯粹的客观审视：** 删除了所有和你本人相关的变量，让这份输出结果可以直接作为你Excel选校表格（Tracker）里的标准化条目，方便你后期横向拉表对比。
 
-</details>
 
 ### 3. 我所了解过的项目
 
