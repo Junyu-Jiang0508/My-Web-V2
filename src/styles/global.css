@@ -51,3 +51,17 @@ html {
 .blog-prose tbody tr:last-child td {
   border-bottom: 1px solid #374151;
 }
+
+/* Global link style: blue + underline, matching homepage */
+a:not([class]) {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-color: #93c5fd;
+  text-underline-offset: 2px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+a:not([class]):hover {
+  color: #1e40af;
+  text-decoration-color: #3b82f6;
+}
