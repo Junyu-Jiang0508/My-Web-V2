@@ -1,62 +1,118 @@
 ---
 /**
- * Auto-generated Table of Contents for blog posts.
- * Scans h2/h3 headings in the article and builds TOC. Only visible when headings exist.
+ * Sticky Sidebar Table of Contents for blog posts.
+ * Auto-extracts H2/H3 from article, builds nested list, smooth scroll + scroll spy.
  */
 ---
 
-<nav id="blog-toc" class="blog-toc" aria-label="Table of contents" style="display: none;">
-  <p class="blog-toc-title">Contents</p>
-  <ol id="blog-toc-list" class="blog-toc-list"></ol>
-</nav>
+<aside id="toc-sidebar" class="blog-toc-sidebar" aria-label="Table of contents" style="display: none;">
+  <p class="blog-toc-label">CONTENTS</p>
+  <nav id="blog-toc-nav">
+    <ul id="blog-toc-list" class="blog-toc-list"></ul>
+  </nav>
+</aside>
 
 <script>
-  function buildBlogTOC() {
-    const article = document.querySelector('article');
-    const toc = document.getElementById('blog-toc');
-    const tocList = document.getElementById('blog-toc-list');
-    if (!article || !toc || !tocList) return;
+  function slugify(text) {
+    return (text || '')
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\u4e00-\u9fff-]/g, '')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '') || 'section';
+  }
 
-    const headings = article.querySelectorAll('.prose h2, .prose h3');
+  function buildBlogTOC() {
+    const article = document.querySelector('article.blog-article');
+    const tocSidebar = document.getElementById('toc-sidebar');
+    const tocList = document.getElementById('blog-toc-list');
+    if (!article || !tocSidebar || !tocList) return;
+
+    const headings = article.querySelectorAll('.blog-prose h2, .blog-prose h3');
     if (headings.length === 0) return;
 
-    toc.style.display = '';
+    tocSidebar.style.display = '';
     tocList.innerHTML = '';
 
-    let h2Index = 0;
-    let h3Index = 0;
+    let currentUl = tocList;
+    let lastLevel = 1; // 1 = h2, 2 = h3
 
     headings.forEach((h) => {
       let id = h.id;
       if (!id) {
-        id = (h.textContent || '')
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/[^\w\u4e00-\u9fff-]/g, '')
-          .replace(/-+/g, '-')
-          .replace(/^-|-$/g, '') || 'section';
+        id = slugify(h.textContent);
         h.id = id;
       }
 
-      const li = document.createElement('li');
       const isH2 = h.tagName === 'H2';
-      if (isH2) {
-        h2Index++;
-        h3Index = 0;
-        li.className = 'blog-toc-item blog-toc-h2';
-        li.dataset.num = String(h2Index);
-      } else {
-        h3Index++;
-        li.className = 'blog-toc-item blog-toc-h3';
-        li.dataset.num = `${h2Index}.${h3Index}`;
+      const level = isH2 ? 1 : 2;
+
+      if (level === 1) {
+        currentUl = tocList;
+      } else if (level === 2 && lastLevel === 1) {
+        const lastLi = currentUl.lastElementChild;
+        if (lastLi) {
+          let nestedUl = lastLi.querySelector('ul');
+          if (!nestedUl) {
+            nestedUl = document.createElement('ul');
+            nestedUl.className = 'blog-toc-sublist';
+            lastLi.appendChild(nestedUl);
+          }
+          currentUl = nestedUl;
+        }
+      } else if (level === 1 && lastLevel === 2) {
+        currentUl = tocList;
       }
+
+      lastLevel = level;
+
+      const li = document.createElement('li');
+      li.className = isH2 ? 'blog-toc-h2' : 'blog-toc-h3';
+      li.dataset.targetId = id;
 
       const a = document.createElement('a');
       a.href = `#${id}`;
       a.textContent = h.textContent || '';
       a.className = 'blog-toc-link';
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
       li.appendChild(a);
-      tocList.appendChild(li);
+      currentUl.appendChild(li);
+    });
+
+    setupScrollSpy();
+  }
+
+  function setupScrollSpy() {
+    const links = document.querySelectorAll('.blog-toc-link');
+    const items = document.querySelectorAll('.blog-toc-h2, .blog-toc-h3');
+    if (links.length === 0) return;
+
+    const observerOptions = { rootMargin: '-80px 0px -60% 0px', threshold: 0 };
+    const headingIds = Array.from(links).map((a) => a.getAttribute('href')?.slice(1)).filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        items.forEach((item) => {
+          if (item.dataset.targetId === id) {
+            items.forEach((i) => i.classList.remove('active'));
+            item.classList.add('active');
+          }
+        });
+      });
+    }, observerOptions);
+
+    headingIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
     });
   }
 
@@ -65,68 +121,79 @@
 </script>
 
 <style>
-  .blog-toc {
-    margin-bottom: 2.5rem;
-    padding: 1.25rem 0;
-    border-top: 1px solid #374151;
-    border-bottom: 1px solid #374151;
-    font-family: "Times New Roman", "SimSun", "宋体", serif;
+  .blog-toc-sidebar {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    width: 100%;
+    max-width: 250px;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-left: 1rem;
+    border-left: 1px solid #eaeaea;
   }
 
-  .blog-toc-title {
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0 0 1rem 0;
-    letter-spacing: 0.2em;
-    text-align: center;
+  .blog-toc-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
   }
 
   .blog-toc-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.8125rem;
+    font-size: 13px;
   }
 
-  .blog-toc-item {
+  .blog-toc-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0 0;
+    padding-left: 1rem;
+  }
+
+  .blog-toc-h2,
+  .blog-toc-h3 {
     margin-bottom: 0.35rem;
-    padding-left: 0;
     position: relative;
   }
 
-  .blog-toc-item.blog-toc-h2 {
-    font-weight: 600;
-    padding-top: 0.25rem;
-  }
-
-  .blog-toc-item.blog-toc-h2::before {
-    content: attr(data-num) ". ";
-    color: #374151;
-    margin-right: 0.25rem;
-  }
-
-  .blog-toc-item.blog-toc-h3 {
-    padding-left: 1.25rem;
-    font-weight: 400;
-  }
-
-  .blog-toc-item.blog-toc-h3::before {
-    content: attr(data-num) " ";
-    color: #6b7280;
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
+  .blog-toc-h3 {
+    font-size: 12px;
   }
 
   .blog-toc-link {
-    color: #374151;
+    color: #737373;
     text-decoration: none;
-    display: inline;
-    transition: color 0.15s;
+    display: block;
+    transition: color 0.15s ease;
+    line-height: 1.4;
   }
 
   .blog-toc-link:hover {
-    color: #111827;
-    text-decoration: underline;
+    color: #000000;
+  }
+
+  .blog-toc-h2.active .blog-toc-link,
+  .blog-toc-h3.active .blog-toc-link {
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .blog-toc-h2.active,
+  .blog-toc-h3.active {
+    border-left: 2px solid #000;
+    margin-left: -1rem;
+    padding-left: calc(1rem - 2px);
+  }
+
+  @media (max-width: 1023px) {
+    .blog-toc-sidebar {
+      display: none !important;
+    }
   }
 </style>

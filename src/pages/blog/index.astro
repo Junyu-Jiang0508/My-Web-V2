@@ -7,27 +7,131 @@ const allPosts = await getCollection('blog');
 const posts = allPosts
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// 按年份分组
+const postsByYear = posts.reduce<Record<number, typeof posts>>((acc, post) => {
+  const year = post.data.date.getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(post);
+  return acc;
+}, {});
+
+// 格式化日期为 "Mar 05"
+const formatShortDate = (date: Date) => {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[date.getMonth()]} ${date.getDate().toString().padStart(2, '0')}`;
+};
 ---
 
 <Layout title="Blog">
-  <div class="px-4 py-8 md:py-12">
-    <h1 class="mb-8 text-3xl font-bold text-gray-900">Blog Posts</h1>
-    <ul class="space-y-4">
-      {posts.map((post) => (
-        <li class="border-b border-gray-200 pb-4 last:border-0">
-          <a
-            href={`${site}/blog/${post.slug}.html`}
-            class="group flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4"
-          >
-            <time class="shrink-0 text-sm text-gray-500">
-              {post.data.date.toISOString().slice(0, 10)}
-            </time>
-            <span class="font-medium text-gray-900 transition-colors group-hover:text-gray-600">
-              {post.data.title}
-            </span>
-          </a>
-        </li>
+  <div class="blog-list-academic px-4 py-8 md:py-12">
+    <h1 class="blog-list-heading">Blog Posts</h1>
+    {Object.entries(postsByYear)
+      .sort(([a], [b]) => Number(b) - Number(a))
+      .map(([year, yearPosts]) => (
+        <section class="blog-list-section">
+          <h2 class="blog-list-year">{year}</h2>
+          <div class="blog-list-posts">
+            {yearPosts.map((post) => (
+              <article class="blog-list-article">
+                <time class="blog-list-date" datetime={post.data.date.toISOString()}>
+                  {formatShortDate(post.data.date)}
+                </time>
+                <a href={`${site}/blog/${post.slug}.html`} class="blog-list-title">
+                  {post.data.title}
+                </a>
+                <div class="blog-list-tags">
+                  {post.data.tags?.map((tag) => (
+                    <span class="blog-list-tag">{tag}</span>
+                  )) ?? null}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       ))}
-    </ul>
   </div>
 </Layout>
+
+<style>
+  .blog-list-academic {
+    background: #fcfcfc;
+    color: #111111;
+  }
+
+  .blog-list-heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 2rem;
+  }
+
+  .blog-list-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .blog-list-year {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 1rem;
+  }
+
+  .blog-list-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .blog-list-article {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    cursor: pointer;
+  }
+
+  .blog-list-article > a {
+    min-width: 0;
+  }
+
+  .blog-list-date {
+    width: 80px;
+    flex-shrink: 0;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+    color: #737373;
+  }
+
+  .blog-list-title {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .blog-list-article:hover .blog-list-title {
+    color: #737373;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .blog-list-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #737373;
+    margin-left: 0.25rem;
+  }
+
+  .blog-list-tag:first-child {
+    margin-left: 0;
+  }
+
+  .blog-list-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    justify-content: flex-end;
+  }
+</style>

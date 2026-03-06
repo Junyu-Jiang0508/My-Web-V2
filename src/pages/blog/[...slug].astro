@@ -25,28 +25,64 @@ const useLiteratureLayout = post.slug === LITERATURE_SLUG;
     <Content />
   </LiteratureReadingLayout>
 ) : (
-  <Layout title={post.data.title}>
-    <article class="px-4 py-8 md:py-12">
-      <header class="mb-8">
-        <h1 class="mb-2 text-3xl font-bold text-gray-900">{post.data.title}</h1>
-        <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
-          {post.data.date.toISOString().slice(0, 10)}
-        </time>
-        {post.data.tags && post.data.tags.length > 0 && (
-          <div class="mt-2 flex flex-wrap gap-2">
-            {post.data.tags.map((tag) => (
-              <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
+  <Layout title={post.data.title} fullWidth={true}>
+    <div class="blog-post-layout">
+      <article class="blog-article">
+        <header class="blog-article-header">
+          <h1 class="mb-2 text-3xl font-bold text-gray-900">{post.data.title}</h1>
+          <time class="block text-sm text-gray-500" datetime={post.data.date.toISOString()}>
+            {post.data.date.toISOString().slice(0, 10)}
+          </time>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="mt-2 flex flex-wrap gap-2">
+              {post.data.tags.map((tag) => (
+                <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </header>
+        <div class="blog-prose prose prose-gray blog-article-content">
+          <Content />
+        </div>
+      </article>
       <BlogTOC />
-      <div class="blog-prose prose prose-gray prose-sm mx-auto max-w-none">
-        <Content />
-      </div>
-    </article>
+    </div>
     <GiscusComments />
   </Layout>
 )}
+
+<style>
+  .blog-post-layout {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 4rem;
+    align-items: start;
+    padding: 2rem 0;
+  }
+
+  .blog-article {
+    min-width: 0;
+  }
+
+  .blog-article-content {
+    max-width: 800px;
+  }
+
+  .blog-article-header {
+    margin-bottom: 2rem;
+  }
+
+  .blog-prose :global(h2),
+  .blog-prose :global(h3) {
+    scroll-margin-top: 6rem;
+  }
+
+  @media (max-width: 1023px) {
+    .blog-post-layout {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+</style>
