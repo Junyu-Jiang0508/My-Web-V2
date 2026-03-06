@@ -15,10 +15,11 @@ export const readingLogs: ReadingEntry[] = [
     date: '2026-03-05',
     type: 'Paper',
     title: 'Adapting NLP and Corpus Analysis Techniques to Structured Imagery Analysis in Classical Chinese Poetry',
-    author: 'Feng-Hsi Lo & Shu-Kai Hsieh (et al.)',
+    author: 'Alex Chengyu Fang, Fengju Lo, Cheuk Kit Chinn, Núria Bel, Erhard Hinrichs, Petya Osenova & Kiril Simov',
     progress: 'Full paper',
     tags: ['Computational Methods', 'Cultural Studies'],
     notes: `
+<p><strong>Citation:</strong> Fang, A. C., Lo, F., Chinn, C. K., Bel, N., Hinrichs, E., Osenova, P. &amp; Simov, K. (2009). <em>Proceedings of the Workshop on Adaptation of Language Resources and Technology to New Domains</em>. <a href="https://aclanthology.org/W09-4104/" target="_blank" rel="noopener">Link</a></p>
 <ol>
 <li><strong>Research Objective:</strong> Establish a computational framework for analyzing creative language in classical Chinese poetry using NLP and corpus analysis, focusing on extraction, classification, and structural analysis of poetic &ldquo;imageries&rdquo; to investigate inter-poet and intra-poet stylistic differences.</li>
 <li><strong>Ontology of Imageries:</strong> Built on a complete collection of Tang dynasty poems; words segmented and indexed into semantic classes (synsets) across six main categories: human, affair, time, space, object, and miscellany.</li>
