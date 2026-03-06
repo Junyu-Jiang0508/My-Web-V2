@@ -13,23 +13,23 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## 2025-08-14
 
-### [Book] 传播政治经济学 (Vincent Mosco)
+### [Book] The Political Economy of Communication (Vincent Mosco)
 
 - **Read Chapter:** 96-110
 - **Key Points:**
-  1. **影响传播政治经济学的社会和知识因素:**
-    - **社会驱动力:**
-    1. 媒介沿着工业路线被组织并且大多数媒介劳动为薪水工作；但媒介聚集现在如此有力以至于无须保留完全所有权的风险就可以控制积累循环，弹性积累巩固了全球的媒介权力
-    2. 但政治经济学对于探讨围绕家庭组织起来的行为是穷于应付的，同样谈论受众所使用的一种新语言也挑战了政治经济学，受众通过收听、阅读、观赏外加购买媒介内容来参与积累过程
-    3. **跨国化的过程:** 也是世界信息传播新秩序的诉求，而全球化则频繁而含糊的指向跨国化：
-      - eg：不结盟运动——国家自决——传播媒介的普遍获得、对传播的生产和分配过程予以控制以及传播时基本人权——讨论全球资本主义在美国为首的战后重组中传播的角色——传播与文化在对先前对立的国家的重新支配中如何牵连
-      - 新技术扩大受众的控制，国家主权的破坏——嵌入式的假想美国式形象——图汇跨国传播公司的增长和权力以及他们和美国亲近的联动装置
-      - 信息与传播技术具有重新整合全球劳工分工的力量
-    4. **信息社会的出现:**
-      - 时间，空间和社会关系的彻底断流
-      - 丹席勒，数字资本主义
-      - 开放源和黑客网络挑战了所有权：矛盾出现：信息免费使用的渴望和资本主义希望信息达到创造剩余价值的单一目的
-    5. 传播产业与传统古典经济模型格格不入
+  1. **Social and intellectual factors shaping the political economy of communication:**
+    - **Social driving forces:**
+    1. Media have been organized along industrial lines, with most media labor working for wages; yet media conglomerates are now so powerful that they can control the circuit of accumulation without retaining the risks of full ownership—flexible accumulation has consolidated global media power
+    2. However, political economy is ill-equipped to examine behaviors organized around the household; likewise, a new vocabulary used to discuss audiences challenges political economy—audiences participate in the accumulation process through listening, reading, watching, and purchasing media content
+    3. **The process of transnationalization:** also constitutes the demand for a New World Information and Communication Order (NWICO), while "globalization" frequently and vaguely refers to transnationalization:
+      - E.g., the Non-Aligned Movement — national self-determination — universal access to communication media, control over the production and distribution of communication, and communication as a fundamental human right — examining the role of communication in the U.S.-led postwar restructuring of global capitalism — how communication and culture are implicated in the renewed domination of formerly opposed nations
+      - New technologies expand audience control and undermine national sovereignty — embedded imagined American-style imagery — charting the growth and power of transnational communication corporations and their close linkage apparatus with the United States
+      - Information and communication technologies possess the power to restructure the global division of labor
+    4. **The emergence of the information society:**
+      - A radical rupture of time, space, and social relations
+      - Dan Schiller, *Digital Capitalism*
+      - Open source and hacker networks challenge ownership: a contradiction arises between the desire for free access to information and capitalism's drive to harness information solely for the purpose of generating surplus value
+    5. The communication industry is fundamentally incompatible with the traditional classical economic model
 
 ### [Book] Representation: Cultural Representations and Signifying Practices (Stuart Hall, Ed.)
 
@@ -53,17 +53,17 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## 2025-08-11
 
-### [Book] 传播政治经济学 (Vincent Mosco)
+### [Book] The Political Economy of Communication (Vincent Mosco)
 
 - **Read Chapter:** 86-95
 - **Key Points:**
-  1. **如何定义传播:**
-    - 会话的修辞如同调查的逻辑一样应该提供科学的标准，尤其是，这种观点坚持认为理解不是一个人使用解释实在的语言去解释显示并对现实做观察和报告的过程，相反，理解发生于两个或者更多的人交换观察结果、观念以及用并不只是揭示显示、而是有益于建构显示的语言来表达观察结果与观念时。
-    - **两种定义方式:** 信息传输与意义的建构
-    - **数学基础的传播科学:** 香农韦佛，传播者与编码者的信息传送于解码者
-    - **社会学家:** 建立意义的过程
-    - **市场专家:** 两个或多方的交互过程，意义通过符号有意图的使用交换
-    - **政治经济学启示:** 传播学应把传播体系看作社会基本经济、政治、文化过程的一部分：资本主义基本要素框架，资本积累与劳动工资
+  1. **How to define communication:**
+    - The rhetoric of conversation should provide the standards of science just as the logic of inquiry does; specifically, this view insists that understanding is not a process whereby one uses a language that explains reality to describe reality and make observations and reports about it. Rather, understanding occurs when two or more persons exchange observations, ideas, and express them in a language that does not merely reveal reality but contributes to constructing it.
+    - **Two definitional approaches:** information transmission versus the construction of meaning
+    - **Mathematically grounded communication science:** Shannon and Weaver — the transmission of information from a communicator and encoder to a decoder
+    - **Sociological perspective:** The process of constructing meaning
+    - **Market specialists:** An interactive process between two or more parties, in which meaning is exchanged through the intentional use of symbols
+    - **Implications for political economy:** Communication studies should view communication systems as integral to the fundamental economic, political, and cultural processes of society: the framework of capitalism's essential elements — capital accumulation and labor wages
 
 ### [Book] Rise of the Red Engineers: The Cultural Revolution and the Origins of China's New Class (Joel Andreas)
 
@@ -89,33 +89,33 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## 2025-08-10
 
-### [Book] 传播政治经济学 (Vincent Mosco)
+### [Book] The Political Economy of Communication (Vincent Mosco)
 
 - **Read Chapter:** 57-85
 - **Key Points:**
-  1. 马克思如何理解商品：全部商品不过是一定数量的凝结劳动时间（congealed labour-time）
-  2. 在传播上的批判：传统马克思主义过度强调劳动的工具性与生产性，将人简化为生产对象或者简单的生产要素——故劳动的其他物质实践被最小化
-  3. 故传政经提出要展示传播与文化如何构成物质实践、劳动与语言如何互为本质、传播与信息如何构成同一社会活动——意义的社会建构的辩证关系
-  4. 保守主义者对政治经济学的批判：
-    1. 他们认为财富的增长起源于一种有机秩序，这种秩序令人们尊重传统，传统令人们清楚地了解自身的社会角色与驱使他们行使该角色的道德基础
-    2. 根本：反对赋予大众权力从而进行社会改造，认为经济学的本质是最大化快乐——最小程度牺牲不想要的并获取最想要的东西（杰文斯1965）
-    3. 古典经济学在对均衡状态大感兴趣的前提下关注共识性变化，而忽略对历史的传统兴趣——无法分析转型时期
-    4. 市场为古典经济学和新古典经济学赋予道德依据
-  5. 几个政治经济学的变体：
-    1. 新保守主义
-      - 政府是规制的主要受益者——削减规制
-        - 本质上是为了保证科学性而释放政治，任其为自由主义和社会主义思想俘获
-    2. 制度经济学
-    3. 马克思主义政治经济学：批判公司集中化，探讨国家干预解决的可能性，回应生产技术、工业组织、世界市场的变革
-    4. 女性主义政治经济学：
-      - 将家务劳动纳入市场交换体制与分析中
-        - 缺少具体的计算体系
-    5. 环境政治经济学：道德视界的变化
-  6. 为何需要政治经济学：
-    1. 经济学偏爱描述静态，一切在均衡中解决，兴趣仅仅局限于在一套特定制度中描述增量变化
-    2. 无法将重大社会经济决定因素纳入考虑
-    3. 倾向于将市场视为个人互动的自然产物，加剧了社会的阶级、种族和性别分别
-    4. 急切的需要把经济学正统从修辞体系中脱离出来，研究其作为一种权力体系的部分
+  1. Marx's conception of the commodity: all commodities are nothing but a definite quantity of congealed labour-time
+  2. A critique within communication studies: orthodox Marxism overemphasizes the instrumentality and productivity of labor, reducing human beings to objects of production or mere factors of production — thus minimizing the other material practices of labor
+  3. Accordingly, the political economy of communication proposes to demonstrate how communication and culture constitute material practices, how labor and language are mutually constitutive, and how communication and information form part of the same social activity — the dialectical relationship of the social construction of meaning
+  4. The conservative critique of political economy:
+    1. Conservatives hold that the growth of wealth originates from an organic order that leads people to respect tradition, which in turn makes people clearly understand their social roles and the moral foundations that compel them to fulfill those roles
+    2. At its core: opposition to empowering the masses to carry out social transformation; the belief that the essence of economics is the maximization of pleasure — minimizing the sacrifice of what is unwanted while obtaining what is most desired (Jevons, 1965)
+    3. Classical economics, under its preoccupation with equilibrium states, focuses on consensual change while neglecting the traditional interest in history — rendering it unable to analyze periods of transformation
+    4. The market provides classical and neoclassical economics with their moral justification
+  5. Several variants of political economy:
+    1. Neoconservatism
+      - Government is the primary beneficiary of regulation — hence the push for deregulation
+        - Essentially, releasing politics to preserve scientific rigor, while allowing it to be captured by liberal and socialist thought
+    2. Institutional economics
+    3. Marxist political economy: a critique of corporate concentration, an exploration of the possibilities of state intervention, and a response to transformations in production technology, industrial organization, and world markets
+    4. Feminist political economy:
+      - Incorporating domestic labor into the system and analysis of market exchange
+        - Lacking a concrete calculative framework
+    5. Environmental political economy: the transformation of the moral horizon
+  6. Why political economy is needed:
+    1. Economics favors describing statics — everything is resolved in equilibrium, with interest limited to describing incremental change within a given set of institutions
+    2. It is unable to incorporate major socioeconomic determinants into its analysis
+    3. It tends to treat the market as a natural product of individual interaction, thereby exacerbating social divisions of class, race, and gender
+    4. There is an urgent need to disentangle economic orthodoxy from its rhetorical system and to study it as part of a system of power
 
 ### [Paper] Quantifying Narrative Similarity Across Languages
 
@@ -136,24 +136,24 @@ This idea was inspired by [Hongtao Huang's "A Paper A Day"](https://hongtaoh.com
 
 ## 2025-08-02
 
-### [Book] 传播政治经济学 (Vincent Mosco)
+### [Book] The Political Economy of Communication (Vincent Mosco)
 
 - **Read Chapter:** 48-56
 - **Key Points:**
-  1. 社会关系，特别是权力关系，它们交互组成了资源的生产、分配和消费；而这就要求传播政治经济学检视顺着生产分配和消费线路不断变换的控制方式；或行动主义者如何通过新媒介来抵制权力的集中。但在传播产业中，生产者、分配者和消费者无法进行准确定义：受众不可被直接认定为消费者，在消费媒介产品时，也在制作出象征价值。
-  2. 另一个对政治经济学的定义是，研究社会生活中的控制和存在。
+  1. Social relations, particularly power relations, interactively constitute the production, distribution, and consumption of resources; this requires the political economy of communication to examine the constantly shifting modes of control along the lines of production, distribution, and consumption — or how activists use new media to resist the concentration of power. However, within the communication industry, producers, distributors, and consumers cannot be precisely defined: audiences cannot be straightforwardly identified as consumers, for in consuming media products they also produce symbolic value.
+  2. An alternative definition of political economy: the study of control and survival in social life.
 
 ## 2025-07-28
 
-### [Book] 传播政治经济学 (Vincent Mosco)
+### [Book] The Political Economy of Communication (Vincent Mosco)
 
 - **Read Chapter:** 30-47
 - **Key Points:**
-  1. 传播政治经济学的基本政治图谱：商品化、空间化、结构化
-  2. 受众商品论：劳工为了回报他们所接受的媒介内容而出卖了他们的劳动力（注意力）；延伸了劳动的外延，扩展了传统的商品逻辑，也许可作为资本主义的劳动转型过程
-  3. 劳动（Braverman，1974）：概念的统一体：想象与创意能力，设计与执行能力；在商品化过程中，资本的作用是把创意和制作相分离，把技术和执行任务的非娴熟相分离，形成一个管理阶层，同时生产上的新的技能与权力的配置相结合来重构劳动过程
-  4. 商品化到空间化：信息系统的出现使得信息转变空间——重新分配产业资源
-  5. 传播政治经济学的传统是把空间化视作企业权力在传播产业的制度延伸
+  1. The fundamental analytical framework of the political economy of communication: commodification, spatialization, and structuration
+  2. The audience commodity thesis: workers sell their labor power (attention) in return for the media content they receive; this extends the scope of labor, expands the traditional logic of the commodity, and may serve as an account of the labor transformation process under capitalism
+  3. Labor (Braverman, 1974): a conceptual unity of imagination and creative capacity, design and execution; in the process of commodification, capital functions to separate conception from execution, to separate skill from the unskilled performance of tasks, thereby forming a managerial class, while new configurations of skill and power in production are combined to restructure the labor process
+  4. From commodification to spatialization: the emergence of information systems enables information to transform space — redistributing industrial resources
+  5. The tradition of the political economy of communication treats spatialization as the institutional extension of corporate power within the communication industry
 
 ## 2025-07-27
 

@@ -27,50 +27,30 @@ const { title, date } = Astro.props;
           <time class="block text-sm text-slate-500" datetime={date}>{date}</time>
         </header>
 
-        <!-- Dashboard: Stats + Filters -->
+        <!-- Dashboard: Stats + Filter -->
         <div id="reading-dashboard" class="reading-dashboard">
           <div class="dashboard-stats">
-            <div class="stat-card" id="stat-total">
+            <div class="stat-card">
               <span class="stat-value" id="stat-total-value">0</span>
               <span class="stat-label">Total</span>
             </div>
-            <div class="stat-card" id="stat-books">
+            <div class="stat-card">
               <span class="stat-value" id="stat-books-value">0</span>
               <span class="stat-label">Books</span>
             </div>
-            <div class="stat-card" id="stat-papers">
+            <div class="stat-card">
               <span class="stat-value" id="stat-papers-value">0</span>
               <span class="stat-label">Papers</span>
             </div>
           </div>
           <div class="dashboard-filters">
             <div class="filter-group">
-              <span class="filter-label">Type:</span>
+              <span class="filter-label">Filter:</span>
               <div class="filter-pills">
                 <button type="button" class="filter-pill active" data-filter-type="all">All</button>
                 <button type="button" class="filter-pill" data-filter-type="book">Books</button>
                 <button type="button" class="filter-pill" data-filter-type="paper">Papers</button>
               </div>
-            </div>
-            <div class="filter-group">
-              <span class="filter-label">Language:</span>
-              <div class="filter-pills filter-pills-lang">
-                <button type="button" class="filter-pill active" data-filter-lang="all">All</button>
-                <button type="button" class="filter-pill" data-filter-lang="zh">Chinese</button>
-                <button type="button" class="filter-pill" data-filter-lang="en">English</button>
-              </div>
-            </div>
-            <div class="filter-group">
-              <label for="filter-field" class="filter-label">Field:</label>
-              <select id="filter-field" class="filter-select">
-                <option value="">All Fields</option>
-              </select>
-            </div>
-            <div class="filter-group">
-              <label for="filter-subfield" class="filter-label">Subfield:</label>
-              <select id="filter-subfield" class="filter-select">
-                <option value="">All Subfields</option>
-              </select>
             </div>
           </div>
           <p class="dashboard-count" id="dashboard-count" aria-live="polite">Showing 0 of 0 items</p>
@@ -86,69 +66,29 @@ const { title, date } = Astro.props;
   </article>
 
   <script>
-    // Step 1: Wrap h3 (Books) and h4 (Papers) in details/summary accordion
     function wrapAccordionSections() {
       const content = document.querySelector('.literature-content');
       if (!content) return;
 
       const children = Array.from(content.children);
-
-      // Find Books Reading section (h2 with id or text "Books Reading")
-      let inBooks = false;
-      let inPaper = false;
-      let booksStartIdx = -1;
-      let paperStartIdx = -1;
-
-      children.forEach((el, i) => {
-        if (el.tagName === 'H2') {
-          const id = (el.id || '').toLowerCase();
-          const text = (el.textContent || '').toLowerCase();
-          if (id.includes('books-reading') || text.includes('books reading')) {
-            inBooks = true;
-            inPaper = false;
-            booksStartIdx = i + 1;
-          } else if (id.includes('paper-reading') || text.includes('paper reading')) {
-            inBooks = false;
-            inPaper = true;
-            paperStartIdx = i + 1;
-          }
-        }
-      });
-
       const toReplace = [];
 
-      // Wrap Books: each h3 and its content until next h3
-      if (booksStartIdx >= 0) {
-        for (let i = booksStartIdx; i < children.length; i++) {
-          const el = children[i];
-          if (el.tagName === 'H2') break;
-          if (el.tagName === 'H3') {
-            const siblings = [];
-            for (let j = i + 1; j < children.length; j++) {
-              const next = children[j];
-              if (next.tagName === 'H3' || next.tagName === 'H2') break;
-              siblings.push(next);
-            }
-            toReplace.push({ type: 'book', heading: el, siblings });
-          }
-        }
-      }
+      for (let i = 0; i < children.length; i++) {
+        const el = children[i];
+        if (el.tagName !== 'H3') continue;
 
-      // Wrap Papers: each h4 and its content until next h4 or h3
-      if (paperStartIdx >= 0) {
-        for (let i = paperStartIdx; i < children.length; i++) {
-          const el = children[i];
-          if (el.tagName === 'H2') break;
-          if (el.tagName === 'H4') {
-            const siblings = [];
-            for (let j = i + 1; j < children.length; j++) {
-              const next = children[j];
-              if (next.tagName === 'H4' || next.tagName === 'H3' || next.tagName === 'H2') break;
-              siblings.push(next);
-            }
-            toReplace.push({ type: 'paper', heading: el, siblings });
-          }
+        const text = (el.textContent || '').trim();
+        let type = 'book';
+        if (text.startsWith('[Paper]')) type = 'paper';
+        else if (text.startsWith('[Book]')) type = 'book';
+
+        const siblings = [];
+        for (let j = i + 1; j < children.length; j++) {
+          const next = children[j];
+          if (next.tagName === 'H3' || next.tagName === 'H2') break;
+          siblings.push(next);
         }
+        toReplace.push({ type, heading: el, siblings });
       }
 
       toReplace.forEach(({ type, heading, siblings }) => {
@@ -184,7 +124,6 @@ const { title, date } = Astro.props;
       });
     }
 
-    // Step 2 & 3: Dashboard stats, filtering
     function initDashboard() {
       wrapAccordionSections();
 
@@ -192,11 +131,8 @@ const { title, date } = Astro.props;
       const statTotal = document.getElementById('stat-total-value');
       const statBooks = document.getElementById('stat-books-value');
       const statPapers = document.getElementById('stat-papers-value');
-      const fieldSelect = document.getElementById('filter-field');
-      const subfieldSelect = document.getElementById('filter-subfield');
       const countText = document.getElementById('dashboard-count');
       const typePills = document.querySelectorAll('.filter-pill[data-filter-type]');
-      const langPills = document.querySelectorAll('.filter-pill[data-filter-lang]');
 
       const totalBooks = [...entries].filter((e) => e.dataset.type === 'book').length;
       const totalPapers = [...entries].filter((e) => e.dataset.type === 'paper').length;
@@ -209,73 +145,13 @@ const { title, date } = Astro.props;
         countText.textContent = `Showing ${visibleTotal} of ${total} items`;
       }
 
-      function getFields() {
-        const fields = new Set();
-        entries.forEach((e) => {
-          const f = e.dataset.field;
-          if (f) fields.add(f.trim());
-        });
-        return [...fields].sort();
-      }
-
-      function getSubfields() {
-        const subfields = new Set();
-        entries.forEach((e) => {
-          const s = e.dataset.subfield;
-          if (s) subfields.add(s.trim());
-        });
-        return [...subfields].sort();
-      }
-
-      function populateField() {
-        const fields = getFields();
-        fieldSelect.innerHTML = '<option value="">All Fields</option>';
-        fields.forEach((f) => {
-          const opt = document.createElement('option');
-          opt.value = f;
-          opt.textContent = f;
-          fieldSelect.appendChild(opt);
-        });
-      }
-
-      function populateSubfield() {
-        const fieldFilter = fieldSelect.value;
-        const subfields = new Set();
-        entries.forEach((e) => {
-          if (fieldFilter && e.dataset.field !== fieldFilter) return;
-          const s = e.dataset.subfield;
-          if (s) subfields.add(s.trim());
-        });
-        subfieldSelect.innerHTML = '<option value="">All Subfields</option>';
-        [...subfields].sort().forEach((s) => {
-          const opt = document.createElement('option');
-          opt.value = s;
-          opt.textContent = s;
-          subfieldSelect.appendChild(opt);
-        });
-      }
-
       function applyFilters() {
         const typeFilter = document.querySelector('.filter-pill[data-filter-type].active')?.dataset.filterType || 'all';
-        const langFilter = document.querySelector('.filter-pill[data-filter-lang].active')?.dataset.filterLang || 'all';
-        const fieldFilter = fieldSelect.value;
-        const subfieldFilter = subfieldSelect.value;
-
-        let visible = 0;
-        let visibleBooks = 0;
-        let visiblePapers = 0;
+        let visible = 0, visibleBooks = 0, visiblePapers = 0;
 
         entries.forEach((entry) => {
           const type = entry.dataset.type;
-          const lang = entry.dataset.lang || 'en';
-          const field = entry.dataset.field || '';
-          const subfield = entry.dataset.subfield || '';
-          const typeMatch = typeFilter === 'all' || type === typeFilter;
-          const langMatch = langFilter === 'all' || lang === langFilter;
-          const fieldMatch = !fieldFilter || field === fieldFilter;
-          const subfieldMatch = !subfieldFilter || subfield === subfieldFilter;
-          const show = typeMatch && langMatch && fieldMatch && subfieldMatch;
-
+          const show = typeFilter === 'all' || type === typeFilter;
           entry.style.display = show ? '' : 'none';
           if (show) {
             visible++;
@@ -283,16 +159,11 @@ const { title, date } = Astro.props;
             else if (type === 'paper') visiblePapers++;
           }
         });
-
         updateStats(visible, visibleBooks, visiblePapers);
       }
 
-      // Initial stats
       updateStats(total, totalBooks, totalPapers);
-      populateField();
-      populateSubfield();
 
-      // Type filter pills
       typePills.forEach((pill) => {
         pill.addEventListener('click', () => {
           typePills.forEach((p) => p.classList.remove('active'));
@@ -300,24 +171,6 @@ const { title, date } = Astro.props;
           applyFilters();
         });
       });
-
-      // Language filter pills
-      langPills.forEach((pill) => {
-        pill.addEventListener('click', () => {
-          langPills.forEach((p) => p.classList.remove('active'));
-          pill.classList.add('active');
-          applyFilters();
-        });
-      });
-
-      // Field select: when changed, update subfield options and apply filter
-      fieldSelect.addEventListener('change', () => {
-        populateSubfield();
-        subfieldSelect.value = '';
-        applyFilters();
-      });
-
-      subfieldSelect.addEventListener('change', applyFilters);
     }
 
     function buildTOC() {
@@ -586,16 +439,6 @@ const { title, date } = Astro.props;
     background: #111111;
     border-color: #111111;
     color: white;
-  }
-
-  .filter-select {
-    padding: 0.35rem 0.75rem;
-    font-size: 0.8125rem;
-    border-radius: 0.25rem;
-    border: 1px solid #e5e5e5;
-    background: white;
-    color: #111111;
-    min-width: 140px;
   }
 
   .dashboard-count {
