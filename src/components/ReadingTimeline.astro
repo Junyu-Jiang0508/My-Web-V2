@@ -24,6 +24,15 @@ const groupedByDate = readingLogs.reduce((acc, entry) => {
 }, {} as Record<string, typeof readingLogs>);
 
 const sortedDates = Object.keys(groupedByDate).sort((a, b) => b.localeCompare(a));
+const latestDate = sortedDates[0] || date;
+
+const datesByYear = sortedDates.reduce((acc, d) => {
+  const year = d.slice(0, 4);
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(d);
+  return acc;
+}, {} as Record<string, string[]>);
+const sortedYears = Object.keys(datesByYear).sort((a, b) => b.localeCompare(a));
 
 function formatDateLabel(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -42,7 +51,7 @@ function formatShortDate(dateStr: string) {
       <h1 class="rt-title">{title}</h1>
       <p class="rt-subtitle">A daily practice of reading and annotating scholarly literature, inspired by
         <a href="https://hongtaoh.com/en/apad/" target="_blank" rel="noopener">Hongtao Huang's "A Paper A Day"</a>.
-        Began {date}.
+        Latest update: {latestDate}.
       </p>
     </header>
 
@@ -70,11 +79,16 @@ function formatShortDate(dateStr: string) {
 
         <nav class="rt-nav">
           <p class="rt-nav-label">Date Index</p>
-          <ul class="rt-nav-list">
-            {sortedDates.map(d => (
-              <li><a href={`#date-${d}`} class="rt-nav-link" data-date={d}>{formatShortDate(d)}</a></li>
-            ))}
-          </ul>
+          {sortedYears.map(year => (
+            <div class="rt-nav-year-group">
+              <p class="rt-nav-year">{year}</p>
+              <ul class="rt-nav-list">
+                {datesByYear[year].map(d => (
+                  <li><a href={`#date-${d}`} class="rt-nav-link" data-date={d}>{formatShortDate(d)}</a></li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </nav>
 
         <div class="rt-filter-section">
@@ -315,6 +329,19 @@ document.addEventListener('DOMContentLoaded', () => {
     letter-spacing: 0.1em;
     color: #999;
     margin-bottom: 0.5rem;
+  }
+
+  .rt-nav-year-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .rt-nav-year {
+    font-family: ui-monospace, "Cascadia Code", monospace;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+    padding-left: 0.75rem;
   }
 
   .rt-nav-list {
