@@ -94,39 +94,40 @@
     const items = document.querySelectorAll('.blog-toc-h2, .blog-toc-h3');
     if (sections.length === 0 || items.length === 0) return;
 
-    const observerOptions = { rootMargin: '-100px 0px -60% 0px', threshold: 0 };
-    const visible = new Map();
+    function getActiveSection() {
+      const viewportTop = 120;
+      let active = null;
+      for (const s of sections) {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= viewportTop) {
+          active = s;
+        }
+      }
+      return active?.id || sections[0]?.id || '';
+    }
 
     function updateActive() {
-      const intersecting = [...sections].filter((s) => visible.get(s.id));
-      const sorted = intersecting.sort(
-        (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
-      );
-      const activeId = sorted[0]?.id || '';
-
+      const activeId = getActiveSection();
       items.forEach((item) => {
         item.classList.toggle('active', item.dataset.targetId === activeId);
       });
     }
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          visible.set(entry.target.id, entry.isIntersecting);
-        });
-        updateActive();
-      },
-      observerOptions
+      () => updateActive(),
+      { rootMargin: '-120px 0px -50% 0px', threshold: 0 }
     );
-
     sections.forEach((s) => observer.observe(s));
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
   }
 
   document.addEventListener('DOMContentLoaded', buildBlogTOC);
   document.addEventListener('astro:page-load', buildBlogTOC);
 </script>
 
-<style>
+<style is:global>
   .blog-toc-sidebar {
     position: sticky;
     top: 6rem;
@@ -138,13 +139,13 @@
   }
 
   .blog-toc-label {
-    font-size: 11px;
+    font-family: "Times New Roman", "SimSun", "宋体", serif !important;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     color: #999;
     text-transform: uppercase;
-    margin: 0 0 0.75rem 0;
-    font-family: "Times New Roman", "SimSun", "宋体", serif;
+    margin: 0 0 0.5rem 0;
   }
 
   .blog-toc-list {
@@ -156,27 +157,27 @@
   .blog-toc-sublist {
     list-style: none;
     padding: 0;
-    margin: 0.25rem 0 0 0;
-    padding-left: 1rem;
+    margin: 0.2rem 0 0 0;
+    padding-left: 0.75rem;
   }
 
   .blog-toc-h2,
   .blog-toc-h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
     position: relative;
   }
 
   .blog-toc-link {
     display: block;
-    padding: 0.4rem 0 0.4rem 1rem;
+    padding: 0.3rem 0 0.3rem 0.75rem;
     border-left: 2px solid #eee;
-    font-family: "Times New Roman", "SimSun", "宋体", serif;
-    font-size: 0.875rem;
+    font-family: "Times New Roman", "SimSun", "宋体", serif !important;
+    font-size: 0.75rem;
     font-weight: 500;
     color: #999;
     text-decoration: none;
     transition: all 0.2s ease;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .blog-toc-link:hover {
@@ -191,8 +192,8 @@
   }
 
   .blog-toc-h3 .blog-toc-link {
-    font-size: 0.75rem;
-    padding-left: 1.25rem;
+    font-size: 0.6875rem;
+    padding-left: 1rem;
   }
 
   @media (max-width: 767px) {
