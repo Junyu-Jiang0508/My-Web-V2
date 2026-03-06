@@ -1,6 +1,7 @@
 ---
 title: "Computational Social Science Literature DailyReading Project"
 date: 2025-07-27
+template: literature
 ---
 
 ## Preface

@@ -13,6 +13,13 @@ const { title, date } = Astro.props;
 <Layout title={title} fullWidth={true}>
   <article class="literature-reading">
     <div class="literature-grid">
+      <!-- Sticky TOC (left) -->
+      <aside class="literature-toc" aria-label="Table of contents">
+        <nav id="toc-nav" class="toc-nav">
+          <p class="toc-title">CONTENTS</p>
+          <ul id="toc-list" class="toc-list"></ul>
+        </nav>
+      </aside>
       <!-- Main content -->
       <div class="literature-main">
         <header class="mb-10">
@@ -75,14 +82,6 @@ const { title, date } = Astro.props;
 
         <GiscusComments />
       </div>
-
-      <!-- Sticky TOC -->
-      <aside class="literature-toc" aria-label="Table of contents">
-        <nav id="toc-nav" class="toc-nav">
-          <h3 class="toc-title">Contents</h3>
-          <ul id="toc-list" class="toc-list"></ul>
-        </nav>
-      </aside>
     </div>
   </article>
 
@@ -331,7 +330,7 @@ const { title, date } = Astro.props;
       if (headings.length === 0 && accordions.length === 0) return;
 
       tocList.innerHTML = '';
-      const observeTargets = [];
+      const sections = [];
 
       headings.forEach((h) => {
         const id = h.id || h.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\u4e00-\u9fff-]/g, '') || '';
@@ -340,13 +339,18 @@ const { title, date } = Astro.props;
 
         const li = document.createElement('li');
         li.className = 'toc-item toc-h2';
+        li.dataset.targetId = id;
         const a = document.createElement('a');
         a.href = `#${id}`;
         a.textContent = h.textContent || '';
         a.className = 'toc-link';
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
         li.appendChild(a);
         tocList.appendChild(li);
-        observeTargets.push(h);
+        sections.push(h);
       });
 
       accordions.forEach((acc) => {
@@ -356,29 +360,38 @@ const { title, date } = Astro.props;
 
         const li = document.createElement('li');
         li.className = 'toc-item toc-h3';
+        li.dataset.targetId = id;
         const a = document.createElement('a');
         a.href = `#${id}`;
         a.textContent = title;
         a.className = 'toc-link';
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
         li.appendChild(a);
         tocList.appendChild(li);
-        observeTargets.push(acc);
+        sections.push(acc);
       });
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const id = entry.target.id;
-              tocList.querySelectorAll('.toc-link').forEach((link) => {
-                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-              });
-            }
-          });
-        },
-        { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
-      );
-      observeTargets.forEach((el) => observer.observe(el));
+      const items = tocList.querySelectorAll('.toc-item');
+      function getActiveSection() {
+        const viewportTop = 120;
+        let active = null;
+        for (const s of sections) {
+          const rect = s.getBoundingClientRect();
+          if (rect.top <= viewportTop) active = s;
+        }
+        return active?.id || sections[0]?.id || '';
+      }
+      function updateActive() {
+        const activeId = getActiveSection();
+        items.forEach((item) => {
+          item.classList.toggle('active', item.dataset.targetId === activeId);
+        });
+      }
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
     }
 
     function init() {
@@ -404,16 +417,18 @@ const { title, date } = Astro.props;
 
   .literature-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
     max-width: 72rem;
     margin: 0 auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (max-width: 767px) {
     .literature-grid {
-      grid-template-columns: 1fr 240px;
-      gap: 3rem;
+      grid-template-columns: 1fr;
+    }
+    .literature-toc {
+      display: none !important;
     }
   }
 
@@ -422,63 +437,59 @@ const { title, date } = Astro.props;
   }
 
   .literature-toc {
-    display: none;
-  }
-
-  @media (min-width: 1024px) {
-    .literature-toc {
-      display: block;
-      position: sticky;
-      top: 6rem;
-      align-self: start;
-      max-height: calc(100vh - 8rem);
-      overflow-y: auto;
-    }
+    position: sticky;
+    top: 6rem;
+    align-self: start;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
   }
 
   .toc-title {
-    font-size: 0.75rem;
+    font-family: "Times New Roman", "SimSun", "宋体", serif !important;
+    font-size: 10px;
     font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #999;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--cool-gray);
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.5rem 0;
   }
 
   .toc-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.875rem;
   }
 
   .toc-item {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
   }
 
-  .toc-item.toc-h3 {
+  .toc-item.toc-h3 .toc-link {
+    font-size: 0.6875rem;
     padding-left: 1rem;
   }
 
   .toc-link {
-    color: var(--cool-gray);
-    text-decoration: none;
     display: block;
-    padding: 0.25rem 0;
-    border-left: 2px solid transparent;
-    padding-left: 0.5rem;
-    margin-left: -0.5rem;
-    transition: color 0.15s, border-color 0.15s;
+    padding: 0.3rem 0 0.3rem 0.75rem;
+    border-left: 2px solid #eee;
+    font-family: "Times New Roman", "SimSun", "宋体", serif !important;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #999;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    line-height: 1.45;
   }
 
   .toc-link:hover {
-    color: var(--navy);
+    color: #555;
   }
 
-  .toc-link.active {
-    color: var(--navy);
-    font-weight: 500;
-    border-left-color: var(--accent-blue);
+  .toc-item.active .toc-link {
+    border-left-color: #1a1a1a;
+    color: #1a1a1a;
+    font-weight: 700;
   }
 
   /* Dashboard - 极简学术风 */
