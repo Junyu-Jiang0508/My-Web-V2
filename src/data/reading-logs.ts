@@ -11,6 +11,38 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-05-kao-jurafsky',
+    date: '2026-03-05',
+    type: 'Paper',
+    title: 'A Computational Analysis of Poetic Style: Imagism and Its Influence on Modern Professional and Amateur Poetry',
+    author: 'Justine T. Kao & Dan Jurafsky',
+    progress: 'Full paper',
+    tags: ['Computational Linguistics', 'Cultural Analytics', 'Stylistics'],
+    notes: `
+<p><strong>Citation:</strong> Kao, J. T. &amp; Jurafsky, D. (2015). <em>Linguistic Issues in Language Technology</em>. <a href="https://aclanthology.org/2015.lilt-12.3/" target="_blank" rel="noopener">Link</a></p>
+<ol>
+<li><strong>Research Questions:</strong>
+  <ul>
+  <li>How do literary movements transform the ideals of poetic beauty?</li>
+  <li>How do changes in aesthetic standards impact different levels of expertise (elite vs. amateur)?</li>
+  <li>Can we measure these shifts using computational methods?</li>
+  </ul>
+</li>
+<li><strong>Place in the Literature:</strong> Builds on Martindale (1990)&rsquo;s work on elite corpus measurement; extends to analyzing changes surrounding Imagism and measuring the trickle-down effect from elite to mass aesthetics.</li>
+<li><strong>Key Concepts &amp; Operationalization:</strong>
+  <ul>
+  <li><strong>Concrete imagery:</strong> Average concreteness rating of all words &rarr; Concreteness score</li>
+  <li><strong>Emotional language:</strong> Average valence and arousal ratings from affective norms database &rarr; Valence &amp; Arousal scores</li>
+  <li><strong>Sound devices:</strong> Identity rhyme, perfect rhyme, slant rhyme, alliteration, consonance, and assonance</li>
+  <li><strong>Diction:</strong> Summed word frequencies divided by poem length &rarr; WordFreq score</li>
+  <li><strong>Exactness:</strong> Unique word types / total word instances &rarr; Type-Token Ratio</li>
+  </ul>
+</li>
+<li><strong>Research Design:</strong> Three comparative analyses &mdash; Imagists vs. 19th-century professionals; contemporary vs. 19th-century professionals; contemporary professionals vs. amateurs.</li>
+<li><strong>Comments:</strong> Effective framework for measuring stylistic features across expertise levels and historical periods. The elite-to-masses comparison is compelling. However, most measurements remain limited to word-level statistics.</li>
+</ol>`
+  },
+  {
     id: '2025-08-14-mosco',
     date: '2025-08-14',
     type: 'Book',
