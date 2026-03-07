@@ -75,8 +75,7 @@ date: 2026-03-05
 
 在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI总结功能可以在这一部分有非常优秀的发挥，将具体的faculty网页link复制粘贴，我的prompt如下：
 
-<details>
-<summary>Prompt 模板</summary>
+Prompt 模板
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -97,16 +96,28 @@ date: 2026-03-05
 >
 > - Distinguish between their historical achievements and recently active directions. Based on the text, indicate whether their research focus has shifted in the past 3–5 years.
 >
-> **Input Data:**
-> [Paste faculty webpage link or bio text here]
-
-</details>
+> **Input Data:**  
+> [Paste link here]
 
 在此基础上，你所剩下的选择就不多了，仔细阅读选出来的教授的Google Scholar主页，我认为可以着重关注发表量最多和最近的发表取向。很多教授都会有他们的个人主页，通过他们的bio和selected works去了解这个教授的整体vibe与他自己所表达出来的研究路径选择也是很好的方式。
 
-在最后的决策圈，不妨列一个表，对匹配程度和可能的担忧进行打分和备注说明，按照你所倾向的权重去取均值，来判断整体系的匹配程度。在一个系里，你最好能有2-3个和你具有相当程度匹配的老师，要么能够在具体理论上具有指导意义，要么可以在方法论上提供或计算或定性的方法。我同样按照上述prompt的三个维度去进行打分。
+在最后的决策圈，不妨列一个表格，对每个系的匹配程度和可能的担忧进行打分与备注，按照你所倾向的权重取均值来做最终判断。我同样按照上述prompt的三个维度进行打分。
+
+一个核心原则是：在一个系里，你最好能找到2-3个与你有相当程度匹配的老师——要么能在具体理论上提供指导，要么能在方法论上给予计算或定性的支持，要么在区域研究上有共同交集。我听说过PI跳槽去哈佛、学生跟着一起转过去的幸运案例，也听说过因此不得不尴尬换导师、被迫走交叉路径的情况。无论如何，一个系里有足够多与你fit的faculty，是整体申请中极其重要的考量因素。即使有那么一两个老师对你的研究路径相当认可，但如果和整体系的vibe不符合，依然不会被committee买单。
 
 ### 3. 我所了解过的项目
+
+我会把我详细读过文章的教授和项目的一些信息简要的列在下文，希望对之后的同学有启发与索引的作用。
+
+- [Upenn Communication](https://www.asc.upenn.edu/graduate/doctorate-communication) 一个超大的院系，有相当规模的Faculty，不论是placement还是资金支持都非常优秀。我在xhs上有看到往届不算少的案例，但26 Fall这个cycle，貌似确实没有中国人去。这个系的研究路径取向非常广，不管是政治传播、人际传播、媒介心理都有合适的老师。在我熟悉的领域里，有做政治极化和身份问题的[Deen Freelon](https://www.asc.upenn.edu/people/faculty/deen-freelon-phd)，也有做Networks的[Sandra González-Bailón](https://www.asc.upenn.edu/people/faculty/sandra-gonzalez-bailon-phd)。
+- [Northwestern MTS](https://mts.northwestern.edu/program-of-study/) 一个跨学科性质极其明显的项目。研究路径极注重交叉，有做网络科学和团队协作的绝对大牛 [Noshir Contractor](https://communication.northwestern.edu/faculty/noshir-contractor/)（[SONIC Lab](https://sonic.northwestern.edu/)负责人），有做在线社区与数字批判研究的 [Aaron Shaw](https://communication.northwestern.edu/faculty/aaron-shaw/)，也有深耕数字新闻与STS的 [Pablo Boczkowski](https://communication.northwestern.edu/faculty/pablo-boczkowski/)。在我的方向中，有做虚假信息与跨国政治传播的[Erik Nisbet](https://scholar.google.com/citations?user=g87pxu8AAAAJ&hl=en)，以及研究中国数字平台的[Yingdan Lu](https://scholar.google.com/citations?user=V_qZ9PwAAAAJ&hl=en)。
+- [Cornell Communication](https://gradschool.cornell.edu/academics/fields-of-study/subject/communication/communication-phd-ithaca/) Cornell的规模相对前两个就更加偏向小而精了，其与Cornell的iSchool有几个共同任职的教授，有交叉方向的朋友可以试着互申。[Drew Margolin](https://scholar.google.com/citations?hl=en&user=iQPFZ_sAAAAJ&view_op=list_works&sortby=pubdate)是做credibility/legitimacy、misinformation的大牛；[Natalie N. Bazarova](https://cals.cornell.edu/people/natalie-bazarova)和她的[Social Media Lab](https://socialmedialab.cornell.edu/)做了不少关于网络生态与内容治理的内容。上述两位老师也有过不少Coauthor的经历且都在iSchool里有任教。但今年Cornell的财政也确实不太景气，有点略微诈骗性质的是在10月份的Info Session上提到不会缩招，但最后只招了4个，也算是极其惨烈。
+- [NYU MCC](https://steinhardt.nyu.edu/degree/phd-media-culture-and-communication) 这算是美国目前为数不多仍然坚持质化路径的项目了。整体的vibe非常偏宏观叙事与批判视角，有做技术成瘾与机器设计的 [Natasha Dow Schüll](https://www.google.com/search?q=https://steinhardt.nyu.edu/people/natasha-dow-schull)，做数字媒体理论与软件研究的 [Alexander Galloway](https://steinhardt.nyu.edu/people/alexander-galloway)。但也有在faculty里独树一帜做量化、博士毕业于MTS的 [Angela Xiao Wu](https://steinhardt.nyu.edu/people/angela-xiao-wu)（计算网络方法与政治信息化的批判视角）。
+- [UMich iSchool](https://www.si.umich.edu/) ischool里面的Top Tier，有不少做计算社会科学的faculty。有做社会政治数据分析的 [Ceren Budak](https://www.si.umich.edu/people/ceren-budak)，更偏向平台的干预设计；有我非常非常喜欢的 **[Dallas Card](https://www.si.umich.edu/people/dallas-card)**, 做政治话语框架演变、历史语料库构建，师承UW的[Noah A. Smith](https://nasmith.github.io/)，交叉方向做的非常出色。
+
+---
+
+需要我帮你按照这个框架，继续锐评其他学校（比如 Cornell Comm 或 UW Comm）吗？如果有其他目标院校的 Faculty Notes，可以直接发给我！
 
 ## 三、材料准备
 
