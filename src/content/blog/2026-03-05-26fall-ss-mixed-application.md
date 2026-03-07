@@ -75,7 +75,8 @@ date: 2026-03-05
 
 在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI总结功能可以在这一部分有非常优秀的发挥，将具体的faculty网页link复制粘贴，我的prompt如下：
 
- Prompt 模板（点击展开）
+<details>
+<summary>Prompt 模板</summary>
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -99,9 +100,11 @@ date: 2026-03-05
 > **Input Data:**
 > [Paste faculty webpage link or bio text here]
 
+</details>
+
 在此基础上，你所剩下的选择就不多了，仔细阅读选出来的教授的Google Scholar主页，我认为可以着重关注发表量最多和最近的发表取向。很多教授都会有他们的个人主页，通过他们的bio和selected works去了解这个教授的整体vibe与他自己所表达出来的研究路径选择也是很好的方式。
 
-在最后的决策圈，不妨列一个表，对匹配程度和可能的担忧进行打分和备注说明，按照你所倾向的权重去取均值，来判断整体系的匹配程度。我同样按照上述prompt的三个维度去进行打分。
+在最后的决策圈，不妨列一个表，对匹配程度和可能的担忧进行打分和备注说明，按照你所倾向的权重去取均值，来判断整体系的匹配程度。在一个系里，你最好能有2-3个和你具有相当程度匹配的老师，要么能够在具体理论上具有指导意义，要么可以在方法论上提供或计算或定性的方法。我同样按照上述prompt的三个维度去进行打分。
 
 ### 3. 我所了解过的项目
 
