@@ -11,6 +11,43 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-07-bamman-coreference',
+    date: '2026-03-07',
+    type: 'Paper',
+    title: 'An Annotated Dataset of Coreference in English Literature',
+    author: 'David Bamman, Olivia Lewke & Anya Mansoor',
+    progress: 'Full paper',
+    tags: ['Computational Methods', 'Narrative Analysis'],
+    notes: `
+<p><strong>Citation:</strong> Bamman, D., Lewke, O. &amp; Mansoor, A. (2020). <em>Proceedings of the Twelfth Language Resources and Evaluation Conference</em>. <a href="https://aclanthology.org/2020.lrec-1.6/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="zotero://open-pdf/0_W4IJWXSV" rel="noopener noreferrer nofollow">Open in Zotero</a></p>
+<ol>
+<li><strong>TL;DR:</strong> The paper introduces a literary coreference dataset and shows that English fiction contains distinctive long-distance, bursty entity patterns; models trained on in-domain literary data perform substantially better than those trained on standard news benchmarks.</li>
+<li><strong>Theoretical Frame:</strong> Computational Literary Studies / coreference resolution domain adaptation.</li>
+<li><strong>Key Concepts:</strong>
+  <ul>
+  <li><strong>Literary coreference:</strong> Differs from standard coreference because literary narratives track entities across long spans, shifting narrative perspectives, and character development over the course of a novel.</li>
+  <li><strong>Near-identity:</strong> A relation shaped by neutralization/compression and refocusing/decompression, which respectively minimize or maximize perceived differences between discourse entities.</li>
+  </ul>
+</li>
+<li><strong>Data &amp; Method:</strong> 210,532 tokens from 100 English-language fiction works in LitBank (1719-1922), annotated for ACE-style entity categories and used to evaluate a BERT-based neural coreference system across training domains.</li>
+<li><strong>Key Findings:</strong>
+  <ol>
+  <li>Most mentions in literary texts are characters/people (83.1%), and pronouns make up 54.3% of mentions.</li>
+  <li>Long-range entities display bursty narrative behavior, while pronouns have a median distance of only two entities to their nearest antecedent.</li>
+  <li>A model trained on literary in-domain data achieves an F-score six points higher than a model trained on OntoNotes.</li>
+  </ol>
+</li>
+<li><strong>Takeaways:</strong>
+  <ul>
+  <li><strong>Reusability:</strong> The annotation distinctions around generic vs. specific mentions and identity revelation are directly useful for narrative text analysis, especially mystery or character-centered texts.</li>
+  <li><strong>Limitation:</strong> The dataset only annotates six ACE entity categories rather than unrestricted coreference.</li>
+  <li><strong>Direct application:</strong> Essential for arguing that domain-specific data matters in NLP, especially when adapting entity tracking to literature, culture, or communication research.</li>
+  </ul>
+</li>
+<li><strong>Key Quote:</strong> &ldquo;While a model trained on in-domain literary data achieves an F-score six points higher than one trained on OntoNotes, it performs equivalently to a model trained on PreCo&rdquo;.</li>
+</ol>`
+  },
+  {
     id: '2026-03-05-lo-cao',
     date: '2026-03-05',
     type: 'Paper',
