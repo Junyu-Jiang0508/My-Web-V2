@@ -67,14 +67,15 @@ date: 2026-03-05
 
 ### 2. 如何选择自己合适的项目
 
-首先，fit大于一切。在我的感官里，至少在comm这，fit比好bg、强connect可能要重要得多。
+回顾整个申请季，我最深刻的体悟是：在PhD申请中，Research Fit大于一切。fit比好bg、强connect可能要重要得多。
 
 我在第一步做的是比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
+<!-- markdownlint-disable MD033 -->
 <details>
-<summary>Prompt 模板（点击展开）</summary>
+<summary>Prompt 模板</summary>
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -99,6 +100,7 @@ date: 2026-03-05
 > [Paste link here]
 
 </details>
+<!-- markdownlint-restore -->
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -158,8 +160,6 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 
 #### SoP
 
-#### 语言
-
 ## 四、套磁
 
 ## 五、我的时间线
@@ -171,4 +171,3 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 ## 八、结语
 
 ## 九、前文未提及但极其有用的资源
-

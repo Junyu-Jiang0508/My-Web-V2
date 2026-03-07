@@ -7,7 +7,7 @@
     "gen:pubs": "python scripts/update_pubs.py",
     "sync:cv": "python scripts/sync_cv.py",
     "dev": "npm run gen && astro dev",
-    "build": "astro build",
+    "build": "astro build --force",
     "preview": "astro preview",
     "astro": "astro"
   },
