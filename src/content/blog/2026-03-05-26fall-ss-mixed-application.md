@@ -25,7 +25,7 @@ date: 2026-03-05
 
 ### 2. 申请结果
 
-我一共申请了12个项目（8个Comm + 2个Polisci + 2个Infosci），拿到了5个面试，最后拿到了2个offer，具体结果如下。
+我一共申请了12个项目（8个Comm + 2个Polisci + 2个Infosci），拿到了4个面试，最后拿到了2个offer，具体结果如下。
 
 - **UC Davis, Political Science**
 - **UNC Chapel Hill, Media & Communication** (Interviewed)
@@ -39,7 +39,6 @@ date: 2026-03-05
 - ~~UCSD, Political Science~~
 - ~~CU Boulder, Information Science~~
 - ~~CU Boulder, APRD~~
-
 
 ## 二、选校
 
@@ -68,9 +67,9 @@ date: 2026-03-05
 
 ### 2. 如何选择自己合适的项目
 
-我在第一步做的是进行比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士点开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
+我在第一步做的是进行比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
 
-在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI总结功能可以在这一部分有非常优秀的发挥，将具体的faculty网页link复制粘贴，我的prompt如下：
+在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
 <details>
 <summary>Prompt 模板（点击展开）</summary>
@@ -99,11 +98,13 @@ date: 2026-03-05
 
 </details>
 
-在此基础上，你所剩下的选择就不多了，仔细阅读选出来的教授的Google Scholar主页，我认为可以着重关注发表量最多和最近的发表取向。很多教授都会有他们的个人主页，通过他们的bio和selected works去了解这个教授的整体vibe与他自己所表达出来的研究路径选择也是很好的方式。
+经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
 在最后的决策圈，不妨列一个表格，对每个系的匹配程度和可能的担忧进行打分与备注，按照你所倾向的权重取均值来做最终判断。我同样按照上述prompt的三个维度进行打分。
 
 一个核心原则是：在一个系里，你最好能找到2-3个与你有相当程度匹配的老师——要么能在具体理论上提供指导，要么能在方法论上给予计算或定性的支持，要么在区域研究上有共同交集。我听说过PI跳槽去哈佛、学生跟着一起转过去的幸运案例，也听说过因此不得不尴尬换导师、被迫走交叉路径的情况。无论如何，一个系里有足够多与你fit的faculty，是整体申请中极其重要的考量因素。即使有那么一两个老师对你的研究路径相当认可，但如果和整体系的vibe不符合，依然不会被committee买单。
+
+关于选校数量，我认为在6-15这个区间段都是正常的，我也有朋友是按照U.S. News从rank1-30 每个都交了申请，最后顺利拿到offer。毕竟这是钱包的问题，而且据我所知，大部分top院校的申请费都是相当好waive的。
 
 ### 3. 我所了解过的项目
 
@@ -116,6 +117,9 @@ date: 2026-03-05
 - [UMich iSchool](https://www.si.umich.edu/) iSchool里面的Top Tier，有不少做计算社会科学的faculty。有做社会政治数据分析的 [Ceren Budak](https://www.si.umich.edu/people/ceren-budak)，更偏向平台的干预设计；有我非常非常喜欢的 **[Dallas Card](https://www.si.umich.edu/people/dallas-card)**, 做政治话语框架演变、历史语料库构建，师承UW的[Noah A. Smith](https://nasmith.github.io/)，交叉方向做得非常出色。UMSI也有开设[master](https://www.si.umich.edu/programs/master-science-information)项目，资源很多，也是非常好的跳板项目。
 - [UIUC Department of Communication](https://communication.illinois.edu/resources/graduate-handbook/phd-program) 一个计算传播资源丰富的的老牌强校。做计算文本分析的，有依托[Cline Center](https://clinecenter.illinois.edu/)海量数据的[Scott L. Althaus](https://communication.illinois.edu/directory/profile/salthaus)（侧重事件编码但貌似不怎么带新生了）；做政治传播、虚假信息和LLM的 [JungHwan Yang](https://communication.illinois.edu/directory/profile/junghwan)，非常的 supportive。UIUC的Funding强绑定TA岗位，要求貌似是口语8.0。
 - [UNC Chapel Hill Hussman](https://hussman.unc.edu/grad/phd) 同样的老牌强校，兼顾量化和质化，主流取向是健康传播和政治传播。[CITAP](https://citap.unc.edu/)有相当不错的跨学科资源，有大佬[Daniel Kreiss](https://hussman.unc.edu/people/daniel-kreiss) 和 [Shannon McGregor](https://hussman.unc.edu/people/shannon-c-mcgregor)。缺点在于自从Deen Freelon走后，系里做纯定量的只有[Eva Zhao](https://hussman.unc.edu/people/xinyan-eva-zhao)，也可以看出系里的一个主流取向。Hussman会发不少无funding的offer，也可以看出刚刚才从惨淡财政中走出来的痕迹。
+- [Rutgers SC&I](https://sci.rutgers.edu/academics/graduate-programs/phd-program) 一个被严重低估的项目，最大的特点是Communication与InfoSci不分家。[Katya Ognyanova](https://sci.rutgers.edu/ognyanova-katherine-katya)之前做的[COVID States Project](https://www.covidstates.org/)很有意思，专注于网络对政治行为和信任的影响；[Kiran Garimella](https://comminfo.rutgers.edu/garimella-kiran) 做的东西很独特很有意思，他之前在MIT IDSS做博后，专门研究加密平台上的Misinformation和政治极化。[Sarah Shugars](https://comminfo.rutgers.edu/shugars-sarah)结合了Network Analysis和NLP来分析政治商议，人也超级nice。Health Comm也是该系的大头，而且funding给的真很不错。
+- 这是一份基于你所提供的“锐评”风格，结合 University at Buffalo (UB) Communication PhD 项目现状（特别是你关注的计算社会科学、政治传播与虚假信息方向）的点评：
+- [UBuffalo Communication](https://www.buffalo.edu/cas/communication/graduate/phd.html) 系非常小，招的人非常少，但是老师都很好很好，非常偏向于量化的一个项目。[Yotam Ophir](https://www.buffalo.edu/cas/communication/faculty/faculty-directory/ophir.html)和他负责的 **[MEME Lab](https://www.google.com/search?q=https://www.buffalo.edu/cii/research/meme-lab.html)** 在文本挖掘、网络分析与政治极端主义的研究上非常活跃。此外，值得一提的是**[Yini Zhang](https://www.buffalo.edu/cas/communication/faculty/faculty-directory.host.html/content/shared/cas/communication/faculty-staff/faculty-profiles/zhang-yini.html)**，我非常非常喜欢的一个老师，毕业于UW-Madison，导师是 Dhavan Shah 和 Chris Wells。她算是少有的非常专注methodology的老师，研究社交媒体上的政治注意力流变。她和 Yotam Ophir 经常有合作，把 UB 在 Misinformation 和 Political Polarization 这一块的 research output 拉得非常高。UB 的 Funding 是个比较明显的痛点，Base stipend 目前大概在 $23k 左右，虽然 Buffalo 物价低，但对比私立名校确实略显捉襟见肘。不过对于想在量化领域打下极其扎实基础（特别是 Measurement 和 Stats）的人来说，这里的 ROI 依然很高。
 
 ## 三、材料准备
 
