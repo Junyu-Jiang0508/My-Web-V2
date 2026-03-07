@@ -19,7 +19,7 @@ date: 2026-03-05
 
 我本科毕业于中国传媒大学的传播学专业，这是一个与美国[密苏里大学新闻学院](https://journalism.missouri.edu/)的联合办学项目，但与密苏里的connect极其有限。
 
-目前我在UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的Polisci、Cogsci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connect。
+目前我就读UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的Polisci、Cogsci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connect。
 
 我的兴趣主要集中于政治话语的测量与语义的变迁，并且对计算方法有相当不错的热情。申请时大概有5-6篇AEJMC/IPSA等传播学政治学报告过的论文，一作但不算发表。在校期间跟着UCSD文学系的[Prof. Amelia Glasser](https://literature.ucsd.edu/people/faculty/aglaser.html)做关于[乌克兰诗歌数字档案](https://www.ukrpoetry.org/)的RA。
 
@@ -27,21 +27,18 @@ date: 2026-03-05
 
 我一共申请了12个项目（8个Comm + 2个Polisci + 2个Infosci），拿到了5个面试，最后拿到了2个offer，具体结果如下。
 
-
-| 学校           | 项目           | 截止    | 面试    | 结果           | 通知   |
-| ------------ | ------------ | ----- | ----- | ------------ | ---- |
-| UC Davis     | PoliSci      | 12/15 | —     | **Accepted** | 2/4  |
-| UNC          | Media & Comm | 12/1  | 1/30  | **Accepted** | 2/4  |
-| Buffalo      | Comm & Info  | 12/1  | 12/25 | Waitlist     | —    |
-| Rutgers      | Comm & Info  | 12/1  | 1/27  | —            | —    |
-| Northwestern | MTS          | 12/1  | —     | —            | —    |
-| Cornell      | Comm         | 12/1  | —     | Declined     | 1/28 |
-| NYU          | MCC          | 12/1  | —     | Declined     | 3/5  |
-| Michigan     | iSchool      | 12/1  | 1/9   | Declined     | 2/6  |
-| UIUC         | Comm         | 12/1  | —     | Declined     | 1/16 |
-| UCSD         | PoliSci      | 12/1  | —     | Declined     | 2/12 |
-| CU Boulder   | Info         | 12/1  | —     | Declined     | 1/27 |
-| CU Boulder   | APRD         | 11/25 | —     | Declined     | 2/9  |
+- **UC Davis, Political Science**
+- **UNC Chapel Hill, Media & Communication** (Interviewed)
+- Buffalo, Communication & Information (Interviewed → Waitlist)
+- Rutgers, Communication & Information (Interviewed)
+- Northwestern, MTS (TBD)
+- ~~Cornell, Communication~~
+- ~~NYU, MCC~~
+- ~~Michigan, iSchool~~ (Interviewed)
+- ~~UIUC, Communication~~
+- ~~UCSD, Political Science~~
+- ~~CU Boulder, Information Science~~
+- ~~CU Boulder, APRD~~
 
 
 ## 二、选校
