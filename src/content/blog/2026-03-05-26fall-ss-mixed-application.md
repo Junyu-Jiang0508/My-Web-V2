@@ -1,7 +1,8 @@
 ---
-title: "我的26fall北美社科混申总结"
+
+## title: "我的26fall北美社科混申总结"
+
 date: 2026-03-05
----
 
 ## 前言
 
@@ -67,12 +68,13 @@ date: 2026-03-05
 
 ### 2. 如何选择自己合适的项目
 
-我在第一步做的是进行比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
+首先，fit大于一切。在我的感官里，至少在comm这，fit比好bg、强connect可能要重要得多。
 
-在完成最宏观的项目检索后，你可能留下50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
+我在第一步做的是比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
 
-<details>
-<summary>Prompt 模板（点击展开）</summary>
+现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
+
+Prompt 模板
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -96,8 +98,6 @@ date: 2026-03-05
 > **Input Data:**  
 > [Paste link here]
 
-</details>
-
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
 在最后的决策圈，不妨列一个表格，对每个系的匹配程度和可能的担忧进行打分与备注，按照你所倾向的权重取均值来做最终判断。我同样按照上述prompt的三个维度进行打分。
@@ -119,13 +119,45 @@ date: 2026-03-05
 - [UNC Chapel Hill Hussman](https://hussman.unc.edu/grad/phd) 同样的老牌强校，兼顾量化和质化，主流取向是健康传播和政治传播。[CITAP](https://citap.unc.edu/)有相当不错的跨学科资源，有大佬[Daniel Kreiss](https://hussman.unc.edu/people/daniel-kreiss) 和 [Shannon McGregor](https://hussman.unc.edu/people/shannon-c-mcgregor)。缺点在于自从Deen Freelon走后，系里做纯定量的只有[Eva Zhao](https://hussman.unc.edu/people/xinyan-eva-zhao)，也可以看出系里的一个主流取向。Hussman会发不少无funding的offer，也可以看出刚刚才从惨淡财政中走出来的痕迹。
 - [Rutgers SC&I](https://sci.rutgers.edu/academics/graduate-programs/phd-program) 一个被严重低估的项目，最大的特点是Communication与InfoSci不分家。[Katya Ognyanova](https://sci.rutgers.edu/ognyanova-katherine-katya)之前做的[COVID States Project](https://www.covidstates.org/)很有意思，专注于网络对政治行为和信任的影响；[Kiran Garimella](https://comminfo.rutgers.edu/garimella-kiran) 做的东西很独特很有意思，他之前在MIT IDSS做博后，专门研究加密平台上的Misinformation和政治极化。[Sarah Shugars](https://comminfo.rutgers.edu/shugars-sarah)结合了Network Analysis和NLP来分析政治商议，人也超级nice。Health Comm也是该系的大头，而且funding给的真很不错。
 - 这是一份基于你所提供的“锐评”风格，结合 University at Buffalo (UB) Communication PhD 项目现状（特别是你关注的计算社会科学、政治传播与虚假信息方向）的点评：
-- [UBuffalo Communication](https://www.buffalo.edu/cas/communication/graduate/phd.html) 系非常小，招的人非常少，但是老师都很好很好，非常偏向于量化的一个项目。[Yotam Ophir](https://www.buffalo.edu/cas/communication/faculty/faculty-directory/ophir.html)和他负责的 **[MEME Lab](https://www.google.com/search?q=https://www.buffalo.edu/cii/research/meme-lab.html)** 在文本挖掘、网络分析与政治极端主义的研究上非常活跃。此外，值得一提的是**[Yini Zhang](https://www.buffalo.edu/cas/communication/faculty/faculty-directory.host.html/content/shared/cas/communication/faculty-staff/faculty-profiles/zhang-yini.html)**，我非常非常喜欢的一个老师，毕业于UW-Madison，导师是 Dhavan Shah 和 Chris Wells。她算是少有的非常专注methodology的老师，研究社交媒体上的政治注意力流变。她和 Yotam Ophir 经常有合作，把 UB 在 Misinformation 和 Political Polarization 这一块的 research output 拉得非常高。UB 的 Funding 是个比较明显的痛点，Base stipend 目前大概在 $23k 左右，虽然 Buffalo 物价低，但对比私立名校确实略显捉襟见肘。不过对于想在量化领域打下极其扎实基础（特别是 Measurement 和 Stats）的人来说，这里的 ROI 依然很高。
+- [UBuffalo Communication](https://www.buffalo.edu/cas/communication/graduate/phd.html) 系非常小，招的人非常少，但是老师都很好很好，非常偏向于量化的一个项目。[Yotam Ophir](https://www.buffalo.edu/cas/communication/faculty/faculty-directory/ophir.html)和他负责的 [MEME Lab](https://www.google.com/search?q=https://www.buffalo.edu/cii/research/meme-lab.html) 在文本挖掘、网络分析与政治极端主义的研究上非常活跃。此外，值得一提的是[Yini Zhang](https://www.buffalo.edu/cas/communication/faculty/faculty-directory.host.html/content/shared/cas/communication/faculty-staff/faculty-profiles/zhang-yini.html)，我非常非常喜欢的一个老师，毕业于UW-Madison，导师是 Dhavan Shah 和 Chris Wells。她算是少有的非常专注于methodology的老师，研究社交媒体上的政治注意力流变。她和 Yotam Ophir 经常有合作，把 UB 在 Misinformation 和 Political Polarization 这一块的 research output 拉得非常高。UB 的 Funding 是个比较明显的痛点，Base stipend 目前大概在 $23k 左右。
 
 ## 三、材料准备
 
-### 1. 在申请季中可以提升的
+### 1. 在申请季中不可把控的or无关紧要的
 
-### 2. 在申请季中不可把控的
+#### GPA
+
+GPA肯定是长期积累的结果。但就个人观感而言，社科这个track申请者的GPA普遍不会太低，到了3.7以上之后边际效益就很小了。
+
+#### PUB
+
+我的一个结论是：在Committee从400-500份申请中筛出50人shortlist的阶段，Publication的核心价值在于帮你在SOP中呈现一条清晰的学术轨迹；而在从shortlist中进一步挑选面试名单或直接发ad时，pub则可能在背景相近的候选人之间形成比较优势。
+
+不妨想想，在Committee极其有限的审阅时间里，教授会关注pub的哪些信息？首先是论文标题所透露的细分领域、研究议题和方法取向，其次是你是否为一作，最后可能才会扫一眼期刊名称。在传播学这样一个不像隔壁PoliSci有等级森严的顶刊体系的学科里，是正式发表、会议论文还是working paper，其实远没有你想象的那么重要。
+
+于是结论就很容易出来了，Pub（哪怕只是一个Idea），他只是增加SoP信度的validtion set，教授更重视你是否有成熟的，提出一个问题然后尝试去解决的思维路径，也就是常常说的培养潜力。
+
+#### GRE
+
+除了经济学、政治学等对量化基础有严格要求的学科（其实这也未尝不是一种学科主流取向的展现）仍将GRE（尤其是Quant部分）作为评估学力的重要参考外，GRE在绝大多数人文及软社科项目申请中已逐渐边缘化。许多项目不仅将其设为Optional，更有不少直接采取了GRE Blind政策，明确表示不接受或不审阅GRE成绩。
+
+#### 语言
+
+无关紧要，但一定请关注项目明确的TA 语言要求。例如，UC Davis、UIUC及Purdue的传播学项目，均明确要求申请者的托福口语达到26分或雅思口语达到8.0分及以上。强烈建议在申请前详细核查目标项目的相关政策。
+
+#### PS/Diversity Statement
+
+其实用处不大，但在Campus Visit的时候和faculty聊才发现，其实绝大多数的Fellowship Nomination都和这个有关。其具体内容主要包含你的一些身份政治的内容，如种族、第一代大学生、性别歧视、身体残疾等，也同时可以提及一些个体中大事件例如重大挫折、童年的社经困难。同时，讲述如何克服困难、如何服务于社群（或小群体）、如何发挥leadership，都是很不错的论述点。
+
+### 2. 在申请季中可以提升的
+
+#### 推荐信
+
+#### CV
+
+#### SoP
+
+#### 语言
 
 ## 四、套磁
 
