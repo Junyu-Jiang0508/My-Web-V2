@@ -1,8 +1,7 @@
 ---
-
-## title: "我的26fall北美社科混申总结"
-
+title: "我的26fall北美社科混申总结"
 date: 2026-03-05
+---
 
 ## 前言
 
@@ -74,7 +73,9 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-Prompt 模板
+<!-- markdownlint-disable MD033 -->
+<details>
+<summary>Prompt 模板</summary>
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -97,6 +98,9 @@ Prompt 模板
 >
 > **Input Data:**  
 > [Paste link here]
+
+</details>
+<!-- markdownlint-restore -->
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -158,7 +162,7 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 
 另外，一个很细小的容易被忽略的点：在填写推荐信系统时请务必waive查看推荐信内容的权利。许多学校会认为没有waive的推荐信等于造假而直接不看。
 
-关于推荐信发送Timeline。我推荐在10月中旬就和教授做好确认，然后再10月下旬or11月初把自己的材料（CV/SOP/申请list/简要描述和教授的互动回忆）打包发送给推荐人。11月有大部分学校的期末周，教授可能会极其繁忙，如果在11月中旬把具体的链接发给教授（或更早），在距离ddl的前一周发一个warmly reminder。
+关于推荐信发送Timeline。我推荐在10月中旬就和教授做好确认，然后再10月下旬or11月初把自己的材料（CV/SOP/申请list/简要描述和教授的互动回忆）打包发送给推荐人。11月有大部分学校的期末周，教授可能会极其繁忙，建议在11月中旬把具体的链接发给教授（或更早），在距离ddl的前一周发一个warmly reminder。
 
 ### 2. 在申请季中可以提升的
 
