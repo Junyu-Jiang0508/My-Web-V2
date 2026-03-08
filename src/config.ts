@@ -1,3 +1,6 @@
+/** GoatCounter analytics code from https://goatcounter.com */
+export const goatCounter = 'junyu';
+
 export const giscus = {
   repo: 'Junyu-Jiang0508/My-Web-V2',
   repoId: 'R_kgDORd7wPw',

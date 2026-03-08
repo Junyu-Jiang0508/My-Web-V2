@@ -73,9 +73,9 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-<!-- markdownlint-disable MD033 -->
-<details>
-<summary>Prompt 模板</summary>
+
+
+Prompt 模板
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -99,8 +99,7 @@ date: 2026-03-05
 > **Input Data:**  
 > [Paste link here]
 
-</details>
-<!-- markdownlint-restore -->
+
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -134,11 +133,11 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 
 #### PUB
 
-我的一个结论是：在Committee从400-500份申请中筛出50人shortlist的阶段，Publication的核心价值在于帮你在SOP中呈现一条清晰的学术轨迹；而在从shortlist中进一步挑选面试名单或直接发ad时，pub则可能在背景相近的候选人之间形成比较优势。
+我的一个结论是：在Committee从400-500份申请中筛出50人shortlist的阶段，Publication的核心价值在于帮你在SOP（Statement of Purpose）中呈现一条清晰的学术轨迹；而在从shortlist中进一步挑选面试名单或直接发ad时，pub则可能在背景相近的候选人之间形成比较优势。
 
 不妨想想，在Committee极其有限的审阅时间里，教授会关注pub的哪些信息？首先是论文标题所透露的细分领域、研究议题和方法取向，其次是你是否为一作，最后可能才会扫一眼期刊名称。在传播学这样一个不像隔壁PoliSci有等级森严的顶刊体系的学科里，是正式发表、会议论文还是working paper，其实远没有你想象的那么重要。
 
-于是结论就很容易出来了，Pub（哪怕只是一个Idea），他只是增加SoP信度的validtion set，教授更重视你是否有成熟的，提出一个问题然后尝试去解决的思维路径，也就是常常说的培养潜力。
+于是结论就很容易出来了，Pub（哪怕只是一个idea）更多是在为SOP提供一个可验证的支撑点；教授更重视的，是你是否已经具备较成熟的、能够提出问题并尝试解决问题的思维路径，也就是常说的培养潜力。
 
 #### GRE
 
@@ -148,17 +147,19 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 
 无关紧要，但一定请关注项目明确的TA 语言要求。例如，UC Davis、UIUC及Purdue的传播学项目，均明确要求申请者的托福口语达到26分或雅思口语达到8.0分及以上。强烈建议在申请前详细核查目标项目的相关政策。
 
-#### PS/Diversity Statement
+#### Personal Statement / Diversity Statement
 
 其实用处不大，但在Campus Visit的时候和faculty聊才发现，其实绝大多数的Fellowship Nomination都和这个有关。其具体内容主要包含你的一些身份政治的内容，如种族、第一代大学生、性别歧视、身体残疾等，也同时可以提及一些个体中大事件例如重大挫折、童年的社经困难。同时，讲述如何克服困难、如何服务于社群（或小群体）、如何发挥leadership，都是很不错的论述点。
 
-### 2. 在申请季中可以提升的
-
 #### 推荐信
+
+其实对于绝大多数人来说，三封推荐信都是来占坑的。在没能拿到来自对方认识的推荐信之外，我认为推荐信所起的作用是：在你的CV和SOP这两个相对主观且结果导向的材料之外，能够提供一个非常独特的第三视角来更宏观地审视申请者。
+
+### 2. 在申请季中可以提升的
 
 #### CV
 
-#### SoP
+#### SOP（Statement of Purpose）
 
 ## 四、套磁
 
@@ -171,3 +172,4 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 ## 八、结语
 
 ## 九、前文未提及但极其有用的资源
+

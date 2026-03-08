@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import { goatCounter } from '../config';
 
 interface Props {
 	title?: string;
@@ -23,6 +24,12 @@ const lastUpdated = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 		<link rel="apple-touch-icon" href="/icon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script
+			data-goatcounter={`https://${goatCounter}.goatcounter.com/count`}
+			data-goatcounter-settings='{"allow_local": false}'
+			async
+			src="//gc.zgo.at/count.js"
+		></script>
 	</head>
 	<body>
 		<Header />
