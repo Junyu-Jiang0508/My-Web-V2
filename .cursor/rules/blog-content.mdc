@@ -1,0 +1,36 @@
+---
+description: Rules for editing blog markdown files in src/content/blog/
+globs: src/content/blog/**/*.md
+alwaysApply: false
+---
+
+# Blog Markdown Editing Rules
+
+## Frontmatter Protection
+
+Blog posts use YAML frontmatter delimited by `---`. When editing these files:
+
+1. **NEVER** insert blank lines inside the frontmatter block (between the opening `---` and closing `---`).
+2. **NEVER** prepend `##` or any Markdown syntax to frontmatter fields.
+3. Always verify the frontmatter structure remains intact after any edit.
+
+Correct format:
+```
+---
+title: "Post Title"
+date: 2026-01-01
+---
+```
+
+## HTML Block Protection
+
+Some blog posts contain `<details>/<summary>` collapsible sections and other raw HTML blocks.
+
+1. **NEVER** remove `<details>`, `<summary>`, `</summary>`, `</details>` tags during edits.
+2. **NEVER** remove `<!-- markdownlint-disable -->` / `<!-- markdownlint-restore -->` comment pairs.
+3. When editing content inside a `<details>` block, always preserve the opening and closing tags.
+4. After any edit, verify all HTML structural tags are still present.
+
+## Square Bracket Escaping
+
+In Markdown, `[text]` is parsed as a link reference. When square brackets are used as literal labels (not links), they must be escaped: `\[text\]`.

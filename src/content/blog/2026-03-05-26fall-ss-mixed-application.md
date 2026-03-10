@@ -73,7 +73,9 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-Prompt 模板
+<!-- markdownlint-disable MD033 -->
+<details>
+<summary>Prompt 模板</summary>
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -96,6 +98,9 @@ Prompt 模板
 >
 > **Input Data:**  
 > [Paste link here]
+
+</details>
+<!-- markdownlint-restore -->
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
