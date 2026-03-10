@@ -32,6 +32,12 @@ export const readingLogs: ReadingEntry[] = [
   <li><strong>Priming and Prominence:</strong> The psychological prominence of textual triggers dictates the depth of reader involvement. &ldquo;These two poems support such a notion since the deictic fields of &lsquo;Mittens&rsquo;, though unusual and at times apparently contradictory, are nevertheless strongly primed, whereas those of &lsquo;Pain tells you what to wear&rsquo; are less clear and thus less fully primed.&rdquo;</li>
   </ul>
 </li>
+<li><strong>The Role of Pronouns:</strong>
+  <ul>
+  <li><strong>First-person &ldquo;I&rdquo; (<em>Mittens</em>):</strong> Provides an entry perspective for the reader to enter the text world; facilitates identification with the narrator and allows readers to interpret the poem in personally relevant ways; juxtaposing two &ldquo;ages&rdquo; of the narrator demonstrates that identity is not singular across a lifetime.</li>
+  <li><strong>Second-person &ldquo;you&rdquo; (<em>Pain tells you what to wear</em>):</strong> Iterative descriptions induce a generic third-person reading rather than true address; with no overt &ldquo;I&rdquo; to identify with, conceptual blending between reader and narrator remains incomplete, creating alienation; the narrator effectively hides behind a generalized pronoun that fails to establish a clear deictic centre.</li>
+  </ul>
+</li>
 </ol>`
   },
   {
