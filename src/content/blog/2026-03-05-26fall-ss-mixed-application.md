@@ -1,7 +1,7 @@
 ---
-title: "我的26fall北美社科混申总结"
+
+## title: "我的26fall北美社科混申总结"
 date: 2026-03-05
----
 
 ## 前言
 
@@ -19,9 +19,9 @@ date: 2026-03-05
 
 我本科毕业于中国传媒大学的传播学专业，这是一个与美国[密苏里大学新闻学院](https://journalism.missouri.edu/)的联合办学项目，但与密苏里的connect极其有限。
 
-目前我就读UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的Polisci、Cogsci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connect。
+目前我就读UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的PoliSci、CogSci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connect。
 
-我的兴趣主要集中于政治话语的测量与语义的变迁，并且对计算方法有相当不错的热情。申请时大概有5-6篇AEJMC/IPSA等传播学政治学报告过的论文，一作但不算发表。在校期间跟着UCSD文学系的[Prof. Amelia Glasser](https://literature.ucsd.edu/people/faculty/aglaser.html)做关于[乌克兰诗歌数字档案](https://www.ukrpoetry.org/)的RA。
+我的兴趣主要集中于政治话语的测量与语义的变迁，并且对计算方法有相当不错的热情。申请时大概有5-6篇AEJMC/IPSA等传播学政治学报告过的论文，一作但不算发表。在校期间跟着UCSD文学系的[Prof. Amelia Glasser](https://literature.ucsd.edu/people/faculty/aglaser.html)做关于[Ukrainian Poetry Archive](https://www.ukrpoetry.org/)的RA。
 
 ### 2. 申请结果
 
