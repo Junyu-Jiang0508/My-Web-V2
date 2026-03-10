@@ -1,7 +1,8 @@
 ---
-title: "我的26fall北美社科混申总结"
+
+## title: "我的26fall北美社科混申总结"
+
 date: 2026-03-05
----
 
 ## 前言
 
@@ -11,7 +12,7 @@ date: 2026-03-05
 
 本文中的信息有来自互联网检索，有我心路历程中的极个体性的感悟，也尝试比较宏观地对我了解过的项目进行简略的总结。如果能对之后相关社科专业的朋友有所帮助，甚至只是在申请季过程中煎熬时刻的宽慰与满足，那本文也算是达成目的了。
 
-由于毕业论文和其他项目的推进，我会比较长期地更新这篇文章，最后一次修改：2026年3月7日。
+由于毕业论文和其他项目的推进，我会比较长期地更新这篇文章，最后一次修改：2026年3月9日。
 
 ## 一、背景与申请结果
 
@@ -73,9 +74,7 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-<!-- markdownlint-disable MD033 -->
-<details>
-<summary>Prompt 模板</summary>
+Prompt 模板
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -98,9 +97,6 @@ date: 2026-03-05
 >
 > **Input Data:**  
 > [Paste link here]
-
-</details>
-<!-- markdownlint-restore -->
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -168,17 +164,37 @@ GPA肯定是长期积累的结果。但就个人观感而言，社科这个track
 
 #### CV
 
+CV的意义在于短小精干（了解到的大部分项目对于CV的页数是没有限制的），可以把你在SOP里细细讲述细节的大段文字用点的方式一目了然的看完。
+
+具体可以分为Academic Part和Non-Academic Part。前者可以有：
+
+- **Education**：列一下master相关（本科就不必要了，如果有量化的的课程也是一个不错的加分项）、交换或联合培养经历（其实真蛮有用处的）。
+- **Publications**：建议把和faculty/个人方向相关的文章放在前面，然后按照作者序列/期刊层级/完成时间依次下排。
+- **Conference Paper**：同上，建议把会议全称写明白；很多文社科会议没有doi/arxiv，把项目放在github上，认真写一个简练的readme，在CV上附加链接会是一个极好的方法。
+- **Working Paper**
+- **Research Experience**：具体写做了什么、用了什么方法（具体的模型）、自己在其中担任的角色。若为RA可以考虑把PI的链接加上。
+- **Academic Service**：审稿、会议志愿、学生组织学术活动等。
+- **Teaching Experience**：远超想象的有用，结论来源于许多大公校在面试环节就会问你想教什么课。
+- **Award and Honors**：奖学金、竞赛等，有链接放链接。
+- **Skills**。
+
+后者有 Work ExperienceLeadership ExperienceVolunteer Experience 等，用于展示个人品质或追求。
+
+非常推荐用Latex进行排版，我用的模板是Overleaf上的[Academic CV Template](https://www.overleaf.com/latex/templates/academic-cv-template/gmyytjmdbvdm)。大佬张沥今总结的[github库](https://github.com/zhanglj37/Tutorial-on-PhD-Application/tree/main/CV)里有许多非常好的案例。
+
+总而言之，CV建议越早完成越好，这是套磁环节最关键的要素。后续有论文录用更新简历然后发邮件告知即可。
+
 #### SOP（Statement of Purpose）
 
-## 四、套磁
+#### 套磁
 
-## 五、我的时间线
+## 四、我的时间线
 
-## 六、面试
+## 五、面试
 
-## 七、Plan B
+## 六、Plan B
 
-## 八、结语
+## 七、结语
 
-## 九、前文未提及但极其有用的资源
+## 八、前文未提及但极其有用的资源
 
