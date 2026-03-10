@@ -12,7 +12,7 @@ export interface ReadingEntry {
 export const readingLogs: ReadingEntry[] = [
   {
     id: '2026-03-10-jeffries-deictic',
-    date: '2026-03-10',
+    date: '2026-03-09',
     type: 'Paper',
     title: 'The role of style in reader-involvement: Deictic shifting in contemporary poems',
     author: 'Lesley Jeffries',
