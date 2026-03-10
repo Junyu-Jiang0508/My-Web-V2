@@ -1,0 +1,9 @@
+{
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "never"
+    }
+  }
+}
