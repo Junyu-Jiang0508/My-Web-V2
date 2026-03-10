@@ -1,10 +1,14 @@
 {
+  "editor.formatOnSave": false,
   "[markdown]": {
     "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
     "editor.defaultFormatter": null,
     "editor.codeActionsOnSave": {}
   },
   "markdown.extension.toc.updateOnSave": false,
   "markdown.extension.print.onFileSave": false,
+  "markdown.extension.completion.enabled": false,
   "markdownlint.run": "onType"
 }
