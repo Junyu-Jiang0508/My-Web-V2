@@ -11,6 +11,30 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-10-jeffries-deictic',
+    date: '2026-03-10',
+    type: 'Paper',
+    title: 'The role of style in reader-involvement: Deictic shifting in contemporary poems',
+    author: 'Lesley Jeffries',
+    progress: 'Full paper',
+    tags: ['Computational Methods', 'Narrative Analysis'],
+    notes: `
+<p><strong>Citation:</strong> Jeffries, L. (2008). <em>Journal of Literary Semantics (JLSE)</em>. <a href="zotero://open-pdf/0_2WFU3HQL" rel="noopener noreferrer nofollow">Open in Zotero</a></p>
+<ol>
+<li><strong>TL;DR:</strong> This article examines whether reader-involvement in a poem can be at least partly explained by stylistic features. By comparing Peter Sansom&rsquo;s &ldquo;Mittens&rdquo; and Mebdh McGuckian&rsquo;s &ldquo;Pain tells you what to wear,&rdquo; the study uses deictic shift theory and blending theory to explain how different linguistic choices draw readers into the story world or alienate them.</li>
+<li><strong>Theory &amp; Concepts:</strong>
+  <ul>
+  <li><strong>Deictic Positioning:</strong> &ldquo;Thus, it is thought that the way that deictic expressions work in narrative is that they cause the reader to take up the deictic positioning of the character, place and time which are indicated by the textual triggers. Unlike everyday interaction, then, where the first person pronoun I typically references the person speaking, the use of first person in a narrative both identifies the narrator and also provides a perspective for the reader to enter the text world.&rdquo; (Jeffries, 2008, p. 71).</li>
+  <li><strong>Time References:</strong> &ldquo;These alternating time references may cause the readers of this poem, then, to psychologically place themselves repeatedly in the present and then the past of the narrator&rsquo;s deictic field.&rdquo; (Jeffries, 2008, p. 74).</li>
+  <li><strong>Merging of Narrative Perspective:</strong> &ldquo;The incongruities of the text, whereby the narrator appears to be at once a small boy and an adult man, emerge more strongly in the second &ndash; and final &ndash; stanza and create less a sense of deictic shifting between two different ages of the first person narrator than a blending of the two into a new, rather unusual, character who is an adult but is being treated like a child.&rdquo; (Jeffries, 2008, p. 74). This creates an effect where both past and present identities are simultaneously primed, challenging normal decompression.</li>
+  <li><strong>Merging of Historic Context and Present:</strong> &ldquo;In purely textual terms, then, there is no way of knowing in these first five lines, though the first stanza context may incline us towards the uncomfortable reading that this is genuinely happening in the present to the adult narrator, whilst the disjunction with what we know about the world may incline us to revise the deictic field to one in the past (i.e. a flashback), but described in the historic present tense.&rdquo; (Jeffries, 2008, p. 75).</li>
+  <li><strong>Voiding the Deictic Field &amp; Generalized Narration:</strong> Some poetic openings stop chronological progression by failing to instantiate a specific WHO, WHERE, or WHEN, effectively voiding the deictic field. McGuckian&rsquo;s poem uses a generalized second-person narrative: &ldquo;The use of generalized second person pronouns, superficially hints at an addressee, whose referent could be the reader if this were so, but is more likely to refer to some generic third person.&rdquo; This keeps the reader estranged and at arm&rsquo;s length.</li>
+  <li><strong>Priming and Prominence:</strong> The psychological prominence of textual triggers dictates the depth of reader involvement. &ldquo;These two poems support such a notion since the deictic fields of &lsquo;Mittens&rsquo;, though unusual and at times apparently contradictory, are nevertheless strongly primed, whereas those of &lsquo;Pain tells you what to wear&rsquo; are less clear and thus less fully primed.&rdquo;</li>
+  </ul>
+</li>
+</ol>`
+  },
+  {
     id: '2026-03-07-bamman-coreference',
     date: '2026-03-07',
     type: 'Paper',
