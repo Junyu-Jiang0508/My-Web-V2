@@ -9,7 +9,8 @@
     "dev": "npm run gen && astro dev",
     "build": "astro build --force",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "git config core.hooksPath . >nul 2>&1 & copy scripts\\validate-frontmatter.sh .git\\hooks\\pre-commit >nul 2>&1 || cp scripts/validate-frontmatter.sh .git/hooks/pre-commit 2>/dev/null || true"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
