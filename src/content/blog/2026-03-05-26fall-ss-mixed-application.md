@@ -81,7 +81,8 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-Prompt 模板
+<details>
+<summary>Prompt 模板</summary>
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -104,6 +105,8 @@ Prompt 模板
 >
 > **Input Data:**  
 > [Paste link here]
+
+</details>
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -251,7 +254,8 @@ SOP 结构概览
 
 怎么套磁。首先请注意几个细节：1）一个项目建议只套一个。2）用edu邮箱。3）建议定时美国早上9点。4）表达简练，导师没那么多时间读长篇大论/AI生成的东西。5）不要用对方可以看到的邮件追踪功能，这很不好。我把我的邮件结构放在下面：
 
-套磁邮件模板
+<details>
+<summary>套磁邮件模板</summary>
 
 > Dear Professor XXX,
 >
@@ -262,6 +266,8 @@ SOP 结构概览
 > My research uses XXX. My current projects XXX.（方法/领域/具体的结果都可以说） Our research agendas seem closely aligned to me（讲一讲具体的契合度）.
 >
 > I have attached my CV for your reference. May I ask if you anticipate supervising new PhD students in the coming admissions cycles? If you have time, I would be very grateful for the chance to briefly introduce my projects in more detail over a short Zoom call.
+
+</details>
 
 我认为套磁可以在两个时间段发。第一个在9月前，这一时期的目的在于建联，表达喜爱。后续不管是论文发表，哪怕是一些小感悟，都是很好的。第二个在11月5-10号左右，这一时期的目的在于信息获取+可能的自我展示。在这一时期招生委员会大概刚刚确立，信息被分发给各个教授，且距离期末周/开始审理材料有一个不长不短的时间间隔，非常适合套磁。
 
