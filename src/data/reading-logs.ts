@@ -11,6 +11,72 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-03-16-bjarnoe-valence',
+    date: '2026-03-16',
+    type: 'Paper',
+    title: '"Our Issue Positions are Strong, and Our Opponents\' Valence is Weak": An Analysis of Parties\' Campaign Strategies in Ten Western European Democracies',
+    author: 'Camilla Bjarnøe, James Adams & Amber Boydstun',
+    progress: 'Full paper',
+    tags: ['Political Communication', 'Comparative Politics'],
+    notes: `
+<p><strong>Citation:</strong> Bjarnøe, C., Adams, J. &amp; Boydstun, A. (2023). <em>British Journal of Political Science</em>.</p>
+<ol>
+<li><strong>Background &amp; Core Question:</strong> Political parties face strategic decisions during campaigns: should they rely on &ldquo;issue-based&rdquo; appeals (e.g., debates on economy or immigration) or &ldquo;valence-based&rdquo; appeals (emphasizing leadership character, integrity, and competence)? This study investigates how parties choose between these two strategies when presenting themselves versus attacking their opponents across 10 Western European democracies.</li>
+<li><strong>Key Findings:</strong>
+  <ul>
+  <li><strong>&ldquo;Our issues versus their valence&rdquo; effect:</strong> Parties tend to emphasize concrete policy issues when presenting themselves, but heavily focus on valence (character and competence) when attacking rivals. Valence attacks are highly effective at winning votes; emphasizing their own policy issues helps the winning party claim an &ldquo;issue mandate&rdquo; post-election.</li>
+  <li><strong>Extremist party issue focus effect:</strong> Compared to moderate parties, parties with more extreme ideologies place a significantly stronger emphasis on policy issues rather than valence in their self-presentations.</li>
+  <li><strong>Prime ministerial valence focus effect:</strong> The incumbent prime minister&rsquo;s party heavily emphasizes valence in its self-presentation, as prime ministers are the &ldquo;public face&rdquo; of the government and possess unique opportunities to showcase leadership and governing competence.</li>
+  </ul>
+</li>
+<li><strong>Conclusion:</strong> Campaign strategies are highly asymmetrical; parties apply entirely different standards to themselves and their opponents. Understanding these strategic choices is crucial for comprehending modern democratic elections and the dynamics of political polarization.</li>
+</ol>`
+  },
+  {
+    id: '2026-03-16-boydstun-attention-diversity',
+    date: '2026-03-16',
+    type: 'Paper',
+    title: 'The Importance of Attention Diversity and How to Measure It',
+    author: 'Amber E. Boydstun, Shaun Bevan & Herschel F. Thomas III',
+    progress: 'Full paper',
+    tags: ['Political Communication', 'Policy Studies'],
+    notes: `
+<p><strong>Citation:</strong> Boydstun, A. E., Bevan, S. &amp; Thomas III, H. F. (2014). <em>Policy Studies Journal</em>.</p>
+<ol>
+<li><strong>Background &amp; Core Question:</strong> Traditional studies of political attention often narrow their focus to a single issue (e.g., media coverage of the economy). Ignoring the broader agenda can lead to flawed assumptions. The authors argue that scholars must measure &ldquo;attention diversity&rdquo;&mdash;the extent to which attention is concentrated or widely distributed across various items (e.g., different issues on a policy agenda or different frames within a debate). The field lacked a standard measurement approach.</li>
+<li><strong>Key Findings:</strong>
+  <ul>
+  <li>Attention diversity is an independent and vital variable that reveals the openness and accessibility of policy agendas to various problems and perspectives.</li>
+  <li>The study evaluated four widely used diversity metrics: the inverse Herfindahl Index, Shannon&rsquo;s H (entropy), and their normalized versions.</li>
+  <li>Through testing with simulated data and three real-world datasets, Shannon&rsquo;s H and its normalized form were found to be superior measurement tools.</li>
+  </ul>
+</li>
+<li><strong>Conclusion:</strong> When measuring the distribution of attention in agendas or policy debates, Shannon&rsquo;s H effectively minimizes the risk of spurious findings. The choice between raw and normalized Shannon&rsquo;s H should depend on whether the variance in the total number of possible items is substantively meaningful for the specific research context.</li>
+</ol>`
+  },
+  {
+    id: '2026-03-16-feezell-framing-identity',
+    date: '2026-03-16',
+    type: 'Paper',
+    title: 'Framing, identity, and responsibility: do episodic vs. thematic framing effects vary by target population?',
+    author: 'Jessica T. Feezell, Rebecca A. Glazier & Amber E. Boydstun',
+    progress: 'Full paper',
+    tags: ['Political Communication', 'Framing'],
+    notes: `
+<p><strong>Citation:</strong> Feezell, J. T., Glazier, R. A. &amp; Boydstun, A. E. (2021). <em>Politics, Groups, and Identities</em>.</p>
+<ol>
+<li><strong>Background &amp; Core Question:</strong> Iyengar&rsquo;s (1991) classic research shows that &ldquo;episodic&rdquo; frames (specific individual experiences) lead to individual responsibility attribution, while &ldquo;thematic&rdquo; frames (broader social contexts) lead to government/societal attribution. This paper investigates whether these framing effects change when the identity of the target population portrayed in the news changes (e.g., &ldquo;American&rdquo; vs. &ldquo;Muslim American&rdquo;).</li>
+<li><strong>Key Findings:</strong>
+  <ul>
+  <li><strong>In the context of Poverty:</strong> The experiment replicated Iyengar&rsquo;s findings. Participants reacted similarly regardless of whether the subject was &ldquo;Muslim American&rdquo; or &ldquo;American.&rdquo; Episodic frame led to individual attribution; thematic frame led to societal attribution. Identity did not alter the direction of responsibility.</li>
+  <li><strong>In the context of Religious Radicalism:</strong> The classic framing effects disappeared. Regardless of frame (episodic or thematic), audiences consistently attributed responsibility to the radicalized individuals rather than government or society.</li>
+  <li><strong>The deep impact of identity:</strong> When the news subject was identified as &ldquo;Muslim American&rdquo; in the radicalism issue, respondents were significantly more likely to cite &ldquo;religion&rdquo; as the substantive underlying cause of the individual&rsquo;s responsibility.</li>
+  </ul>
+</li>
+<li><strong>Conclusion:</strong> While classic framing theories demonstrate robustness in certain contexts, they are complicated by the interacting effects of target group identity and issue type. A group&rsquo;s identity deeply influences how the public forms internal attributions about their behavior, especially in specific policy contexts.</li>
+</ol>`
+  },
+  {
     id: '2026-03-10-jeffries-deictic',
     date: '2026-03-09',
     type: 'Paper',
