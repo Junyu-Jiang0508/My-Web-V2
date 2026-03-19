@@ -11,7 +11,7 @@ date: 2026-03-05
 
 本文中的信息有来自互联网检索，有我心路历程中的极个体性的感悟，也尝试比较宏观地对我了解过的项目进行简略的总结。如果能对之后相关社科专业的朋友有所帮助，甚至只是在申请季过程中煎熬时刻的宽慰与满足，那本文也算是达成目的了。
 
-由于毕业论文和其他项目的推进，我会比较长期地更新这篇文章，最后一次修改：2026年3月16日。
+由于毕业论文和其他项目的推进，我会比较长期地更新这篇文章，最后一次修改：2026年3月18日。
 
 ## 一、背景与申请结果
 
@@ -19,7 +19,7 @@ date: 2026-03-05
 
 我本科毕业于中国传媒大学的传播学专业，这是一个与美国[密苏里大学新闻学院](https://journalism.missouri.edu/)的联合办学项目，但与密苏里的connection极其有限。
 
-目前我就读UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的PoliSci、CogSci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connect。
+目前我就读UCSD的[M.S. in Computational Social Science](https://css.ucsd.edu/masters/index.html)，这是一个一年制项目，cohort相对较少，和教授联系很紧密，但名气甚小，背靠着相当强大的中国研究资源和UCSD的PoliSci、CogSci系，计算方面的培养还是相当踏实的。最大的特色可能是6月30号开学，有一个持续10周、高强度的bootcamp夯实一些计算方面的基础，也可以在这个时期和老师建立相当不错的connection。
 
 我的兴趣主要集中于政治话语的测量与语义的变迁，并且对计算方法有相当不错的热情。
 申请时大概有5-6篇AEJMC/IPSA等传播学政治学报告过的论文，一作但不算发表。
@@ -29,7 +29,7 @@ date: 2026-03-05
 
 ### 2. 申请结果
 
-我一共申请了12个项目（8个Comm + 2个Polisci + 2个Infosci），拿到了4个面试，最后拿到了2个offer，具体结果如下。
+我一共申请了12个项目（8个Comm + 2个PoliSci + 2个InfoSci），拿到了4个面试，最后拿到了2个offer，具体结果如下。
 
 - **UC Davis, Political Science**
 - **UNC Chapel Hill, Media & Communication** (Interviewed)
@@ -75,7 +75,7 @@ date: 2026-03-05
 
 ### 2. 如何选择自己合适的项目
 
-回顾整个申请季，我最深刻的体悟是：在PhD申请中，Research Fit大于一切。fit比好bg、强connect可能要重要得多。
+回顾整个申请季，我最深刻的体悟是：在PhD申请中，Research Fit大于一切。fit比好bg、强connection可能要重要得多。
 
 我在第一步做的是比较宏观的检索。对于Political Science和Information Science来说，最快捷的方式是去查询[U.S. News Best Grad School](https://www.usnews.com/best-graduate-schools)的排名。Communication可以去看[NCA的博士开设点](https://www.natcom.org/doctoral-program-guide/)。豆瓣上也有一篇极好的帖子[《美国传播学选校信息》](https://www.douban.com/group/topic/258742771/?_i=6480540d3ijNbw,2839752NOVDwT1)，虽然是22年的信息，但对整体学校和范式取向的锐评是相对精准且有参考意义的。
 
@@ -210,13 +210,13 @@ SOP 结构概览
   有连续问题 + 个人经历经验 + 具体的研究兴趣；
    有开门见山研究兴趣 + 具体阐述该研究兴趣的方向 + 我希望做出的贡献等不一一列举。
 2. **Relevant Education/Research Experience.** 这里最重要的是如何有效率地表达，
-  而英文中最有效率的表达则是总分结构。推荐的行文逻辑是：
-   【总】在[教育经历]期间，我开始对[研究兴趣的方向]产生兴趣；
-   【分】我在[具体项目]中，做了[用了什么模型/数据库/研究方法]，
-   得到了[理论上的结果]，这对[研究兴趣]有什么启发；【分2】同上。
-   建议在第一页完成上述两部分的论述（以单倍行距12号字体为例），否则将过于冗长。
-   而篇幅限制则让你必须选出2-3个和你的方向最相关的项目，
-   请好不遗憾的把其他没那么相关的舍弃掉或放在其他地方（如后文的技能）。
+  而英文中最有效率的表达则是总分结构。推荐的行文逻辑是：  
+   【总】在[教育经历]期间，我开始对[研究兴趣的方向]产生兴趣；  
+   【分】我在[具体项目]中，做了[用了什么模型/数据库/研究方法]，  
+   得到了[理论上的结果]，这对[研究兴趣]有什么启发；【分2】同上。  
+   建议在第一页完成上述两部分的论述（以单倍行距12号字体为例），否则将过于冗长。  
+   而篇幅限制则让你必须选出2-3个和你的方向最相关的项目，  
+   请把其他没那么相关的舍弃掉或放在其他地方（如后文的技能）。
 3. **Future Research Agenda.** 这一部分建议从目标院校老师的具体方向入手，
   结合你的个人兴趣来综合考虑。为提高表达效率，仍然建议通过
    【根据上述经历而产生的问题】+【具体阐述问题的方方面面】+
@@ -250,7 +250,7 @@ SOP 结构概览
 
 要不要套磁。首先需要了解的是，我所了解的绝大多数的项目都是委员会制，意思是，是否招录某一候选人，委员会起至关重要的作用。只有极少数的项目，我认为导师可以具有更大的选择权力，其中印象最深刻的是 [CU Boulder的iSchool](https://www.colorado.edu/cmdi/infoscience/phd-information-science)，PI可以从开始就有一票肯定/否定权。但是，委员会制并不意味着导师的意见并不重要。我还是很喜欢把过程分成500进50/50进10这两个阶段，大部分Committee对前者具有更大的权力，但到shortlist发录取这个阶段，导师的意见明显更重要。
 
-基于上述信息，我认为套磁是必要的，且套磁的目的更多的是：获取信息（导师今年招不招+今年项目的计划）+ 可能的展示自己（让导师在后续审材料时“哦，这个学生我有印象”）。当然，如果能约到zoom meeting，那也许会有相当不错的助力（我今年约到了4个informal meeting，回应都蛮不错，但最后只有一个发了offer，所以到底有多少助力不好说，但我还是认为聊胜于无的）。
+基于上述信息，我认为套磁是必要的，且套磁的目的更多的是：获取信息（导师今年招不招+今年项目的计划）+ 可能的展示自己（让导师在后续审材料时“哦，这个学生我有印象”）。当然，如果能约到zoom meeting，那也许会有相当不错的助力（我今年约到了4个informal meeting，回应都蛮不错，但最后只有一个发了offer，所以到底有多少助力不好说，我还是认为聊胜于无的）。
 
 怎么套磁。首先请注意几个细节：1）一个项目建议只套一个。2）用edu邮箱。3）建议定时美国早上9点。4）表达简练，导师没那么多时间读长篇大论/AI生成的东西。5）不要用对方可以看到的邮件追踪功能，这很不好。我把我的邮件结构放在下面：
 
@@ -327,7 +327,7 @@ Emory 的 PoliSci 有三轮。
 
 12：00 寒暄/自我介绍，这一步建议展现你在学术之外相对Chill的一面，可以简要把自己的学术兴趣和现在着手在做的项目表达一下
 
-12：10 进入固定问题环节，老师可能会问一些你研究中的细节/即能掌握/Why PhD/Why school/Research Agenda等常规问题，可以参考这个链接：。我还遇到了一些非常有意思但出乎意料的问题，诸如 如果你有无限资源你想做什么，你在研究中最享受/最不享受哪个part等。
+12：10 进入固定问题环节，老师可能会问一些你研究中的细节/即能掌握/Why PhD/Why school/Research Agenda等常规问题。我还遇到了一些非常有意思但出乎意料的问题，诸如: 如果你有无限资源你想做什么，你在研究中最享受/最不享受哪个part等。
 
 12：25 进入Q/A环节，其实也蛮重要的，问好一个问题在整体vibe上还是非常加分的。
 
@@ -337,17 +337,18 @@ Emory 的 PoliSci 有三轮。
 
 综合来看，26Fall的整体申请行情并不如人意，许多学校进行了很明显的缩招或项目直接被砍。如果说25Fall的行情惨淡来自于资金突然中断的不确定性与犹疑，那么26Fall就来自于学校（尤其是大公校）全方位的财政困难与对未来未知的进一步恐惧。我在申请季结束时读到了Hongtao学长的[一篇帖子](https://hongtaoh.com/cn/2025/10/22/us-phd/)感悟颇深，但就今年的结果而言，我认为依然是赢者通吃，且一定会留下一些坑位的。
 
-零零总总把这篇帖子写完了。我申请的绝非Top校，我本身的bg也远不及许多大佬，我认为我在整个申请季只做好了一点：找到自己的研究兴趣并找到了能够指导我的项目，即fit一点，也希望能把我的一些感悟分享给后面申请的朋友们。祝大家学术长青！
+零零总总把这篇帖子写完了。我申请的绝非Top校，我本身的bg也远不及许多大佬，我认为我在整个申请季只做好了一点：找到自己的研究兴趣并找到了能够指导我的项目。也希望能把我的一些感悟分享给后面申请的朋友们，祝朋友们学术长青！
 
 ## 七、前文未提及但极其有用的资源
 
-- [Writing Statement of Purpose for Graduate School Application](https://yuhuawang.scholars.harvard.edu/sites/g/files/omnuum8221/files/yuhuawang/files/writing_statement_of_purpose_for_graduate_school_application_2021_yuhua_wang_0.pdf) Yuhua Wang写的SOP指导，有好几篇不错的案例和注解。
-- [Hongtao学长的我的美国博士申请之路](https://hongtaoh.com/cn/2021/05/22/my-phd-app/) 在我申请的路上给予了我足够的心理支持与安慰。
-- [北美/香港传播学申请保姆级经验贴（2022）](https://www.douban.com/group/topic/263041302/?_i=6480546d3ijNbw,3888886N8wx984&dt_platform=com.douban.activity.weibo)来自豆瓣的帖子，贴主非常详细讲述了关于如何提升自我的方式方法。
-- [How to apply a (U.S.) Ph.D. program](https://airy-catfish-995.notion.site/How-to-apply-a-U-S-Ph-D-program-ebc40c85677e416a80d5f29780218b6e#27e4a08b6ed744b7a16c021765b7b374) 相当综合且适配所有学科的综合指南。
-- [目前为止陶瓷回复的成功率80%，套上offer的成功率在50%](https://forum.chasedream.com/thread-743581-1-1.html) 比较久远但依然极其有效的套磁帖
-- [我的政治学、传播学、计算社会科学美国硕士项目申请心得](https://www.zheqiaoc.com/2024/03/19/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B3%E8%AF%B7%E6%80%BB%E7%BB%93) Zheqiao师哥写的master申请指南
-- [一些面试题目](https://github.com/Junyu-Jiang0508/Interview-for-PhD-Resources)
-- [一亩三分地](https://offer.1point3acres.com/)
-- [寄托天下](https://gter.net/)
+- [Writing Statement of Purpose for Graduate School Application](https://yuhuawang.scholars.harvard.edu/sites/g/files/omnuum8221/files/yuhuawang/files/writing_statement_of_purpose_for_graduate_school_application_2021_yuhua_wang_0.pdf) Yuhua Wang写的SOP指导，有好几篇不错的案例和注解；
+- [Hongtao学长的我的美国博士申请之路](https://hongtaoh.com/cn/2021/05/22/my-phd-app/) 在我申请的路上给予了我足够的心理支持与安慰；
+- [北美/香港传播学申请保姆级经验贴（2022）](https://www.douban.com/group/topic/263041302/?_i=6480546d3ijNbw,3888886N8wx984&dt_platform=com.douban.activity.weibo)来自豆瓣的帖子，贴主非常详细讲述了关于如何提升自我的方式方法；
+- [How to apply a (U.S.) Ph.D. program](https://airy-catfish-995.notion.site/How-to-apply-a-U-S-Ph-D-program-ebc40c85677e416a80d5f29780218b6e#27e4a08b6ed744b7a16c021765b7b374) 相当综合且适配所有学科的综合指南；
+- [目前为止陶瓷回复的成功率80%，套上offer的成功率在50%](https://forum.chasedream.com/thread-743581-1-1.html) 比较久远但依然极其有效的套磁帖；
+- [我的政治学、传播学、计算社会科学美国硕士项目申请心得](https://www.zheqiaoc.com/2024/03/19/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B3%E8%AF%B7%E6%80%BB%E7%BB%93) Zheqiao师哥写的master申请指南；
+- [PhD面试流程、考察内容、注意事项](https://www.bilibili.com/video/BV1KpsKeSEUn/?spm_id_from=333.337.search-card.all.click) B站up主Yifan讲的如何准备面试；
+- [一些面试题目；](https://github.com/Junyu-Jiang0508/Interview-for-PhD-Resources)
+- [一亩三分地；](https://offer.1point3acres.com/)
+- [寄托天下。](https://gter.net/)
 
