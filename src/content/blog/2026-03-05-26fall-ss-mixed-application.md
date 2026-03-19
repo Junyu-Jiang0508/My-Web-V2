@@ -81,8 +81,7 @@ date: 2026-03-05
 
 现在你可能留下了50条左右的项目，在这个阶段最重要的是挑选出最fit的老师和整体系的研究方向vibe。我认为各种AI在这一步可以发挥很大的作用——把faculty主页的链接或bio文本直接喂给它，让它帮你快速生成结构化的教授画像。我的prompt如下：
 
-<details>
-<summary>Prompt 模板</summary>
+Prompt 模板
 
 > **Role & Context**  
 > You are a senior scholar in [to be filled] at a top U.S. university. I am conducting preliminary school research for doctoral programs and need to quickly and objectively profile potential advisors for large-scale screening.
@@ -105,8 +104,6 @@ date: 2026-03-05
 >
 > **Input Data:**  
 > [Paste link here]
-
-</details>
 
 经过这一轮筛选，你的候选名单应该已经大幅缩短。接下来值得花时间去细读每位教授的Google Scholar主页——重点关注近3-5年的发表取向。
 
@@ -254,8 +251,7 @@ SOP 结构概览
 
 怎么套磁。首先请注意几个细节：1）一个项目建议只套一个。2）用edu邮箱。3）建议定时美国早上9点。4）表达简练，导师没那么多时间读长篇大论/AI生成的东西。5）不要用对方可以看到的邮件追踪功能，这很不好。我把我的邮件结构放在下面：
 
-<details>
-<summary>套磁邮件模板</summary>
+套磁邮件模板
 
 > Dear Professor XXX,
 >
@@ -266,8 +262,6 @@ SOP 结构概览
 > My research uses XXX. My current projects XXX.（方法/领域/具体的结果都可以说） Our research agendas seem closely aligned to me（讲一讲具体的契合度）.
 >
 > I have attached my CV for your reference. May I ask if you anticipate supervising new PhD students in the coming admissions cycles? If you have time, I would be very grateful for the chance to briefly introduce my projects in more detail over a short Zoom call.
-
-</details>
 
 我认为套磁可以在两个时间段发。第一个在9月前，这一时期的目的在于建联，表达喜爱。后续不管是论文发表，哪怕是一些小感悟，都是很好的。第二个在11月5-10号左右，这一时期的目的在于信息获取+可能的自我展示。在这一时期招生委员会大概刚刚确立，信息被分发给各个教授，且距离期末周/开始审理材料有一个不长不短的时间间隔，非常适合套磁。
 
@@ -315,11 +309,39 @@ SOP 结构概览
 
 ## 五、面试
 
-## 六、Plan B
+传播学/信息科学项目基本都是自带面试的。传统意义上的
+PoliSci 通常不设置面试环节，但今年不少项目都加入了面试；甚至
+Emory 的 PoliSci 有三轮。
 
-## 七、结语
+大致的面试环节如下，我以Umich的iSchool为例：
 
-## 八、前文未提及但极其有用的资源
+1.7 我在SOP提到的两位教授发起面邀，提供可选择时间
+
+1.13 11：55 进入Zoom会议等待室。这一步关键在于不要过早/不要过晚，给老师足够的缓冲环节。
+
+12：00 寒暄/自我介绍，这一步建议展现你在学术之外相对Chill的一面，可以简要把自己的学术兴趣和现在着手在做的项目表达一下
+
+12：10 进入固定问题环节，老师可能会问一些你研究中的细节/即能掌握/Why PhD/Why school/Research Agenda等常规问题，可以参考这个链接：。我还遇到了一些非常有意思但出乎意料的问题，诸如 如果你有无限资源你想做什么，你在研究中最享受/最不享受哪个part等。
+
+12：25 进入Q/A环节，其实也蛮重要的，问好一个问题在整体vibe上还是非常加分的。
+
+综合来看，我认为你需要在整体表达中展示出1）你会说英文，起码沟通无障碍（所以就别准备逐字稿了，对着屏幕念太容易看出来）。2）这里是你的TopChoice。3）你很单纯对研究的热情即可。但我在这一部分表现的并不好，我在最后加入了一些我从中获得巨大帮助的帖子/文档链接，具体可以参考下文。
+
+## 六、结语
+
+综合来看，26Fall的整体申请行情并不如人意，许多学校进行了很明显的缩招或项目直接被砍。如果说25Fall的行情惨淡来自于资金突然中断的不确定性与犹疑，那么26Fall就来自于学校（尤其是大公校）全方位的财政困难与对未来未知的进一步恐惧。我在申请季结束时读到了Hongtao学长的[一篇帖子](https://hongtaoh.com/cn/2025/10/22/us-phd/)感悟颇深，但就今年的结果而言，我认为依然是赢者通吃，且一定会留下一些坑位的。
+
+零零总总把这篇帖子写完了。我申请的绝非Top校，我本身的bg也远不及许多大佬，我认为我在整个申请季只做好了一点：找到自己的研究兴趣并找到了能够指导我的项目，即fit一点，也希望能把我的一些感悟分享给后面申请的朋友们。祝大家学术长青！
+
+## 七、前文未提及但极其有用的资源
 
 - [Writing Statement of Purpose for Graduate School Application](https://yuhuawang.scholars.harvard.edu/sites/g/files/omnuum8221/files/yuhuawang/files/writing_statement_of_purpose_for_graduate_school_application_2021_yuhua_wang_0.pdf) Yuhua Wang写的SOP指导，有好几篇不错的案例和注解。
+- [Hongtao学长的我的美国博士申请之路](https://hongtaoh.com/cn/2021/05/22/my-phd-app/) 在我申请的路上给予了我足够的心理支持与安慰。
+- [北美/香港传播学申请保姆级经验贴（2022）](https://www.douban.com/group/topic/263041302/?_i=6480546d3ijNbw,3888886N8wx984&dt_platform=com.douban.activity.weibo)来自豆瓣的帖子，贴主非常详细讲述了关于如何提升自我的方式方法。
+- [How to apply a (U.S.) Ph.D. program](https://airy-catfish-995.notion.site/How-to-apply-a-U-S-Ph-D-program-ebc40c85677e416a80d5f29780218b6e#27e4a08b6ed744b7a16c021765b7b374) 相当综合且适配所有学科的综合指南。
+- [目前为止陶瓷回复的成功率80%，套上offer的成功率在50%](https://forum.chasedream.com/thread-743581-1-1.html) 比较久远但依然极其有效的套磁帖
+- [我的政治学、传播学、计算社会科学美国硕士项目申请心得](https://www.zheqiaoc.com/2024/03/19/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%B3%E8%AF%B7%E6%80%BB%E7%BB%93) Zheqiao师哥写的master申请指南
+- [一些面试题目](https://github.com/Junyu-Jiang0508/Interview-for-PhD-Resources)
+- [一亩三分地](https://offer.1point3acres.com/)
+- [寄托天下](https://gter.net/)
 
