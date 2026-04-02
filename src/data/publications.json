@@ -21,6 +21,16 @@
       "highlight": true
     },
     {
+      "title": "Deciphering the Question Mark Storm: Context-Aware Interpretation of Asemantic Dissent in Censor-Heavy Danmaku Streams",
+      "authors": "Jiang, J.*",
+      "venue": "APSA",
+      "year": 2026,
+      "links": {
+        "code": "https://github.com/Junyu-Jiang0508/questionmark_danmaku"
+      },
+      "highlight": true
+    },
+    {
       "title": "How Regional Stereotypes Are Narrated: LDA Analysis Based on Douyin",
       "authors": "Jiang, J.* & Xu, J.",
       "venue": "IAMCR",
@@ -49,16 +59,6 @@
       "year": 2026,
       "links": {
         "code": null
-      },
-      "highlight": true
-    },
-    {
-      "title": "Deciphering the Question Mark Storm: Context-Aware Interpretation of Asemantic Dissent in Censor-Heavy Danmaku Streams",
-      "authors": "Jiang, J.*",
-      "venue": "APSA",
-      "year": 2026,
-      "links": {
-        "code": "https://github.com/Junyu-Jiang0508/questionmark_danmaku"
       },
       "highlight": true
     }
