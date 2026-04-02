@@ -11,6 +11,66 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-04-01-holland-causal-inference',
+    date: '2026-04-01',
+    type: 'Paper',
+    title: 'Statistics and Causal Inference',
+    author: 'Paul W. Holland',
+    progress: 'Reading notes',
+    tags: ['Causal Inference', 'Statistics', 'Rubin Causal Model'],
+    notes: `
+<p><strong>Citation:</strong> Holland, P. W. (1986). Statistics and Causal Inference. <em>Journal of the American Statistical Association</em>, 81(396), 945&ndash;960. <a href="https://doi.org/10.2307/2289064" target="_blank" rel="noopener">https://doi.org/10.2307/2289064</a></p>
+<ol>
+<li><strong>Binary clarification &mdash; causes of effects vs. effects of causes:</strong> Holland proposes &ldquo;no causation without manipulation&rdquo; and places the <em>treatment</em> itself in the primary, prior role.</li>
+<li><strong>Associational inference vs. causal inference:</strong>
+  <ol>
+  <li>In causal inference, the role of <em>time</em> is more central than in associational inference.</li>
+  <li>Associational inference amounts to descriptive statistics.</li>
+  </ol>
+</li>
+<li><strong>Rubin&rsquo;s model:</strong>
+  <ol>
+  <li>Distinguish <em>A</em>(<em>u</em>) (a property or characteristic of unit <em>u</em>) from <em>S</em>(<em>u</em>) (the treatment / cause).</li>
+  <li>Because time matters, variables split into <strong>pre-exposure</strong> (fixed before exposure to the cause) and <strong>post-exposure</strong> (fixed after).</li>
+  <li>Basic causal contrast: <em>Y</em><sub><em>t</em></sub>(<em>u</em>) &minus; <em>Y</em><sub><em>c</em></sub>(<em>u</em>).</li>
+  <li><strong>Fundamental problem of causal inference:</strong> <em>Y</em><sub><em>t</em></sub>(<em>u</em>) and <em>Y</em><sub><em>c</em></sub>(<em>u</em>) cannot both be observed on the same unit, so the effect of <em>t</em> on <em>u</em> is not directly observable.
+    <ol>
+    <li>Even when manipulation seems physically <em>intervenable</em>, knowability of the underlying counterfactual remains hypothetical rather than directly observed.</li>
+    <li><strong>Solution 1:</strong> Rely on homogeneity or invariance assumptions.</li>
+    <li><strong>Solution 2:</strong> Average causal effect <em>T</em> of <em>t</em> (vs. <em>c</em>) over <em>U</em>: <strong>E</strong>(<em>Y</em><sub><em>t</em></sub> &minus; <em>Y</em><sub><em>c</em></sub>) = <em>T</em>.</li>
+    </ol>
+  </li>
+  </ol>
+</li>
+<li><strong>Some special cases:</strong>
+  <ol>
+  <li>Temporal stability and causal transience.</li>
+  <li><strong>Unit homogeneity:</strong> cannot be proven; aim to make it plausible.</li>
+  <li><strong>Independence:</strong>
+    <ol>
+    <li>Large samples help.</li>
+    <li>Contrast <strong>E</strong>(<em>Y</em><sub><em>t</em></sub>) vs. <strong>E</strong>(<em>Y</em> | <em>S</em> = <em>t</em>): whether the unit is in the treated vs. untreated group matters for identification.</li>
+    <li><strong>Prima facie</strong> causal effect of <em>t</em>: only under independence can the associational contrast support full causal interpretation.</li>
+    </ol>
+  </li>
+  <li><strong>Constant effect:</strong>
+    <ol>
+    <li>ATE applies at the individual level.</li>
+    <li>Independence is still needed for the prima facie effect to equal the average causal effect <em>T</em>.</li>
+    </ol>
+  </li>
+  <li><strong>Observational studies:</strong>
+    <ol>
+    <li>Independence is typically not assumed to hold.</li>
+    <li><strong>Strong ignorability</strong> (strong unconfoundedness / overlap-type assumptions).</li>
+    <li>Use <strong>covariate</strong> adjustment to approximate randomization.</li>
+    </ol>
+  </li>
+  </ol>
+</li>
+</ol>`
+  },
+  {
     id: '2026-03-16-bjarnoe-valence',
     date: '2026-03-16',
     type: 'Paper',
