@@ -71,6 +71,67 @@ export const readingLogs: ReadingEntry[] = [
 </ol>`
   },
   {
+    id: '2026-04-07-morgan-winship-counterfactuals',
+    date: '2026-04-07',
+    type: 'Book',
+    title: 'Counterfactuals and Causal Inference: Methods and Principles for Social Research',
+    author: 'Stephen L. Morgan & Christopher Winship',
+    progress: 'Ch. 2 §2.3–2.4',
+    tags: ['Causal Inference', 'Methods', 'Social Research'],
+    notes: `
+<p><strong>Citation:</strong> Morgan, S. L., &amp; Winship, C. (2015). <em>Counterfactuals and Causal Inference: Methods and Principles for Social Research</em> (2nd ed.). Cambridge University Press. <a href="https://doi.org/10.1017/CBO9781107585561" target="_blank" rel="noopener">DOI</a></p>
+<p><strong>2.3 Treatment groups and observed outcomes</strong></p>
+<ol>
+<li><strong>Causal exposure variable <em>D</em></strong> can be realized along (at least) three pathways: the individual&rsquo;s decision; planned random allocation; or a decision by an outside actor.</li>
+<li>If more than two causal states matter, the book shifts to language of <strong>alternative treatments and corresponding treatment groups</strong>, moving away from default &ldquo;control state / control group&rdquo; labels.</li>
+<li>Outcome data we observe contain only part of the information that would be needed to compute individual-level causal effects for everyone. (Text figure links exposure <em>D</em> to observed outcomes &mdash; see PDF.)</li>
+</ol>
+<p><strong>2.4 The average treatment effect</strong></p>
+<ol>
+<li><strong>Aggregate causal effects</strong> are averages of individual-level effects.</li>
+<li><strong>Average treatment effect (ATE):</strong> it is crucial to define clearly the population of individuals the analysis targets.</li>
+</ol>
+<p><strong>Document:</strong> Full text: <em>Counterfactuals and Causal Inference</em> (PDF in local library / Zotero).</p>`
+  },
+  {
+    id: '2026-04-06-morgan-winship-counterfactuals',
+    date: '2026-04-06',
+    type: 'Book',
+    title: 'Counterfactuals and Causal Inference: Methods and Principles for Social Research',
+    author: 'Stephen L. Morgan & Christopher Winship',
+    progress: 'Ch. 2 §2.1–2.2',
+    tags: ['Causal Inference', 'Methods', 'Social Research'],
+    notes: `
+<p><strong>Citation:</strong> Morgan, S. L., &amp; Winship, C. (2015). <em>Counterfactuals and Causal Inference: Methods and Principles for Social Research</em> (2nd ed.). Cambridge University Press. <a href="https://doi.org/10.1017/CBO9781107585561" target="_blank" rel="noopener">DOI</a></p>
+<p><strong>2.1 Defining the causal states</strong></p>
+<ol>
+<li><strong>Binary cause: treatment and control</strong>
+  <ol>
+  <li><strong>Fine articulation:</strong> much recent literature stresses finer articulation of causal states to reduce the limitations of a blunt binary.</li>
+  <li><strong>Nominal states from constitutive features</strong> (Catholic-school example):
+    <ol>
+    <li>Nominal states: enrolled in a Catholic school vs. enrolled in a public school.</li>
+    <li>Outcome: learning.</li>
+    </ol>
+  </li>
+  <li>Value of mounting causal analysis on a base that combines a metaphysics of <strong>causal powers</strong> with one of <strong>counterfactual dependence</strong>.</li>
+  </ol>
+</li>
+<li><strong>Local and reasonable</strong>
+  <ol>
+  <li>Why not default to &ldquo;fundamental-cause&rdquo; talk: often <em>non-productive</em> for the analytic job.</li>
+  <li>If a facile <em>ceteris paribus</em> assumption excuses the analyst from discussing other contrasts that almost certainly co-occur, the proposed causal states may be too improbable or ill-defined to support causal analysis built on them.</li>
+  </ol>
+</li>
+</ol>
+<p><strong>2.2 Potential outcomes and individual-level treatment effects</strong></p>
+<ol>
+<li><strong>Notation:</strong> <em>y</em><sub><em>i</em></sub><sup>1</sup> = potential outcome in the treatment state for individual <em>i</em>; <em>y</em><sub><em>i</em></sub><sup>0</sup> = potential outcome in the control state.</li>
+<li><strong>Individual-level causal effect:</strong> <em>&delta;</em><sub><em>i</em></sub> = <em>y</em><sub><em>i</em></sub><sup>1</sup> &minus; <em>y</em><sub><em>i</em></sub><sup>0</sup>.</li>
+<li>The same idea can be framed as a difference between expectations of individual-specific random variables, <strong>E</strong>[<em>Y</em><sub><em>i</em></sub><sup>1</sup>] &minus; <strong>E</strong>[<em>Y</em><sub><em>i</em></sub><sup>0</sup>], which is useful when units self-select into treatment states.</li>
+</ol>`
+  },
+  {
     id: '2026-03-16-bjarnoe-valence',
     date: '2026-03-16',
     type: 'Paper',
