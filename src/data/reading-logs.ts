@@ -11,6 +11,35 @@ export interface ReadingEntry {
 
 export const readingLogs: ReadingEntry[] = [
   {
+    id: '2026-04-08-gerber-green-field-experiments',
+    date: '2026-04-08',
+    type: 'Book',
+    title: 'Field Experiments: Design, Analysis, and Interpretation',
+    author: 'Alan S. Gerber & Donald P. Green',
+    progress: 'Random assignment and unbiased inference',
+    tags: ['Causal Inference', 'Field Experiments', 'Theory', 'Methods'],
+    notes: `
+<p><strong>Citation:</strong> Gerber, A. S., &amp; Green, D. P. (2012). <em>Field Experiments: Design, Analysis, and Interpretation</em>. New York: W. W. Norton &amp; Company. <a href="https://wwnorton.com/books/9780393979954" target="_blank" rel="noopener">Publisher</a></p>
+<p><strong>Random assignment and unbiased inference</strong></p>
+<ol>
+<li>Random assignment constructs a treated group and a control group that match <em>in expectation</em> on everything that precedes treatment, which is the standard way experiments confront the missing-counterfactual structure of causal inference.</li>
+<li><strong>Expected potential outcomes:</strong>
+  <ol>
+  <li>Under randomization, <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(1) | <em>D</em><sub><em>i</em></sub> = 1] = <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(1) | <em>D</em><sub><em>i</em></sub> = 0].</li>
+  <li>The average treatment effect can be written as the contrast of observed group means: <strong>ATE</strong> = <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(1) | <em>D</em><sub><em>i</em></sub> = 1] &minus; <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(0) | <em>D</em><sub><em>i</em></sub> = 0].</li>
+  <li>When treatment is assigned with equal probability for all subjects, potential outcomes are independent of the treatment actually received.</li>
+  </ol>
+</li>
+<li><strong>Unbiased estimator:</strong> an estimator is unbiased if its expectation equals the parameter of interest (here the ATE).</li>
+<li><strong>Difference in sample means (cf. text eq. 2.14):</strong> consider <strong>E</strong>[(1/<em>m</em>)&Sigma;<sub><em>i</em>=1</sub><sup><em>m</em></sup><em>Y</em><sub><em>i</em></sub> &minus; (1/(<em>N</em> &minus; <em>m</em>))&Sigma;<sub><em>i</em>=<em>m</em>+1</sub><sup><em>N</em></sup><em>Y</em><sub><em>i</em></sub>] &mdash; the mean outcome among the <em>m</em> treated units minus the mean among the <em>N</em> &minus; <em>m</em> untreated units.
+  <ol>
+  <li>By linearity of expectation, the expectation of the difference equals the difference of the expectations of the two group means.</li>
+  <li>Under random assignment this chain simplifies to <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(1) | <em>D</em><sub><em>i</em></sub> = 1] &minus; <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(0) | <em>D</em><sub><em>i</em></sub> = 0] = <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(1)] &minus; <strong>E</strong>[<em>Y</em><sub><em>i</em></sub>(0)] = <strong>E</strong>[<em>&tau;</em><sub><em>i</em></sub>] = <strong>ATE</strong>.</li>
+  </ol>
+</li>
+</ol>`
+  },
+  {
     id: '2026-04-01-holland-causal-inference',
     date: '2026-04-01',
     type: 'Paper',
